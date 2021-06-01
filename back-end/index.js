@@ -13,7 +13,7 @@ APP.use(EXPRESS.json());              // JSON Body Parser
 
 // Connect to MongoDB
 MONGOOSE
-    .connect("URL_HERE", {
+    .connect("mongodb://localhost:27017/qacinemas", {
         useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
     }).then(() => {
         console.log("MongoDB Connection Succesful");
