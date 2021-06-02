@@ -1,4 +1,4 @@
-import { Collapse, CardFooter, Card, CardTitle, CardText, Row, Col, CardBody } from 'reactstrap';
+import { CardFooter, Card, CardTitle, CardBody } from 'reactstrap';
 
 const ScrumSection = () => {
 
