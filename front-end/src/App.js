@@ -11,7 +11,7 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -23,10 +23,13 @@ function App() {
           <Route path="/GettingThere">
             <GettingThere />
           </Route>
+          <Route path="/PlacesToGo">
+            <PlacesToGo />
+          </Route>
         </Switch>
         <FooterBar />
-      </Router> */}
-      <PlacesToGo/>
+      </Router>
+
     </>
 
   );
