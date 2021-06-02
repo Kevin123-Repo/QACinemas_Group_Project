@@ -25,9 +25,11 @@ function App() {
           </Route>
           <Route path="/Classifications">
             <Classifications />
+          </Route>
           <Route path="/PlacesToGo">
             <PlacesToGo />
           </Route>
+
         </Switch>
         <FooterBar />
       </Router>
