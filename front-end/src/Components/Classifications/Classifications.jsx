@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 
 
 
-import { Collapse, CardFooter, Card, CardTitle, CardText, Row, Col, CardBody } from 'reactstrap';
+import { Collapse, CardFooter, Card, CardTitle, Row, Col, CardBody } from 'reactstrap';
 
 
 const Classifications = () => {
