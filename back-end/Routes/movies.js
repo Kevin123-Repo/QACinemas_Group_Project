@@ -5,7 +5,7 @@ const ROUTER = require("express").Router();
 const MOVIE = require("../Models/movie");
 
 // Get Requests (200 is default HTTP status code)
-ROUTER.get("/movies/getAll", async(req, res, next) => {
+ROUTER.get("/movies/getAll", async(req, res) => {
     try {
         const MOVIES = await MOVIE.find();
         res.send(MOVIES);
