@@ -63,7 +63,7 @@ const NavBar = () => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem href="">
-                  Getting Here
+                  <Link to="/GettingThere">Getting There</Link>
                 </DropdownItem>
                 <DropdownItem href="">
                   Places To Visit

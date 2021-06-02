@@ -4,6 +4,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import NavBar from './Components/Header_Footer/NavBar';
 import FooterBar from './Components/Header_Footer/FooterBar';
 import OpeningTimes from './Components/OpeningTimes/OpeningTimes'
+import GettingThere from './Components/Getting_There/GettingThere'
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/OpeningTimes">
             <OpeningTimes />
+          </Route>
+          <Route path="/GettingThere">
+            <GettingThere />
           </Route>
         </Switch>
         <FooterBar />
