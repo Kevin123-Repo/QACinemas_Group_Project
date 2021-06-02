@@ -5,12 +5,13 @@ import NavBar from './Components/Header_Footer/NavBar';
 import FooterBar from './Components/Header_Footer/FooterBar';
 import OpeningTimes from './Components/OpeningTimes/OpeningTimes'
 import GettingThere from './Components/Getting_There/GettingThere'
+import Screens from './Components/Screens/Screens';
 
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -22,9 +23,13 @@ function App() {
           <Route path="/GettingThere">
             <GettingThere />
           </Route>
+          <Route path="/Screens">
+            <Screens />
+          </Route>
         </Switch>
         <FooterBar />
-      </Router>
+      </Router> */}
+      <Screens/>
     </>
 
   );
