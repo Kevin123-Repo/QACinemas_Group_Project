@@ -1,5 +1,4 @@
-import FrankieAndBennys from '../../Images/FrankieAndBennys.jpg';
-const Frankie = ({img, name, info, number, website}) => {
+const Place = ({img, name, info, number, website}) => {
     return(
         <div className = 'ToGoInfo'>
             <img src = {img} alt={name} className='ToGoImg'/>
@@ -12,4 +11,4 @@ const Frankie = ({img, name, info, number, website}) => {
     )
 }
 
-export default Frankie;
+export default Place;
