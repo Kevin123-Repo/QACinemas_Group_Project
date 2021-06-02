@@ -12,17 +12,17 @@ const PAYMENT_SCHEMA = new SCHEMA({
 	},
 	cardNumber: {
 		type: Number,
-		min: [16, "Card number must be 16 digits"],
-		max: [16, "Card number must be 16 digits"]
+		min: [1000000000000000, "Card number must be 16 digits"],
+		max: [9999999999999999, "Card number must be 16 digits"]
 	},
 	expiryDate: {
-		type: string,
+		type: String,
 		required: [true, "Expiry date is required"]
 	},
 	cvc: {
 		type: Number,
-		min: [3, "cvc must be 3 digit number"],
-		max: [3, "cvc must be 3 digit number"]
+		min: [100, "cvc must be 3 digit number"],
+		max: [999, "cvc must be 3 digit number"]
 	}
 });
 
