@@ -4,12 +4,14 @@
 const MONGOOSE = require("mongoose");
 const EXPRESS = require("express");
 const CORS = require("cors");
+const MOVIE_ROUTES = require("./Routes/movies");
 const APP = EXPRESS();
 const PORT = 3000;
 
 // Middleware & Routes
 APP.use(CORS());                       // Disable Cross Origin Resource Sharing Restrictions
 APP.use(EXPRESS.json());              // JSON Body Parser
+APP.use(MOVIE_ROUTES);
 
 // Connect to MongoDB
 MONGOOSE
