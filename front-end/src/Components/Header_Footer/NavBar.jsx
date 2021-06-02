@@ -14,8 +14,9 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import { NavLink as Link } from 'react-router-dom'
 
-const Nav_Bar = (props) => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -28,7 +29,7 @@ const Nav_Bar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="">Home</NavLink>
+              <NavLink><Link to="/">Home</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">Listings</NavLink>
@@ -54,15 +55,15 @@ const Nav_Bar = (props) => {
                 <DropdownItem href="">
                   About
                 </DropdownItem>
-                <DropdownItem href="">
-                  Opening Times
+                <DropdownItem>
+                  <Link to="/OpeningTimes">Opening Times</Link>
                 </DropdownItem>
                 <DropdownItem href="">
                   Contact Us
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem href="">
-                  Getting Here
+                  <Link to="/GettingThere">Getting There</Link>
                 </DropdownItem>
                 <DropdownItem href="">
                   Places To Visit
@@ -80,4 +81,4 @@ const Nav_Bar = (props) => {
   );
 }
 
-export default Nav_Bar;
+export default NavBar;
