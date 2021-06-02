@@ -3,14 +3,15 @@ import Homepage from './Components/Homepage';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import NavBar from './Components/Header_Footer/NavBar';
 import FooterBar from './Components/Header_Footer/FooterBar';
-import OpeningTimes from './Components/OpeningTimes/OpeningTimes'
-import GettingThere from './Components/Getting_There/GettingThere'
+import OpeningTimes from './Components/OpeningTimes/OpeningTimes';
+import GettingThere from './Components/Getting_There/GettingThere';
+import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -24,7 +25,8 @@ function App() {
           </Route>
         </Switch>
         <FooterBar />
-      </Router>
+      </Router> */}
+      <PlacesToGo/>
     </>
 
   );
