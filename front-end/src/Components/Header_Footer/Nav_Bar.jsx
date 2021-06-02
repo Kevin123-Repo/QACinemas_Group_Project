@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../../Images/QA-logo-2019.png'
 import {
   Collapse,
   Navbar,
@@ -72,7 +73,7 @@ const Nav_Bar = (props) => {
               <NavLink href="">Discussion</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>LOGO?</NavbarText>
+          <NavbarText><img src={Logo} width="35" height="30" /></NavbarText>
         </Collapse>
       </Navbar>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../../Images/QA-logo-2019.png'
 import {
     Collapse,
     Navbar,
@@ -36,7 +37,7 @@ const Footer_Bar = (props) => {
                             <NavLink href="">Contact</NavLink>
                         </NavItem>
                     </Nav>
-                    <NavbarText>LOGO?</NavbarText>
+                    <NavbarText><img src={Logo} width="35" height="30" /></NavbarText>
                 </Collapse>
             </Navbar>
         </div>
