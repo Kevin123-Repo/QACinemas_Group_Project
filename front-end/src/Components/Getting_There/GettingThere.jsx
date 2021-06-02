@@ -6,6 +6,9 @@ import GoogleMap from "./GoogleMap";
 const GettingThere = (props) => {
     return (
         <>
+        <br/>
+        <br/>
+        <br/>
             <Container>
                 {/* Public Transport row and col */}
                 <Row>

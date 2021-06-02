@@ -21,7 +21,9 @@ const EmailForm = () => {
 
     return (
         <>
+       
         <Container style= {{height: '500px', width: '500px'}}>
+        <h3 style = {{fontWeight: 'italic'}}>Contact the manager!</h3>
             <Form onSubmit={sendEmail}>
             <FormGroup>
                     <Label for="exampleEmail">Name</Label>

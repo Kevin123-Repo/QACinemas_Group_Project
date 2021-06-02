@@ -9,10 +9,12 @@ import GettingThere from './Components/Getting_There/GettingThere'
 import ContactPage from './Components/ContactPage/ContactPage';
 
 
+
+
 function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -24,10 +26,18 @@ function App() {
           <Route path="/GettingThere">
             <GettingThere />
           </Route>
+          <Route path="/ContactPage">
+            <ContactPage />
+          </Route>
         </Switch>
         <FooterBar />
-      </Router> */}
-      <ContactPage/>
+      </Router>
+
+
+     
+
+      
+      
     </>
 
   );
