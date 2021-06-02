@@ -1,12 +1,9 @@
-
-
 import Cinema_Image from "../../Images/Everyman_cinema_Barnet.jpg"
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import Google_Map from "./Google_Map";
+import GoogleMap from "./GoogleMap";
 
-
-const Getting_There = (props) => {
+const GettingThere = (props) => {
     return (
         <>
             <Container>
@@ -38,7 +35,7 @@ const Getting_There = (props) => {
 
                 <Row>
                     <Col><p>You'll find us at [address here]. Please refer to the Map for further assistance!</p>
-                        <Google_Map /></Col>
+                        <GoogleMap /></Col>
                 </Row>
 
 
@@ -50,4 +47,4 @@ const Getting_There = (props) => {
     )
 }
 
-export default Getting_There;
+export default GettingThere;
