@@ -5,12 +5,13 @@ import NavBar from './Components/Header_Footer/NavBar';
 import FooterBar from './Components/Header_Footer/FooterBar';
 import OpeningTimes from './Components/OpeningTimes/OpeningTimes'
 import GettingThere from './Components/Getting_There/GettingThere'
+import EmailForm from './Components/ContactPage/EmailForm';
 
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -24,7 +25,8 @@ function App() {
           </Route>
         </Switch>
         <FooterBar />
-      </Router>
+      </Router> */}
+      <EmailForm/>
     </>
 
   );
