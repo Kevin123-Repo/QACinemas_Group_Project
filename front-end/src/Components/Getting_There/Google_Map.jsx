@@ -6,7 +6,7 @@ export class MapContainer extends Component {
       return (
         
         
-        <Map google={this.props.google} zoom={14}>
+        <Map google={this.props.google} zoom={14} style={{height: '500px', width: '500px'}}>
   
           <Marker onClick={this.onMarkerClick}
                   name={'Current location'} />
