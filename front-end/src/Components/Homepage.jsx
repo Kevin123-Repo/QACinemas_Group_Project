@@ -7,7 +7,7 @@ const Homepage = () => {
         <div>
             <Row>
                 <Col lg="1"></Col>
-                <Col lg="5">
+                <Col lg="4">
                     <h2>Welcome!</h2>
                         <p>
                             Welcome to QA Cinemas! Here you can browse all of the latest films, book tickets for showings in advance, and get a preview of new releases arriving in the near future!  
@@ -24,7 +24,9 @@ const Homepage = () => {
                     
                 </Col>
 
-                <Col lg="5">
+                <Col lg="1"></Col>
+
+                <Col lg="4">
                     <img src={cinemaImage} alt="cinema screen"/>
                 </Col>
                 <Col lg="1"></Col>
