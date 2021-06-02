@@ -33,7 +33,7 @@ const FooterBar = () => {
                             <NavLink href="">Contact</NavLink>
                         </NavItem>
                     </Nav>
-                    <NavbarText><img src={Logo} width="35" height="30" /></NavbarText>
+                    <NavbarText><img src={Logo} width="35" height="30" alt=""/></NavbarText>
                 </Collapse>
             </Navbar>
         </div>
