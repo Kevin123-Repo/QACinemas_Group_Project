@@ -6,7 +6,7 @@ import FooterBar from './Components/Header_Footer/FooterBar';
 import OpeningTimes from './Components/OpeningTimes/OpeningTimes';
 import GettingThere from './Components/Getting_There/GettingThere';
 import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
-
+import Classifications from './Components/Classifications/Classifications';
 
 function App() {
   return (
@@ -23,15 +23,15 @@ function App() {
           <Route path="/GettingThere">
             <GettingThere />
           </Route>
+          <Route path="/Classifications">
+            <Classifications />
           <Route path="/PlacesToGo">
             <PlacesToGo />
           </Route>
         </Switch>
         <FooterBar />
       </Router>
-
     </>
-
   );
 }
 

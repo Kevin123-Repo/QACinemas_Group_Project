@@ -38,7 +38,7 @@ const NavBar = () => {
               <NavLink href="">Bookings</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Classifications</NavLink>
+              <NavLink> <Link to="/Classifications">Classifications</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">Screens</NavLink>
@@ -76,8 +76,8 @@ const NavBar = () => {
           </Nav>
           <NavbarText><img src={Logo} width="35" height="30" alt=""/></NavbarText>
         </Collapse>
-      </Navbar>
-    </div>
+      </Navbar >
+    </div >
   );
 }
 
