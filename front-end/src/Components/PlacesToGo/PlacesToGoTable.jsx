@@ -1,13 +1,18 @@
-import {Table} from "reactstrap";
+import Frankies from './Frankie';
+
+import {Table, tbody} from "reactstrap";
 
 const PlacesToGoTable = () => {
 
     return(
         <>
         <Table>
+        
+        <tbody>
         <tr> 
-        <td></td>   
+        <td><Frankies/></td>   
         </tr>
+        </tbody>
         </Table>
         </>
     )
