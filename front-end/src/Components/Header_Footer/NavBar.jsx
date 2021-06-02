@@ -15,7 +15,7 @@ import {
   NavbarText
 } from 'reactstrap';
 
-const Nav_Bar = (props) => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -80,4 +80,4 @@ const Nav_Bar = (props) => {
   );
 }
 
-export default Nav_Bar;
+export default NavBar;
