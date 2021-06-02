@@ -1,3 +1,11 @@
+.dropdown-item a {
+  text-decoration: none;
+  color: #1e2125;
+}
+.nav-link a {
+  text-decoration: none;
+  color: rgba(0,0,0,.55);
+}
 /* .App {
   text-align: center;
 }
