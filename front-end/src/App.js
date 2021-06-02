@@ -7,6 +7,7 @@ import OpeningTimes from './Components/OpeningTimes/OpeningTimes';
 import GettingThere from './Components/Getting_There/GettingThere';
 import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
+import About from './Components/About/About';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/PlacesToGo">
             <PlacesToGo />
+          </Route>
+          <Route path="/About">
+            <About />
           </Route>
 
         </Switch>

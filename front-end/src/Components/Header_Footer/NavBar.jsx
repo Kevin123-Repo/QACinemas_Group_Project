@@ -52,8 +52,8 @@ const NavBar = () => {
                 Get in Touch
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="">
-                  About
+                <DropdownItem >
+                  <Link to="/About">About</Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link to="/OpeningTimes">Opening Times</Link>
@@ -74,7 +74,7 @@ const NavBar = () => {
               <NavLink href="">Discussion</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText><img src={Logo} width="35" height="30" alt=""/></NavbarText>
+          <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
         </Collapse>
       </Navbar >
     </div >
