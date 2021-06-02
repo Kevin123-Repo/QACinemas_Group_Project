@@ -5,7 +5,8 @@ import NavBar from './Components/Header_Footer/NavBar';
 import FooterBar from './Components/Header_Footer/FooterBar';
 import OpeningTimes from './Components/OpeningTimes/OpeningTimes'
 import GettingThere from './Components/Getting_There/GettingThere'
-import EmailForm from './Components/ContactPage/EmailForm';
+
+import ContactPage from './Components/ContactPage/ContactPage';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         </Switch>
         <FooterBar />
       </Router> */}
-      <EmailForm/>
+      <ContactPage/>
     </>
 
   );
