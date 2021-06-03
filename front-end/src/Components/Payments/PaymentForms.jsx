@@ -10,13 +10,6 @@ const PaymentForms = () => {
     const [errorMessage, setErrorMessage] = useState(null);
     // let total = ({ adult } * 8.50) + ({ child } * 6.50) + ({ concession } * 5);
     const name = "Jim";
-    const city = "London";
-    const postal = "LO132YG";
-    const country = "";
-    const line1 = "";
-    const line2 = "";
-    const email = "";
-    const phone = "";
     const total = 1500
 
 
@@ -33,24 +26,12 @@ const PaymentForms = () => {
             type: 'card',
             card: elements.getElement(CardNumberElement),
             billing_details: {
-                address: {
-                    city: city,
-                    country: country,
-                    line1: line1,
-                    line2: line2,
-                    postal_code: postal,
-                },
-                email: email,
                 name: name,
-                phone: phone,
             },
 
         });
 
-        const paymentIntent = await stripe.retrievePaymentIntent({
-            amount: total,
-            currency: 'gbp'
-        });
+
 
         if (payload.error) {
 
@@ -59,7 +40,7 @@ const PaymentForms = () => {
             //console.log(errorMessage);
             setPaymentMethod(null);
         } else {
-            //console.log('[paymentMethod]', payload.paymentMethod);
+            console.log('[paymentMethod]', payload.paymentMethod);
             setPaymentMethod("Payment has been Successfully Sent!");
             setErrorMessage(null)
         }
@@ -83,12 +64,12 @@ const PaymentForms = () => {
                             setErrorMessage(null)
                             console.log("CardNumberElement [change]", event);
                         }}
-                        onBlur={() => {
-                            console.log("CardNumberElement [blur]");
-                        }}
-                        onFocus={() => {
-                            console.log("CardNumberElement [focus]");
-                        }}
+                    // onBlur={() => {
+                    //     console.log("CardNumberElement [blur]");
+                    // }}
+                    // onFocus={() => {
+                    //     console.log("CardNumberElement [focus]");
+                    // }}
 
 
                     />
@@ -107,12 +88,12 @@ const PaymentForms = () => {
                                 setErrorMessage(null)
                                 console.log("CardExpiryElement [change]", event);
                             }}
-                            onBlur={() => {
-                                console.log("CardExpiryElement [blur]");
-                            }}
-                            onFocus={() => {
-                                console.log("CardExpiryElement [focus]");
-                            }}
+                        // onBlur={() => {
+                        //     console.log("CardExpiryElement [blur]");
+                        // }}
+                        // onFocus={() => {
+                        //     console.log("CardExpiryElement [focus]");
+                        // }}
 
                         />
                     </Col>
@@ -127,12 +108,12 @@ const PaymentForms = () => {
                                 setErrorMessage(null)
                                 console.log("CardCVCElement [change]", event);
                             }}
-                            onBlur={() => {
-                                console.log("CardCVCElement [blur]");
-                            }}
-                            onFocus={() => {
-                                console.log("CardCVCElement [focus]");
-                            }}
+                        // onBlur={() => {
+                        //     console.log("CardCVCElement [blur]");
+                        // }}
+                        // onFocus={() => {
+                        //     console.log("CardCVCElement [focus]");
+                        // }}
 
                         />
                     </Col>
