@@ -44,7 +44,7 @@ const NavBar = () => {
               <NavLink><Link to="/Screens">Screens</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">New Releases</NavLink>
+              <NavLink><Link to="/NewReleases">New Releases</Link></NavLink>
             </NavItem>
 
             <UncontrolledDropdown nav inNavbar>

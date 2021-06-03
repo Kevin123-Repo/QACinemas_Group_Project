@@ -33,12 +33,19 @@ const MovieInfo = () => {
                             <li key={i}> {actor} </li>
                         ))}
                     </ul>
-                    <h5> Showing Times </h5>
-                    <ul>
-                        {data.showingTimes.map((entry, i) => (
-                            <li key={i}> {`${entry.day}: ${entry.times.toString()}`} </li>
-                        ))}
-                    </ul>
+                    { 
+                        (data.showingTimes.length > 0)?
+                        <>
+                            <h5> Showing Times </h5>
+                            <ul>
+                                {
+                                    data.showingTimes.map((entry, i) => (
+                                        <li key={i}> {`${entry.day}: ${entry.times.toString()}`} </li>
+                                    ))
+                                }
+                            </ul>
+                        </> : <br/>
+                    }
                 </div>
             </div>
         );

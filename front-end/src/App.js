@@ -10,8 +10,9 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
-import ListingGallery from './Components/ListingGallery/ListingGallery';
-import MovieInfo from './Components/ListingGallery/MovieInfo';
+import ListingGallery from './Components/Listings/ListingGallery';
+import MovieInfo from './Components/Listings/MovieInfo';
+import NewReleases from './Components/Listings/NewReleases';
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
             </Route>
             <Route path="/Listings">
               <ListingGallery/>
+            </Route>
+            <Route path="/NewReleases">
+              <NewReleases/>
             </Route>
             <Route path="/movies/:movie">
               <MovieInfo/>
