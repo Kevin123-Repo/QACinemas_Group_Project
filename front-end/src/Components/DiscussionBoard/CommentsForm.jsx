@@ -11,6 +11,9 @@ const CommentsForm = ({ handleUpdate }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(movieTitle==="" || "Select a movie"){
+            return;
+        }
         const dataTosend = {
             "username": username,
             "comment": comment,
@@ -39,8 +42,8 @@ const CommentsForm = ({ handleUpdate }) => {
         axios
             .get("http://localhost:8080/movies/getAll")
             .then((response) => {
-                setMovie(response.data);
                 console.log(response);
+                setMovie(response.data);
 
             })
             .catch((error) => {
@@ -88,6 +91,7 @@ const CommentsForm = ({ handleUpdate }) => {
                     name="test"
                     value={movieTitle}
                     onChange={(e) => setMovieTitle(e.target.value)}>
+                    <option selected>Select a movie</option>
                     {movie.map((movie) => (
                         <option>{movie.title}</option>
                     ))}
