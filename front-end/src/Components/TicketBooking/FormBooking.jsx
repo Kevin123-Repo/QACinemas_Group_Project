@@ -22,6 +22,7 @@ const FormBooking = ({data}) => {
     const [selectedMovie, setSelectedMovie] = useState("Movies");
     const [showingTimes, setShowingTimes] = useState([]);
     const [times, setTimes] = useState([]);
+    const [days, setDays] = useState([]);
     const [date, setDate] = useState(new Date());
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -29,23 +30,26 @@ const FormBooking = ({data}) => {
     const toggleThree = () => setDropdownOpenThree(prevState => !prevState);
     const toggleMovie = () => setDropdownOpenMovie(prevState => !prevState);
 
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     const changeDate = (date) => {
         setDate(date);
     };
   
     useEffect(() => {
+        let daysArr = [];
         for (let obj of data) {
             if (obj.title === selectedMovie) {
                 setShowingTimes(obj.showingTimes);
+                for (let entry of obj.showingTimes) {
+                    daysArr.push(daysOfWeek.indexOf(entry.day));
+                    if (entry.day === daysOfWeek[date.getDay()]) {
+                        setTimes(entry.times);
+                    }
+                }
             }
         } 
-        for (let entry of showingTimes) {
-            if (entry.day === days[date.getDay()]) {
-                setTimes(entry.times);
-            }
-        }
+        setDays(daysArr);
     }, [selectedMovie, date]);
 
     return (
@@ -163,6 +167,7 @@ const FormBooking = ({data}) => {
                         minDate={new Date()}
                         onChange={changeDate}
                         value={date}
+                        tileDisabled = {({activeStartDate, date, view }) => !days.includes(date.getDay())}
 
                     />
                     {"You have selected: " + date.getDay()}
