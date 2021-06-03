@@ -41,7 +41,7 @@ const NavBar = () => {
               <NavLink href="">Classifications</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Screens</NavLink>
+              <NavLink><Link to="/Screens">Screens</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">New Releases</NavLink>

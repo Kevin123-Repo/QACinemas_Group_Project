@@ -11,7 +11,7 @@ import Screens from './Components/Screens/Screens';
 function App() {
   return (
     <>
-      {/* <Router>
+      <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -28,8 +28,7 @@ function App() {
           </Route>
         </Switch>
         <FooterBar />
-      </Router> */}
-      <Screens/>
+      </Router>
     </>
 
   );
