@@ -8,6 +8,8 @@ const PaymentForms = () => {
     const elements = useElements();
     const [paymentMethod, setPaymentMethod] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
+    // let total = ({ adult } * 8.50) + ({ child } * 6.50) + ({ concession } * 5);
+    const name = "Jim"
 
 
 
@@ -22,6 +24,24 @@ const PaymentForms = () => {
         const payload = await stripe.createPaymentMethod({
             type: 'card',
             card: elements.getElement(CardNumberElement),
+            billing_details: {
+                address: {
+                    city: {},
+                    country: {},
+                    line1: {},
+                    line2: {},
+                    postal_code: {},
+                    state: {}
+                },
+                email: {},
+                name: {},
+                phone: {},
+
+            }
+            // address: {},
+            // name: {},
+            // amount: 1500,
+            // currency: "GBP"
         });
 
 
