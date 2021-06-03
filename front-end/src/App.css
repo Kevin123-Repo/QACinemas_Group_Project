@@ -11,8 +11,13 @@
 
 .carousel {
   width:1000px;
-  height:700px;
+  height:800px;
   margin: auto;
+}
+
+.carousel-caption {
+  top: auto;
+  bottom: 0;
 }
 /* .App {
   text-align: center;
