@@ -43,11 +43,13 @@ function App() {
             <Route path="/Screens">
               <Screens />
             </Route>
+            <Route path="/Discussion">
+              <DiscussionBoard />
+            </Route>
           </Switch>
         </div>
         <FooterBar />
       </Router> 
-      <DiscussionBoard/>
     </>
   );
 }

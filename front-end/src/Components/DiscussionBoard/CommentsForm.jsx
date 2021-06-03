@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const CommentsForm = ({ handleUpdate }) => {
 
@@ -7,6 +7,7 @@ const CommentsForm = ({ handleUpdate }) => {
     const [comment, setComment] = useState("");
     const [rating, setRating] = useState("1");
     const [movieTitle, setMovieTitle] = useState("");
+    const [movie, setMovie] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,7 +19,7 @@ const CommentsForm = ({ handleUpdate }) => {
         };
         console.log(dataTosend);
         axios
-            .post("http://localhost:3000/discussions/post", dataTosend)
+            .post("http://localhost:8080/discussions/post", dataTosend)
             .then((response) => {
                 console.log(response);
 
@@ -34,13 +35,19 @@ const CommentsForm = ({ handleUpdate }) => {
         handleUpdate();
     }
 
-    // const movieTitles = [];
+    useEffect(() => {
+        axios
+            .get("http://localhost:8080/movies/getAll")
+            .then((response) => {
+                setMovie(response.data);
+                console.log(response);
 
-    // axios
-    //     .get("http://localhost:3000/movies/getAll")
-    //     .then((response)=>{
-    //         console.log(response);
-    //     });
+            })
+            .catch((error) => {
+                console.error(error);
+
+            });
+    }, [])
 
 
     return (
@@ -73,22 +80,18 @@ const CommentsForm = ({ handleUpdate }) => {
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <label>Test</label>
                 </select>
-                {/* <input
-                    id="rating"
-                    type="number"
-                    name="rating"
-                    value={rating}
-                    onChange={(e) => setRating(e.target.value)}
-                /> */}
-                <label>Movie Title</label>
-                <input
-                    id="movieTitle"
+                <label>Movie</label>
+                <select id="test"
                     type="text"
-                    name="movieTitle"
+                    name="test"
                     value={movieTitle}
-                    onChange={(e) => setMovieTitle(e.target.value)}
-                />
+                    onChange={(e) => setMovieTitle(e.target.value)}>
+                    {movie.map((movie) => (
+                        <option>{movie.title}</option>
+                    ))}
+                </select>
                 <button type="submit">Submit</button>
             </form>
         </>

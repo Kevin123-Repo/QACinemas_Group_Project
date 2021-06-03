@@ -13,7 +13,7 @@ const CommentsTable = ({update}) => {
 
 
         axios
-            .get("http://localhost:3000/discussions/getAll")
+            .get("http://localhost:8080/discussions/getAll")
             .then((response) => {
                 setData(response.data);
                 console.log(response);
