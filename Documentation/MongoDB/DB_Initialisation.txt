@@ -3,7 +3,7 @@ use qacinemas
 db.createCollection("movies")
 
 
-db.Movies.insertMany([
+db.movies.insertMany([
 {
     "title" : "Inception",
 	"actors": ["Leonardo DiCaprio, Joseph Gordon-Levitt, Tom Hardy, Cillian Murphy", "Elliot Page"],
