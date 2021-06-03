@@ -26,12 +26,14 @@ const PaymentForms = () => {
 
 
         if (payload.error) {
-            console.log("[Error]", payload.error);
+
+            //console.log("[Error]", payload.error);
             setErrorMessage(payload.error.message);
+            //console.log(errorMessage);
             setPaymentMethod(null);
         } else {
-            console.log('[paymentMethod]', payload.paymentMethod);
-            setPaymentMethod(payload.paymentMethod);
+            //console.log('[paymentMethod]', payload.paymentMethod);
+            setPaymentMethod("Payment has been Successfully Sent!");
             setErrorMessage(null)
         }
     };
@@ -51,6 +53,7 @@ const PaymentForms = () => {
                             console.log("CardNumberElement [ready]");
                         }}
                         onChange={event => {
+                            setErrorMessage(null)
                             console.log("CardNumberElement [change]", event);
                         }}
                         onBlur={() => {
@@ -70,6 +73,19 @@ const PaymentForms = () => {
                         <label htmlFor="cardExpiry">Card Expiry</label>
                         <CardExpiryElement
                             id="expiryDate"
+                            onReady={() => {
+                                console.log("CardExpiryElement [ready]");
+                            }}
+                            onChange={event => {
+                                setErrorMessage(null)
+                                console.log("CardExpiryElement [change]", event);
+                            }}
+                            onBlur={() => {
+                                console.log("CardExpiryElement [blur]");
+                            }}
+                            onFocus={() => {
+                                console.log("CardExpiryElement [focus]");
+                            }}
 
                         />
                     </Col>
@@ -77,11 +93,29 @@ const PaymentForms = () => {
                         <label htmlFor="cardCVC">Card CVC</label>
                         <CardCvcElement
                             id="expiryDate"
+                            onReady={() => {
+                                console.log("CardCVCElement [ready]");
+                            }}
+                            onChange={event => {
+                                setErrorMessage(null)
+                                console.log("CardCVCElement [change]", event);
+                            }}
+                            onBlur={() => {
+                                console.log("CardCVCElement [blur]");
+                            }}
+                            onFocus={() => {
+                                console.log("CardCVCElement [focus]");
+                            }}
 
                         />
                     </Col>
 
                 </Row>
+                <div>
+                    <b style={{ color: 'red' }}>{errorMessage}</b>
+                    <b style={{ color: 'green' }}>{paymentMethod}</b>
+                </div>
+
 
                 <button type="submit" disabled={!stripe}>
                     Pay
