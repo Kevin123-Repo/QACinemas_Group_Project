@@ -38,7 +38,7 @@ const NavBar = () => {
               <NavLink href="">Bookings</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Classifications</NavLink>
+              <NavLink> <Link to="/Classifications">Classifications</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">Screens</NavLink>
@@ -52,8 +52,8 @@ const NavBar = () => {
                 Get in Touch
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="">
-                  About
+                <DropdownItem >
+                  <Link to="/About">About</Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link to="/OpeningTimes">Opening Times</Link>
@@ -66,7 +66,7 @@ const NavBar = () => {
                   <Link to="/GettingThere">Getting There</Link>
                 </DropdownItem>
                 <DropdownItem href="">
-                  Places To Visit
+                  <Link to="/PlacesToGo">Places To Visit</Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -74,10 +74,10 @@ const NavBar = () => {
               <NavLink href="">Discussion</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText><img src={Logo} width="35" height="30" /></NavbarText>
+          <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
         </Collapse>
-      </Navbar>
-    </div>
+      </Navbar >
+    </div >
   );
 }
 

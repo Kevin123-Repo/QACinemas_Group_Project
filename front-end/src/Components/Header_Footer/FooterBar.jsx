@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../../Images/QA-logo-2019.png'
+import Logo from '../../Images/QA-logo-2019.png';
 import {
     Collapse,
     Navbar,
@@ -10,6 +10,7 @@ import {
     NavLink,
     NavbarText
 } from 'reactstrap';
+import { NavLink as Link } from 'react-router-dom';
 
 const FooterBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,16 +25,16 @@ const FooterBar = () => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="">Home</NavLink>
+                            <NavLink><Link to="/">Home</Link></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="">About Us</NavLink>
+                            <NavLink><Link to="/About">About</Link></NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink href="">Contact</NavLink>
                         </NavItem>
                     </Nav>
-                    <NavbarText><img src={Logo} width="35" height="30" /></NavbarText>
+                    <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
                 </Collapse>
             </Navbar>
         </div>
