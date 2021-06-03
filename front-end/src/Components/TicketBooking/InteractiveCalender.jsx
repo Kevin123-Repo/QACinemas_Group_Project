@@ -3,33 +3,24 @@ import { useState } from 'react';
 import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 
-const InteractiveCalendar = () => {
-
-  const [date, setDate] = useState(new Date());
-
-  const onChange = date => {
-    setDate(date);
-  };
-
- 
+const InteractiveCalendar = ({date, changeDate}) => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <h5 style={{ fontWeight: 'bold' }}>Select a Date</h5>
         <Calendar
 
          
           // maxDate={}
           minDate ={new Date()}
-          onChange={onChange}
+          onChange={changeDate}
           value={date}
          
 
         />
         {"You have selected: " + date.getDay()}
-       
-      </div>
+      </div> */}
       
     </>
   )

@@ -1,14 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Row, Col, Button, Form, FormGroup, Label, Input, Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import InteractiveCalendar from './InteractiveCalender';
-
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 
 
 const FormBooking = ({data}) => {
-
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [dropdownOpenTwo, setDropdownOpenTwo] = useState(false);
@@ -20,17 +20,33 @@ const FormBooking = ({data}) => {
     const [child, setChildren] = useState(0);
     const [seats, setSeats] = useState(0);
     const [selectedMovie, setSelectedMovie] = useState("Movies");
-    
-
+    const [showingTimes, setShowingTimes] = useState([]);
+    const [times, setTimes] = useState([]);
+    const [date, setDate] = useState(new Date());
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
     const toggleTwo = () => setDropdownOpenTwo(prevState => !prevState);
     const toggleThree = () => setDropdownOpenThree(prevState => !prevState);
     const toggleMovie = () => setDropdownOpenMovie(prevState => !prevState);
-    
 
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-
+    const changeDate = (date) => {
+        setDate(date);
+    };
+  
+    useEffect(() => {
+        for (let obj of data) {
+            if (obj.title === selectedMovie) {
+                setShowingTimes(obj.showingTimes);
+            }
+        } 
+        for (let entry of showingTimes) {
+            if (entry.day === days[date.getDay()]) {
+                setTimes(entry.times);
+            }
+        }
+    }, [selectedMovie, date]);
 
     return (
         <>
@@ -137,7 +153,21 @@ const FormBooking = ({data}) => {
 
 
 
-                <InteractiveCalendar />
+                {/* <InteractiveCalendar date={date} changeDate={changeDate}/> */}
+                <div>
+
+                    <h5 style={{ fontWeight: 'bold' }}>Select a Date</h5>
+                    <Calendar
+
+                        // maxDate={}
+                        minDate={new Date()}
+                        onChange={changeDate}
+                        value={date}
+
+                    />
+                    {"You have selected: " + date.getDay()}
+
+                </div>
 
 
 
