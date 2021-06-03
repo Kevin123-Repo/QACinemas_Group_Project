@@ -9,11 +9,12 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
+import TicketBooking from './Components/TicketBooking/TicketBooking';
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -39,7 +40,8 @@ function App() {
           </Route>
         </Switch>
         <FooterBar />
-      </Router>
+      </Router> */}
+      <TicketBooking/>
     </>
   );
 }
