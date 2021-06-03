@@ -1,5 +1,4 @@
 import './App.css';
-import 'react-slideshow-image/dist/styles.css';
 import Homepage from './Components/Homepage';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import NavBar from './Components/Header_Footer/NavBar';
@@ -18,6 +17,7 @@ function App() {
   return (
     <>
       <Router>
+        <NavBar/>
         <div className="container-fluid main-content">
           <Switch>
             <Route exact path="/">
