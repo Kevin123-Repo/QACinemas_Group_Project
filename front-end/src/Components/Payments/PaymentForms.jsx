@@ -9,7 +9,15 @@ const PaymentForms = () => {
     const [paymentMethod, setPaymentMethod] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
     // let total = ({ adult } * 8.50) + ({ child } * 6.50) + ({ concession } * 5);
-    const name = "Jim"
+    const name = "Jim";
+    const city = "London";
+    const postal = "LO132YG";
+    const country = "";
+    const line1 = "";
+    const line2 = "";
+    const email = "";
+    const phone = "";
+    const total = 1500
 
 
 
@@ -26,24 +34,23 @@ const PaymentForms = () => {
             card: elements.getElement(CardNumberElement),
             billing_details: {
                 address: {
-                    city: {},
-                    country: {},
-                    line1: {},
-                    line2: {},
-                    postal_code: {},
-                    state: {}
+                    city: city,
+                    country: country,
+                    line1: line1,
+                    line2: line2,
+                    postal_code: postal,
                 },
-                email: {},
-                name: {},
-                phone: {},
+                email: email,
+                name: name,
+                phone: phone,
+            },
 
-            }
-            // address: {},
-            // name: {},
-            // amount: 1500,
-            // currency: "GBP"
         });
 
+        const paymentIntent = await stripe.retrievePaymentIntent({
+            amount: total,
+            currency: 'gbp'
+        });
 
         if (payload.error) {
 
