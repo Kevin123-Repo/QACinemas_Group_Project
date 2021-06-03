@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input, Col, Row, Container } from 'reactstrap';
 import { CardNumberElement, CardExpiryElement, CardCvcElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import "./Styles.css";
@@ -6,6 +6,9 @@ import "./Styles.css";
 const PaymentForms = () => {
     const stripe = useStripe();
     const elements = useElements();
+    const [paymentMethod, setPaymentMethod] = useState(null);
+    const [errorMessage, setErrorMessage] = useState(null);
+
 
 
 
@@ -20,9 +23,18 @@ const PaymentForms = () => {
             type: 'card',
             card: elements.getElement(CardNumberElement),
         });
-        console.log("[PaymentMethod]", payload)
-    };
 
+
+        if (payload.error) {
+            console.log("[Error]", payload.error);
+            setErrorMessage(payload.error.message);
+            setPaymentMethod(null);
+        } else {
+            console.log('[paymentMethod]', payload.paymentMethod);
+            setPaymentMethod(payload.paymentMethod);
+            setErrorMessage(null)
+        }
+    };
     return (
 
         <Container>
