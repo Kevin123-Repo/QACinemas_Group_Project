@@ -1,13 +1,12 @@
 import Comment from './Comment';
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {Table} from "reactstrap";
+import { Table } from "reactstrap";
 
-const CommentsTable = () => {
+const CommentsTable = ({update}) => {
 
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
-    const [update, setUpdate] = useState(false);
 
 
     useEffect(() => {
@@ -15,7 +14,7 @@ const CommentsTable = () => {
 
         axios
             .get("http://localhost:3000/discussions/getAll")
-            .then((response) => {  
+            .then((response) => {
                 setData(response.data);
                 console.log(response);
 
@@ -25,8 +24,8 @@ const CommentsTable = () => {
                 console.error(error);
 
             });
-        
-    }, []);
+
+    }, [update]);
     if (error) {
         return <h1>{error.message}</h1>
     } else {
@@ -34,28 +33,28 @@ const CommentsTable = () => {
         return (
             <>
                 <Table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Rating</th>
-                        <th>Film</th>
-                        <th>Comment</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((comment) => (
-                       
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Film</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((comment) => (
+
                             <Comment key={comment.id} comment={comment} />
-                        
-                    ))}
-                    
-                </tbody>
+
+                        ))}
+
+                    </tbody>
                 </Table>
-                
+
             </>
         );
 
     };
 
 }
-export default CommentsTable;   
+export default CommentsTable;

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-const CommentsForm = () =>{
+const CommentsForm = ({handleUpdate}) =>{
 
     const [username,setUsername] = useState("");
     const [comment, setComment] = useState("");
@@ -31,7 +31,16 @@ const CommentsForm = () =>{
         setComment("");
         setRating("");
         setMovieTitle("");
+        handleUpdate();
     }
+
+    // const movieTitles = [];
+
+    // axios
+    //     .get("http://localhost:3000/movies/getAll")
+    //     .then((response)=>{
+    //         console.log(response);
+    //     });
 
 
   return (
