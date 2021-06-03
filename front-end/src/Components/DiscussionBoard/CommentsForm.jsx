@@ -8,6 +8,7 @@ const CommentsForm = ({ handleUpdate }) => {
     const [rating, setRating] = useState("1");
     const [movieTitle, setMovieTitle] = useState("");
     const [movie, setMovie] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -44,6 +45,7 @@ const CommentsForm = ({ handleUpdate }) => {
             .then((response) => {
                 console.log(response);
                 setMovie(response.data);
+                setIsLoading(false);
 
             })
             .catch((error) => {
@@ -52,7 +54,7 @@ const CommentsForm = ({ handleUpdate }) => {
             });
     }, [])
 
-
+if(isLoading===false){
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -100,6 +102,13 @@ const CommentsForm = ({ handleUpdate }) => {
             </form>
         </>
     );
+}else{
+    return(
+        <>
+        <h1>Loading</h1>
+        </>
+    )
+}
 }
 
 
