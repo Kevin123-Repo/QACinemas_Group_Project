@@ -9,8 +9,8 @@ const PaymentForms = () => {
     const [paymentMethod, setPaymentMethod] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
     // let total = ({ adult } * 8.50) + ({ child } * 6.50) + ({ concession } * 5);
-    const name = "Jim";
-    const total = 1500
+    const name = "Jim"
+
 
 
 
@@ -40,7 +40,7 @@ const PaymentForms = () => {
             //console.log(errorMessage);
             setPaymentMethod(null);
         } else {
-            console.log('[paymentMethod]', payload.paymentMethod);
+            console.log('[paymentMethod]', payload.paymentMethod.id);
             setPaymentMethod("Payment has been Successfully Sent!");
             setErrorMessage(null)
         }
@@ -125,7 +125,7 @@ const PaymentForms = () => {
                 </div>
 
 
-                <button type="submit" disabled={!stripe}>
+                <button type="submit">
                     Pay
                     </button>
             </form>
