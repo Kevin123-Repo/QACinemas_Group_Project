@@ -72,7 +72,6 @@ const Screens = () => {
   
     return (
       <>
-        
         <Container>
           <h1 style={{textAlign: "center"}}>Screens</h1>
           <Carousel
@@ -87,7 +86,6 @@ const Screens = () => {
           </Carousel>
         </Container>
       </>
-    
     );
 }
 
