@@ -28,7 +28,7 @@ const InteractiveCalendar = () => {
 
         />
         {"You have selected: " + date.toLocaleDateString()}
-        {console.log(date)}
+        
       </div>
 
     </>

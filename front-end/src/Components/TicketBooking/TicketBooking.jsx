@@ -7,7 +7,6 @@ const TicketBooking = (props) => {
 
     return (
         <>
-
             <BookingForm/>
         </>
     )

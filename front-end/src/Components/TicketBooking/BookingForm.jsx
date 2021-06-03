@@ -7,8 +7,11 @@ import InteractiveCalendar from './InteractiveCalender';
 const BookingForm = (props) => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [adults, setAdults] = useState(0);
+    const [child, setChildren] = useState(0);
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
+    
     return (
         <>
 
@@ -16,28 +19,57 @@ const BookingForm = (props) => {
                 <h3 style={{ fontWeight: 'bold' }}>Ticket Booking</h3>
                 <Form >
 
+                    <FormGroup>
+                        <Label for="userName" disabled>Name</Label>
+                        <Input type="text" name="name" id="qaCinemaName" placeholder="Enter your name" />
+                    </FormGroup>
+                    <br />
 
-
-                    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                    
+                    <Dropdown isOpen={dropdownOpen} toggle={toggle} size="sm" >
                         <DropdownToggle caret>
-                            Select your movie
+                            Adults
                          </DropdownToggle>
                         <DropdownMenu>
-
+                            <DropdownItem onClick={()=>setAdults(1)}  >1</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(2)}  >2</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(3)}  >3</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(4)} >4</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(5)} >5</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(6)} >6</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(7)} >7</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(8)} >8</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(9)} >9</DropdownItem>
+                            <DropdownItem onClick={()=>setAdults(10)} >10</DropdownItem>
                         </DropdownMenu>
-                    </Dropdown>
+                        </Dropdown>
+
+                        <Dropdown isOpen={dropdownOpen} toggle={toggle} size="sm" >
+                        <DropdownToggle caret>
+                            Children
+                         </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem onClick={()=>setChildren(1)}  >1</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(2)}  >2</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(3)}  >3</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(4)} >4</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(5)} >5</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(6)} >6</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(7)} >7</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(8)} >8</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(9)} >9</DropdownItem>
+                            <DropdownItem onClick={()=>setChildren(10)} >10</DropdownItem>
+                        </DropdownMenu>
+                        <p>You have selected : {adults} adults and {child} children</p>
+                        </Dropdown>
+
+                   
 
                     <InteractiveCalendar />
 
-                    <FormGroup>
-                        <Label for="exampleEmail" disabled>Number of seats</Label>
-                        <Input type="text" name="email" id="exampleEmail" placeholder="Enter the number of seats" />
-                    </FormGroup>
 
-                    <FormGroup>
-                        <Label for="exampleText">Enter your message here!</Label>
-                        <Input type="textarea" name="message" id="exampleText" />
-                    </FormGroup>
+
+
 
                     <Button color="primary" type="submit">Send</Button>
                 </Form>
