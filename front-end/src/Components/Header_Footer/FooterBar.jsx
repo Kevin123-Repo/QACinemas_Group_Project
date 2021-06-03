@@ -31,7 +31,7 @@ const FooterBar = () => {
                             <NavLink><Link to="/About">About</Link></NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink><Link to="/ContactPage">About</Link></NavLink>
+                            <NavLink><Link to="/ContactPage">Contact Us</Link></NavLink>
                         </NavItem>
                     </Nav>
                     <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
