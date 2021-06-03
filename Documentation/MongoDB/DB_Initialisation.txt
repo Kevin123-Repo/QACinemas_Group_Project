@@ -107,5 +107,37 @@ db.movies.insertMany([
 			"times": ["12:00", "13:30", "15:00", "16:00", "18:00", "19:30"]
 		}
 	]
+},
+{
+    "title" : "Fast & Furious 9",
+	"actors": ["Vin Diesel", "Michelle Rodriguez", "Jordana Brewster", "Tyrese Gibson", "Charlize Theron"],
+    "director": "Justin Lin",
+	"imageUrl": "https://m.media-amazon.com/images/M/MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_.jpg",
+	"classification": "12A",
+	"releaseDate": new Date("2021-06-24")
+},
+{
+    "title" : "Black Widow",
+	"actors": ["Scarlett Johansson", "Florence Pugh", "Rachel Weisz", "David Harbour", "William Hurt"],
+    "director": "Cate Shortland",
+	"imageUrl": "https://m.media-amazon.com/images/M/MV5BYjdmODAzNTctNWU1NS00ZmRiLWFiM2YtMjAyNzgzZWJlZjhlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+	"classification": "12A",
+	"releaseDate": new Date("2021-07-09")
+},
+{
+    "title" : "Free Guy",
+	"actors": ["Ryan Reynolds", "Taika Waititi", "Jodie Comer", "Joe Keery", "Matty Cardarople"],
+    "director": "Shawn Levy",
+	"imageUrl": "https://m.media-amazon.com/images/M/MV5BYTNjNzFiZTItNDM5NS00ODBhLTk5NmMtYzUyZWRmOWJjOTI3XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg",
+	"classification": "12A",
+	"releaseDate": new Date("2021-08-13")
+}, 
+{
+    "title" : "No Time To Die",
+	"actors": ["Daniel Craig", "Ana de Armas", "Rami Malek", "Ralph Fiennes", "Lea Seydoux"],
+    "director": "Cary Joji Fukunaga",
+	"imageUrl": "https://m.media-amazon.com/images/M/MV5BMTk3ZGM2YzQtMmYxYy00NDZjLWFmOTUtZTQwMzg0ZjA5ZjU3XkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_.jpg",
+	"classification": "12A",
+	"releaseDate": new Date("2021-09-30")
 } 
 ])
