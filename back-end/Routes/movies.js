@@ -14,5 +14,14 @@ ROUTER.get("/movies/getAll", async(req, res, next) => {
     }
 });
 
+ROUTER.get("/movies/get/:title", async(req, res, next) => {
+    try {
+        const FOUND = await MOVIE.findOne({ title: req.params.title });
+        (FOUND)? res.send(FOUND) : next(new Error("ERROR: Could not find a movie with that title"));
+    } catch(err) {
+        next(new Error(err.message));
+    }
+});
+
 // Export
 module.exports = ROUTER;
