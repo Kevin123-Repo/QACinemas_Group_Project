@@ -1,6 +1,6 @@
 use qacinemas
 
-db.createCollection("Movies")
+db.createCollection("movies")
 
 
 db.Movies.insertMany([
