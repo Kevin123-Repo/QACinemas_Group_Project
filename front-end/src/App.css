@@ -6,6 +6,11 @@
   text-decoration: none;
   color: rgba(0,0,0,.55);
 }
+
+.main-content {
+  margin-top:5%;
+  margin-bottom: 5%;
+}
 /* .App {
   text-align: center;
 }

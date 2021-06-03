@@ -15,29 +15,31 @@ function App() {
     <>
       <Router>
         <NavBar />
-        <Switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-          <Route path="/OpeningTimes">
-            <OpeningTimes />
-          </Route>
-          <Route path="/GettingThere">
-            <GettingThere />
-          </Route>
-          <Route path="/Classifications">
-            <Classifications />
-          </Route>
-          <Route path="/PlacesToGo">
-            <PlacesToGo />
-          </Route>
-          <Route path="/About">
-            <About />
-          </Route>
-          <Route path="/ContactPage">
-            <ContactPage />
-          </Route>
-        </Switch>
+        <div className="container-fluid main-content">
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route path="/OpeningTimes">
+              <OpeningTimes />
+            </Route>
+            <Route path="/GettingThere">
+              <GettingThere />
+            </Route>
+            <Route path="/Classifications">
+              <Classifications />
+            </Route>
+            <Route path="/PlacesToGo">
+              <PlacesToGo />
+            </Route>
+            <Route path="/About">
+              <About />
+            </Route>
+            <Route path="/ContactPage">
+              <ContactPage />
+            </Route>
+          </Switch>
+        </div>
         <FooterBar />
       </Router>
     </>
