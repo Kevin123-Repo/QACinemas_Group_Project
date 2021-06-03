@@ -9,6 +9,7 @@
 
 
 
+
 .carousel {
   width:1000px;
   height:800px;
@@ -18,6 +19,11 @@
 .carousel-caption {
   top: auto;
   bottom: 0;
+
+.main-content {
+  margin-top:5%;
+  margin-bottom: 5%;
+
 }
 /* .App {
   text-align: center;

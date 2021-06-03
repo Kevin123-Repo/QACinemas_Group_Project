@@ -6,6 +6,9 @@ import GoogleMap from "./GoogleMap";
 const GettingThere = (props) => {
     return (
         <>
+        <br/>
+        <br/>
+        <br/>
             <Container>
                 {/* Public Transport row and col */}
                 <Row>
@@ -24,7 +27,7 @@ const GettingThere = (props) => {
 
                 <Row>
                     <Col><p>Our facilities has state of the art accessability. Parking included! All available parking spaces and disabled priority spaces will be at the front of the venue!</p>
-                     <img src={Cinema_Image} width = "40%" /></Col>
+                     <img src={Cinema_Image} width = "40%" alt =""/></Col>
                 </Row>
 
 

@@ -8,6 +8,14 @@ import GettingThere from './Components/Getting_There/GettingThere'
 import Screens from './Components/Screens/Screens';
 
 
+import OpeningTimes from './Components/OpeningTimes/OpeningTimes';
+import GettingThere from './Components/Getting_There/GettingThere';
+import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
+import Classifications from './Components/Classifications/Classifications';
+import About from './Components/About/About';
+import ContactPage from './Components/ContactPage/ContactPage';
+
+
 function App() {
   return (
     <>
@@ -27,10 +35,35 @@ function App() {
             <Screens />
           </Route>
         </Switch>
+
+        <div className="container-fluid main-content">
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route path="/OpeningTimes">
+              <OpeningTimes />
+            </Route>
+            <Route path="/GettingThere">
+              <GettingThere />
+            </Route>
+            <Route path="/Classifications">
+              <Classifications />
+            </Route>
+            <Route path="/PlacesToGo">
+              <PlacesToGo />
+            </Route>
+            <Route path="/About">
+              <About />
+            </Route>
+            <Route path="/ContactPage">
+              <ContactPage />
+            </Route>
+          </Switch>
+        </div>
         <FooterBar />
       </Router>
     </>
-
   );
 }
 
