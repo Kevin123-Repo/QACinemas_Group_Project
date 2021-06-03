@@ -11,10 +11,11 @@ import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
 
-
 function App() {
   return (
     <>
+      <Router>
+        <NavBar/>
         <div className="container-fluid main-content">
           <Switch>
             <Route exact path="/">
