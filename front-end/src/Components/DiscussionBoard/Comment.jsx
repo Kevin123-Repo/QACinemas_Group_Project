@@ -1,8 +1,8 @@
 const Comment = (props) => {
 
-    const { comment, setUpdate } = props;
+    const { comment } = props;
     console.log(comment);
-    
+
 
     return (
         <tr>
