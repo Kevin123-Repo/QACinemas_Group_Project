@@ -34,10 +34,18 @@ const CommentsTable = () => {
         return (
             <>
                 <Table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Rating</th>
+                        <th>Film</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
                 <tbody>
                     {data.map((comment) => (
                        
-                            <Comment key={comment.id} comment={comment} setUpdate={setUpdate} />
+                            <Comment key={comment.id} comment={comment} />
                         
                     ))}
                     

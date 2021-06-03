@@ -1,10 +1,12 @@
+import CommentsForm from "./CommentsForm";
 import CommentsTable from "./CommentsTable"
 
-const DiscussionBoard = () =>{
-    return(
+const DiscussionBoard = () => {
+    return (
         <>
-        <h1>Disccusion Board</h1>
-        <CommentsTable/>
+            <h1>Disccusion Board</h1>
+            <CommentsForm/>
+            <CommentsTable />
         </>
     )
 }
