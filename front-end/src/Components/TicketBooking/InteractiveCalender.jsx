@@ -24,13 +24,13 @@ const InteractiveCalendar = () => {
           minDate ={new Date()}
           onChange={onChange}
           value={date}
-          
+         
 
         />
-        {"You have selected: " + date.toLocaleDateString()}
-        
+        {"You have selected: " + date.getDay()}
+       
       </div>
-
+      
     </>
   )
 }
