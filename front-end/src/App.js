@@ -1,4 +1,5 @@
 import './App.css';
+import 'react-slideshow-image/dist/styles.css';
 import Homepage from './Components/Homepage';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import NavBar from './Components/Header_Footer/NavBar';
@@ -9,11 +10,13 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
+import NewReleases from './Components/NewReleases/NewReleases';
 
 function App() {
   return (
     <>
-      <Router>
+    <NewReleases/>
+      {/* <Router>
         <NavBar />
         <div className="container-fluid main-content">
           <Switch>
@@ -41,7 +44,7 @@ function App() {
           </Switch>
         </div>
         <FooterBar />
-      </Router>
+      </Router> */}
     </>
   );
 }
