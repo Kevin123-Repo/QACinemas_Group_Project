@@ -8,6 +8,7 @@ import GettingThere from './Components/Getting_There/GettingThere';
 import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
+import ContactPage from './Components/ContactPage/ContactPage';
 
 function App() {
   return (
@@ -33,7 +34,9 @@ function App() {
           <Route path="/About">
             <About />
           </Route>
-
+          <Route path="/ContactPage">
+            <ContactPage />
+          </Route>
         </Switch>
         <FooterBar />
       </Router>

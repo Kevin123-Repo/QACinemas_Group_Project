@@ -59,7 +59,7 @@ const NavBar = () => {
                   <Link to="/OpeningTimes">Opening Times</Link>
                 </DropdownItem>
                 <DropdownItem href="">
-                  Contact Us
+                <Link to="/ContactPage">Contact Us</Link>
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem href="">
