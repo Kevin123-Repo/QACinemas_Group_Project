@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import {
     Carousel,
     CarouselItem,
     CarouselControl,
-    CarouselIndicators,
     CarouselCaption
 } from 'reactstrap';
 
@@ -36,7 +36,6 @@ const ListingGallery = () => {
         axios.get("http://localhost:8080/movies/getAll")
             .then((res) => {
                 const DATA = res.data;
-                console.log(DATA);
                 setData(DATA);
                 setIsLoaded(true);
                 removeLabels();
@@ -53,7 +52,9 @@ const ListingGallery = () => {
             onExited={() => setAnimating(false)}
             key={i}
           >
-            <img className={"listingImgs"} src={item.imageUrl} alt={""} />
+            <Link to={`/movies/${item.title}`}>
+                <img className={"listingImgs"} src={item.imageUrl} alt={""} />
+            </Link>
             <CarouselCaption captionText={item.title} />
           </CarouselItem>
         );
@@ -73,9 +74,8 @@ const ListingGallery = () => {
                     activeIndex={activeIndex}
                     next={next}
                     previous={previous}
-                    interval={false}
+                    interval={false} // Auto-play (off for testing, on for live)
                 >
-                    <CarouselIndicators items={data} activeIndex={activeIndex} onClickHandler={goToIndex} />
                     {slides}
                     <CarouselControl direction="prev" onClickHandler={previous} />
                     <CarouselControl direction="next" onClickHandler={next} />

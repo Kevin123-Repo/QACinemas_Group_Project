@@ -10,8 +10,8 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
-import ListingGallery from './Components/NewReleases/ListingGallery';
-
+import ListingGallery from './Components/ListingGallery/ListingGallery';
+import MovieInfo from './Components/ListingGallery/MovieInfo';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Router>
         <NavBar/>
         <div className="container-fluid main-content">
-          {/* <Switch>
+          <Switch>
             <Route exact path="/">
               <Homepage />
             </Route>
@@ -44,8 +44,13 @@ function App() {
             <Route path="/Screens">
               <Screens />
             </Route>
-          </Switch> */}
-          <ListingGallery/>
+            <Route path="/Listings">
+              <ListingGallery/>
+            </Route>
+            <Route path="/movies/:movie">
+              <MovieInfo/>
+            </Route>
+          </Switch>
         </div>
         <FooterBar />
       </Router>
