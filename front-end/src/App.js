@@ -13,6 +13,7 @@ import ContactPage from './Components/ContactPage/ContactPage';
 import ListingGallery from './Components/Listings/ListingGallery';
 import MovieInfo from './Components/Listings/MovieInfo';
 import NewReleases from './Components/Listings/NewReleases';
+import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
 
 function App() {
   return (
@@ -54,10 +55,13 @@ function App() {
             <Route path="/movies/:movie">
               <MovieInfo/>
             </Route>
+            <Route path="/Discussion">
+              <DiscussionBoard />
+            </Route>
           </Switch>
         </div>
         <FooterBar />
-      </Router>
+      </Router> 
     </>
   );
 }

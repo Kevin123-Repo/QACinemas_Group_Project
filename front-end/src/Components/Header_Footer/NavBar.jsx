@@ -71,7 +71,7 @@ const NavBar = () => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="">Discussion</NavLink>
+              <NavLink href="/Discussion">Discussion</NavLink>
             </NavItem>
           </Nav>
           <NavbarText></NavbarText>
