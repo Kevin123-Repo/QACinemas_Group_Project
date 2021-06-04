@@ -35,10 +35,10 @@ const NavBar = () => {
               <NavLink href="">Listings</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Bookings</NavLink>
+              <NavLink><Link to="/TicketBooking">Bookings</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink> <Link to="/Classifications">Classifications</Link></NavLink>
+              <NavLink><Link to="/Classifications">Classifications</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">Screens</NavLink>
