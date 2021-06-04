@@ -19,7 +19,7 @@ const FooterBar = () => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md" fixed="bottom">
+            <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">QA Cinema</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
