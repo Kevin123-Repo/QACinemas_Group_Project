@@ -11,11 +11,13 @@ import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
+import Payments from './Components/Payments/Payments';
 
 function App() {
   return (
     <>
-      <Router>
+      <Payments />
+      {/* <Router>
         <NavBar/>
         <div className="container-fluid main-content">
           <Switch>
@@ -49,7 +51,7 @@ function App() {
           </Switch>
         </div>
         <FooterBar />
-      </Router> 
+      </Router>  */}
     </>
   );
 }
