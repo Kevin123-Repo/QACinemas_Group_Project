@@ -5,7 +5,7 @@ import BadWordsFilter from "bad-words";
 const CommentsForm = ({ handleUpdate }) => {
 
     const [username, setUsername] = useState("Anonymous");
-    const [comment, setComment] = useState("");
+    const [comment, setComment] = useState("Comment");
     const [rating, setRating] = useState("");
     const [movieTitle, setMovieTitle] = useState("N/A");
     const [movie, setMovie] = useState("");
@@ -15,7 +15,7 @@ const CommentsForm = ({ handleUpdate }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const dataTosend = {
-            "username": username,
+            "username": filter.clean(username),
             "comment": filter.clean(comment),
             "rating": rating,
             "movieTitle": movieTitle
@@ -32,7 +32,7 @@ const CommentsForm = ({ handleUpdate }) => {
 
             });
         setUsername("Anonymous");
-        setComment("");
+        setComment("Comment");
         setRating("");
         setMovieTitle("N/A");
         handleUpdate();
