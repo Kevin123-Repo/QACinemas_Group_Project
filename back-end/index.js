@@ -9,7 +9,7 @@ const DISCUSSION_BOARD_ROUTES = require("./Routes/discussionboard");
 const BOOKING_ROUTES = require("./Routes/bookings");
 const PAYMENT_ROUTES = require("./Routes/payments");
 const APP = EXPRESS();
-const PORT = 3000;
+const PORT = 8080;
 
 // Middleware & Routes
 APP.use(CORS());                       // Disable Cross Origin Resource Sharing Restrictions

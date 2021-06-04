@@ -10,6 +10,7 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
+import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
 
 function App() {
   return (
@@ -42,10 +43,13 @@ function App() {
             <Route path="/Screens">
               <Screens />
             </Route>
+            <Route path="/Discussion">
+              <DiscussionBoard />
+            </Route>
           </Switch>
         </div>
         <FooterBar />
-      </Router>
+      </Router> 
     </>
   );
 }
