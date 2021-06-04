@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, Label, Input } from 'reactstrap';
+import { Row, FormGroup, Label, Input, Col } from 'reactstrap';
 import {Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -14,12 +14,15 @@ const Searchbar = () => {
     }
 
     return(
-        <>
-            <FormGroup>
-                <Label for="exampleText">Search</Label>
-                <Input type="text" id="movieSearch" onInput={handleFilter}/>
-                <Link to={searchQuery}><button type="submit">Submit</button></Link>
-            </FormGroup>
+        <>  
+            <Row>
+                <FormGroup>
+                
+                    <Input type="text" id="movieSearch" onInput={handleFilter} placeholder="Search"/>
+                    <Link to={searchQuery}><button type="submit">Submit</button></Link>
+                    
+                </FormGroup>
+            </Row>
         </>
     );
 }

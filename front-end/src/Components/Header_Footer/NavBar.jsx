@@ -76,8 +76,8 @@ const NavBar = () => {
             </NavItem>
           </Nav>
           <NavbarText></NavbarText>
+          <Searchbar/>
         </Collapse>
-        <Searchbar/>
       </Navbar >
     </div >
   );
