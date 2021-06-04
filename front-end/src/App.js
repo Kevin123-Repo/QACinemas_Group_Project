@@ -14,7 +14,7 @@ import TicketBooking from './Components/TicketBooking/TicketBooking';
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <NavBar />
         <Switch>
           <Route exact path="/">
@@ -43,7 +43,8 @@ function App() {
           </Route>
         </Switch>
         <FooterBar />
-      </Router>
+      </Router> */}
+      <TicketBooking/>
     </>
   );
 }

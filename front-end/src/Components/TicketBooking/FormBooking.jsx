@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-
+import axios from "axios";
 import { Row, Col, Button, Form, FormGroup, Label, Input, Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import InteractiveCalendar from './InteractiveCalender';
 import Calendar from 'react-calendar';
@@ -8,34 +8,44 @@ import 'react-calendar/dist/Calendar.css';
 
 
 
-const FormBooking = ({data}) => {
+const FormBooking = ({ data }) => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [dropdownOpenTwo, setDropdownOpenTwo] = useState(false);
     const [dropdownOpenThree, setDropdownOpenThree] = useState(false);
     const [dropdownOpenMovie, setDropdownOpenMovie] = useState(false);
-    
+    const [dropdownOpenMovieTimes, setDropdownOpenMovieTimes] = useState(false);
+    const [dropdownConcessions, setDropdownConcessions] = useState(false);
 
-    const [adults, setAdults] = useState(0);
-    const [child, setChildren] = useState(0);
-    const [seats, setSeats] = useState(0);
+    const [name, setName] = useState("");
+    const [adults, setAdults] = useState("Adults");
+    const [child, setChildren] = useState("Children");
+    const [concession, setConcession] = useState("Concession");
+    const [seats, setSeats] = useState("Seats");
+    
     const [selectedMovie, setSelectedMovie] = useState("Movies");
+    const [selectedTime, setSelectedTime] = useState("Times for " ,{selectedMovie});
     const [showingTimes, setShowingTimes] = useState([]);
     const [times, setTimes] = useState([]);
+    
     const [days, setDays] = useState([]);
     const [date, setDate] = useState(new Date());
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
     const toggleTwo = () => setDropdownOpenTwo(prevState => !prevState);
     const toggleThree = () => setDropdownOpenThree(prevState => !prevState);
+    
+
     const toggleMovie = () => setDropdownOpenMovie(prevState => !prevState);
+    const toggleMovieTimes = () => setDropdownOpenMovieTimes(prevState => !prevState);
+    const toggleConcessions = () => setDropdownConcessions(prevState => !prevState);
 
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     const changeDate = (date) => {
         setDate(date);
     };
-  
+
     useEffect(() => {
         let daysArr = [];
         for (let obj of data) {
@@ -48,16 +58,49 @@ const FormBooking = ({data}) => {
                     }
                 }
             }
-        } 
+        }
         setDays(daysArr);
     }, [selectedMovie, date]);
 
+    const submitBooking=(e)=>{
+        e.preventDefault();
+
+        const obj = {
+            movieTitle : selectedMovie,
+            date : date,
+            time : selectedTime,
+            name : name, 
+            numberOfSeats: seats,
+            adults : adults,
+            child: child,
+            concession: concession
+        }
+        axios
+            .post("http://localhost:8080/bookings/post", obj)
+            .then((response) => {
+
+                // setAdults(0);
+                // setChildren(0);
+                // setSeats(0);
+                // setSelectedMovie("");
+                // setShowingTimes([]);
+                // setDate([])
+
+            })
+            .catch((err) => {
+                console.log(err.message);
+                setIsLoaded(true)
+            })
+
+        console.log(obj);
+
+        }
+
     return (
         <>
-
-
-               
             <Form >
+                <h5 style={{ fontWeight: 'bold' }}>Name:</h5>
+                <Input type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
 
                 <br />
                 <h5 style={{ fontWeight: 'bold' }}>Select the Movie</h5>
@@ -65,45 +108,36 @@ const FormBooking = ({data}) => {
                 <Dropdown isOpen={dropdownOpenMovie} toggle={toggleMovie} size="sm" >
                     <DropdownToggle caret>
                         {selectedMovie}
-                            </DropdownToggle>
+                    </DropdownToggle>
                     <DropdownMenu>
-
-
-                    {
-                    data.map((obj, i)=>(
-                        <DropdownItem  onClick={() => setSelectedMovie(obj.title)} key = {i} >{obj.title}</DropdownItem>
-                    ))
-                }
-
+                        {
+                            data.map((obj, i) => (
+                                <DropdownItem onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
+                            ))
+                        }
                     </DropdownMenu>
-
                 </Dropdown>
 
                 <br />
 
-
-
-                
-
-
                 <Row>
-                    <h5 style={{ fontWeight: 'bold' }}>Select the number of Adult and Children</h5>
+                    <h5 style={{ fontWeight: 'bold' }}>Adult, Children , seats and concessions</h5>
                     <Col sm="2">
                         <Dropdown isOpen={dropdownOpen} toggle={toggle} size="sm" >
                             <DropdownToggle caret>
-                                Adults
+                                {adults}
                             </DropdownToggle>
                             <DropdownMenu>
-                                <DropdownItem onClick={() => setAdults(1)}  >1</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(2)}  >2</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(3)}  >3</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(4)} >4</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(5)} >5</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(6)} >6</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(7)} >7</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(8)} >8</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(9)} >9</DropdownItem>
-                                <DropdownItem onClick={() => setAdults(10)} >10</DropdownItem>
+                                <DropdownItem value={1} onClick={(e) => setAdults(e.target.value)}>1</DropdownItem>
+                                <DropdownItem value={2} onClick={(e) => setAdults(e.target.value)}>2</DropdownItem>
+                                <DropdownItem value={3} onClick={(e) => setAdults(e.target.value)}>3</DropdownItem>
+                                <DropdownItem value={4} onClick={(e) => setAdults(e.target.value)}>4</DropdownItem>
+                                <DropdownItem value={5} onClick={(e) => setAdults(e.target.value)}>5</DropdownItem>
+                                <DropdownItem value={6} onClick={(e) => setAdults(e.target.value)}>6</DropdownItem>
+                                <DropdownItem value={7} onClick={(e) => setAdults(e.target.value)}>7</DropdownItem>
+                                <DropdownItem value={8} onClick={(e) => setAdults(e.target.value)}>8</DropdownItem>
+                                <DropdownItem value={9} onClick={(e) => setAdults(e.target.value)}>9</DropdownItem>
+                                <DropdownItem value={10} onClick={(e) => setAdults(e.target.value)}>10</DropdownItem>
                             </DropdownMenu>
 
                         </Dropdown>
@@ -112,72 +146,92 @@ const FormBooking = ({data}) => {
                     <Col sm="2">
                         <Dropdown isOpen={dropdownOpenTwo} toggle={toggleTwo} size="sm" >
                             <DropdownToggle caret>
-                                Children
+                                {child}
                             </DropdownToggle>
                             <DropdownMenu>
-                                <DropdownItem onClick={() => setChildren(1)}  >1</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(2)}  >2</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(3)}  >3</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(4)} >4</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(5)} >5</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(6)} >6</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(7)} >7</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(8)} >8</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(9)} >9</DropdownItem>
-                                <DropdownItem onClick={() => setChildren(10)} >10</DropdownItem>
+                                <DropdownItem value={1}  onClick={(e) => setChildren(e.target.value)}>1</DropdownItem>
+                                <DropdownItem value={2} onClick={(e) => setChildren(e.target.value)}>2</DropdownItem>
+                                <DropdownItem value={3} onClick={(e) => setChildren(e.target.value)}>3</DropdownItem>
+                                <DropdownItem value={4} onClick={(e) => setChildren(e.target.value)}>4</DropdownItem>
+                                <DropdownItem value={5} onClick={(e) => setChildren(e.target.value)}>5</DropdownItem>
+                                <DropdownItem value={6} onClick={(e) => setChildren(e.target.value)}>6</DropdownItem>
+                                <DropdownItem value={7} onClick={(e) => setChildren(e.target.value)}>7</DropdownItem>
+                                <DropdownItem value={8} onClick={(e) => setChildren(e.target.value)}>8</DropdownItem>
+                                <DropdownItem value={9} onClick={(e) => setChildren(e.target.value)}>9</DropdownItem>
+                                <DropdownItem value={10} onClick={(e) => setChildren(e.target.value)}>10</DropdownItem>
                             </DropdownMenu>
 
                         </Dropdown>
                     </Col>
-
 
                     <Col sm="2">
                         <Dropdown isOpen={dropdownOpenThree} toggle={toggleThree} size="sm" >
                             <DropdownToggle caret>
-                                Seats
+                                {seats} 
                             </DropdownToggle>
                             <DropdownMenu>
-                                <DropdownItem onClick={() => setSeats(1)}  >1</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(2)}  >2</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(3)}  >3</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(4)} >4</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(5)} >5</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(6)} >6</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(7)} >7</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(8)} >8</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(9)} >9</DropdownItem>
-                                <DropdownItem onClick={() => setSeats(10)} >10</DropdownItem>
+                                <DropdownItem value={1} onClick={(e) => setSeats(e.target.value)}>1</DropdownItem>
+                                <DropdownItem value={2} onClick={(e) => setSeats(e.target.value)}>2</DropdownItem>
+                                <DropdownItem value={3} onClick={(e) => setSeats(e.target.value)}>3</DropdownItem>
+                                <DropdownItem value={4} onClick={(e) => setSeats(e.target.value)}>4</DropdownItem>
+                                <DropdownItem value={5} onClick={(e) => setSeats(e.target.value)}>5</DropdownItem>
+                                <DropdownItem value={6} onClick={(e) => setSeats(e.target.value)}>6</DropdownItem>
+                                <DropdownItem value={7} onClick={(e) => setSeats(e.target.value)}>7</DropdownItem>
+                                <DropdownItem value={8} onClick={(e) => setSeats(e.target.value)}>8</DropdownItem>
+                                <DropdownItem value={9} onClick={(e) => setSeats(e.target.value)}>9</DropdownItem>
+                                <DropdownItem value={10} onClick={(e) => setSeats(e.target.value)}>10</DropdownItem>
                             </DropdownMenu>
-
                         </Dropdown>
                     </Col>
-                    <p>{adults} Adults and {child} Children with {seats} seats selected</p>
+                    
+
+                    <Col sm="2">
+                        <Dropdown isOpen={dropdownConcessions} toggle={toggleConcessions} size="sm" >
+                            <DropdownToggle caret>
+                                {concession}
+                            </DropdownToggle>
+                            <DropdownMenu>
+                                <DropdownItem value={1} onClick={(e) => setConcession(e.target.value)}>1</DropdownItem>
+                                <DropdownItem value={2} onClick={(e) => setConcession(e.target.value)}>2</DropdownItem>
+                                <DropdownItem value={3} onClick={(e) => setConcession(e.target.value)}>3</DropdownItem>
+                            </DropdownMenu>
+                        </Dropdown>
+                    </Col>
+
+                    
                 </Row>
 
 
+                            
+                
 
-
-                {/* <InteractiveCalendar date={date} changeDate={changeDate}/> */}
                 <div>
-
                     <h5 style={{ fontWeight: 'bold' }}>Select a Date</h5>
                     <Calendar
-
                         // maxDate={}
                         minDate={new Date()}
                         onChange={changeDate}
                         value={date}
-                        tileDisabled = {({activeStartDate, date, view }) => !days.includes(date.getDay())}
-
+                        tileDisabled={({ activeStartDate, date, view }) => !days.includes(date.getDay())}
                     />
-                    {"You have selected: " + date.getDay()}
-
                 </div>
 
+                <br />
 
-
-
-
+                <h5 style={{ fontWeight: 'bold' }}>Select the time</h5>
+                <Dropdown isOpen={dropdownOpenMovieTimes} toggle={toggleMovieTimes} size="sm" >
+                    <DropdownToggle caret>
+                       {selectedTime}
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        {
+                            times.map((time, i) => (
+                                <DropdownItem onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
+                            ))
+                        }
+                    </DropdownMenu>
+                </Dropdown>
+                <br />
                 <Button color="primary" type="submit">Send</Button>
             </Form>
         </>
