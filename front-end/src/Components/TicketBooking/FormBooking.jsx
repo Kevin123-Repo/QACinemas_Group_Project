@@ -77,28 +77,23 @@ const FormBooking = ({ data }) => {
         }
         axios
             .post("http://localhost:8080/bookings/post", obj)
-            .then((response) => {
-
+            .then((res) => {
+                console.log(res);
                 // setAdults(0);
                 // setChildren(0);
                 // setSeats(0);
                 // setSelectedMovie("");
                 // setShowingTimes([]);
                 // setDate([])
-
             })
             .catch((err) => {
                 console.log(err.message);
-                setIsLoaded(true)
             })
-
-        console.log(obj);
-
         }
 
     return (
         <>
-            <Form >
+            <Form onSubmit={submitBooking}>
                 <h5 style={{ fontWeight: 'bold' }}>Name:</h5>
                 <Input type="text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
 
