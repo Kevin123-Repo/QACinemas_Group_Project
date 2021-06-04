@@ -41,7 +41,7 @@ const NavBar = () => {
               <NavLink> <Link to="/Classifications">Classifications</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Screens</NavLink>
+              <NavLink><Link to="/Screens">Screens</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="">New Releases</NavLink>
@@ -71,7 +71,7 @@ const NavBar = () => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="">Discussion</NavLink>
+              <NavLink href="/Discussion">Discussion</NavLink>
             </NavItem>
           </Nav>
           <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
