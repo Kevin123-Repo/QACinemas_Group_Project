@@ -36,9 +36,9 @@ const CommentsTable = ({update}) => {
                     <thead>
                         <tr>
                             <th>Username</th>
-                            <th>Rating</th>
-                            <th>Film</th>
                             <th>Comment</th>
+                            <th>Film</th>
+                            <th>Rating</th>
                         </tr>
                     </thead>
                     <tbody>
