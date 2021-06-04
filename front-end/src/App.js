@@ -14,6 +14,7 @@ import ListingGallery from './Components/Listings/ListingGallery';
 import MovieInfo from './Components/Listings/MovieInfo';
 import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
+import SearchLinksPage from './Components/Searchbar/SearchLinksPage';
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
             </Route>
             <Route path="/Discussion">
               <DiscussionBoard />
+            </Route>
+            <Route path="/search/:query">
+              <SearchLinksPage />
             </Route>
           </Switch>
         </div>

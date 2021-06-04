@@ -15,6 +15,7 @@ import {
   NavbarText
 } from 'reactstrap';
 import { NavLink as Link } from 'react-router-dom'
+import Searchbar from '../Searchbar/Searchbar';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,6 +77,7 @@ const NavBar = () => {
           </Nav>
           <NavbarText></NavbarText>
         </Collapse>
+        <Searchbar/>
       </Navbar >
     </div >
   );
