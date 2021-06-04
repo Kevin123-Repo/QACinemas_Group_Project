@@ -1,6 +1,7 @@
 const Comment = (props) => {
     const { comment } = props;
-    console.log(comment);
+    const myString = comment.comment;
+    console.log(myString);
     
 
 

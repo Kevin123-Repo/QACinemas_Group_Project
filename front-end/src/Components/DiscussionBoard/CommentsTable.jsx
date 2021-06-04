@@ -16,7 +16,7 @@ const CommentsTable = ({update}) => {
             .get("http://localhost:8080/discussions/getAll")
             .then((response) => {
                 setData(response.data);
-                console.log(response);
+                // console.log(response);
 
             })
             .catch((error) => {
@@ -42,9 +42,9 @@ const CommentsTable = ({update}) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((comment) => (
+                        {data.map((comment,index) => (
 
-                            <Comment key={comment.id} comment={comment} />
+                            <Comment key={index} comment={comment} />
 
                         ))}
 

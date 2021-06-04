@@ -42,7 +42,7 @@ const CommentsForm = ({ handleUpdate }) => {
         axios
             .get("http://localhost:8080/movies/getAll")
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 setMovie(response.data);
                 setIsLoading(false);
 
@@ -79,13 +79,12 @@ const CommentsForm = ({ handleUpdate }) => {
                         name="rating"
                         value={rating}
                         onChange={(e) => setRating(e.target.value)}>
-                        <option selected>0</option>
+                        <option value="N/A"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                        <label>Test</label>
                     </select>
                     <label>Movie</label>
                     <select id="test"
@@ -93,7 +92,7 @@ const CommentsForm = ({ handleUpdate }) => {
                         name="movie"
                         value={movieTitle}
                         onChange={(e) => setMovieTitle(e.target.value)}>
-                        <option selected="N/A"></option>
+                        <option></option>
                         {movie.map((movie) => (
                             <option key={movie.title}>{movie.title}</option>
                         ))}
