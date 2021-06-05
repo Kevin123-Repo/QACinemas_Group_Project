@@ -20,6 +20,6 @@ const Payments = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 export default Payments;
