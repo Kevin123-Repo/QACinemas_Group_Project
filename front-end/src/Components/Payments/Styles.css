@@ -54,16 +54,17 @@
   
   .card-error {
     color: red;
-    margin-left: 7vw;
+    margin-left: 22vw;
   }
 
   .card-success {
     color: green;
-    margin-left: 7vw;
+    margin-left: 29vw;
   }
 
   .card-loading {
-    margin-left: 20vw;
+    margin-left: 6vw;
+    margin-top: 1vw;
   }
 
   label {
@@ -91,7 +92,6 @@
     text-decoration: none;
     -webkit-transition: all 150ms ease;
     transition: all 150ms ease;
-    margin-left: 7vw;
   }
   
   button:hover {
@@ -105,7 +105,7 @@
   input,
   .StripeElement {
     display: block;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 5px 0;
     max-width: 500px;
     padding: 10px 14px;
     font-size: 1em;

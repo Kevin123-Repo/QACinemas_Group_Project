@@ -2,28 +2,18 @@ import { CardElement, CardNumberElement, CardExpiryElement, CardCvcElement} from
 import { Input, Col, Row, Container } from 'reactstrap';
 import "./Styles.css";
 
-function CardSection({name, changeName}) {
+function CardSection({name}) {
   return (
-    <Container>
-      <Col md={4}>
+    <>
         <label htmlFor="cardName">Card Holder's Name</label>
-        <Input type="text" placeholder="Card Holder's Name" value={name} onChange={(e) => changeName(e.target.value)}/>
-      </Col>
-      <Col md={4}>
+        <Input type="text" placeholder={name} value={name} readOnly/>
         <label htmlFor="cardNumber">Card Number</label>
         <CardNumberElement/>
-      </Col>
-      <Row >
-        <Col md={2}>
-          <label htmlFor="cardExpiry">Card Expiry</label>
-          <CardExpiryElement/>
-        </Col>
-        <Col md={2}>
-          <label htmlFor="cardCVC">Card CVC</label>
-          <CardCvcElement/>
-        </Col>
-      </Row>
-    </Container>
+        <label htmlFor="cardExpiry">Card Expiry</label>
+        <CardExpiryElement/>
+        <label htmlFor="cardCVC">Card CVC</label>
+        <CardCvcElement/>
+    </>
   );
 }
 

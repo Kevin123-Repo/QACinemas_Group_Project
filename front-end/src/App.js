@@ -19,11 +19,11 @@ import Payments from './Components/Payments/Payments';
 function App() {
   return (
     <>
-      <Payments />
-      {/* <Router>
+      <Router>
         <NavBar/>
         <div className="container-fluid main-content">
-          <Switch>
+        <Payments />
+          {/* <Switch>
             <Route exact path="/">
               <Homepage />
             </Route>
@@ -60,10 +60,10 @@ function App() {
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
-          </Switch>
+          </Switch> */}
         </div>
         <FooterBar />
-      </Router>  */}
+      </Router> 
     </>
   );
 }

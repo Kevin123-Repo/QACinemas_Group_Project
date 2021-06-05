@@ -1,4 +1,4 @@
-/* .dropdown-item a {
+.dropdown-item a {
   text-decoration: none;
   color: #1e2125;
 }
@@ -21,7 +21,6 @@
 
 .main-content {
   margin-top:8%;
-  margin-bottom: 6%;
   width:80%
 }
 
@@ -76,16 +75,14 @@
   margin-top: 1vw;
   color: #0f4b5a;
   font-size: 1.3vw;
-} */
-
-/* .paymentDiv {
-  font-family: sans-serif;
-  height: 100vh;
-  display: flex;
-  align-items: center;
 }
 
-.StripeElement {
+.payment-form {
+  margin-left: 20vw;
+  width: 35vw;
+}
+
+/*.StripeElement {
   margin: 15px auto;
   padding: 10px 12px;
   color: #32325d;
