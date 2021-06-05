@@ -22,8 +22,7 @@ function App() {
       <Router>
         <NavBar/>
         <div className="container-fluid main-content">
-        <Payments />
-          {/* <Switch>
+          <Switch>
             <Route exact path="/">
               <Homepage />
             </Route>
@@ -60,7 +59,7 @@ function App() {
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
-          </Switch> */}
+          </Switch>
         </div>
         <FooterBar />
       </Router> 
