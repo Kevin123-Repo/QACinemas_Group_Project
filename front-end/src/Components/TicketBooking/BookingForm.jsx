@@ -9,7 +9,6 @@ const BookingForm = (props) => {
 
     const [data, setData] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
-    const { title, showingTimes } = data;
 
     useEffect(() => {
         axios.get("http://localhost:8080/movies/getCurrent")
@@ -27,9 +26,7 @@ const BookingForm = (props) => {
     if (isLoaded) {
         return (
             <>
-    
-                <Container style={{ height: '500px', width: '500px' }}>
-                    <h3 style={{ fontWeight: 'bold' }}>Ticket Booking</h3>
+                <Container className="booking-div" style={{ width: '50vw' }}>
                     <FormBooking data = {data}/>
                 </Container>
             </>

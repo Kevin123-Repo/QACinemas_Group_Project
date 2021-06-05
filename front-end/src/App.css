@@ -77,6 +77,25 @@
   color: #0f4b5a;
   font-size: 1.3vw;
 }
+
+.dropdowns {
+  display:inherit;
+}
+
+.booking-div {
+  width: 50vw;
+  padding-left: 7vw;
+}
+
+.booking-dropdown {
+  margin-right: 1vw;
+  min-width: 7vw;
+}
+
+.booking-name {
+  width: 35vw;
+}
+
 /* .App {
   text-align: center;
 }
