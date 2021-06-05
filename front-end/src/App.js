@@ -10,16 +10,18 @@ import PlacesToGo from './Components/PlacesToGo/PlacesToGo';
 import Classifications from './Components/Classifications/Classifications';
 import About from './Components/About/About';
 import ContactPage from './Components/ContactPage/ContactPage';
+import TicketBooking from './Components/TicketBooking/TicketBooking';
 import ListingGallery from './Components/Listings/ListingGallery';
 import MovieInfo from './Components/Listings/MovieInfo';
 import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
 import Payments from './Components/Payments/Payments';
 
+
 function App() {
   return (
     <>
-      <Router>
+      <Router>   
         <NavBar/>
         <div className="container-fluid main-content">
           <Switch>
@@ -62,6 +64,9 @@ function App() {
             <Route path="/Payments">
               <Payments />
             </Route>
+            <Route path="/TicketBooking">
+            <TicketBooking/>
+          </Route>
           </Switch>
         </div>
         <FooterBar />
