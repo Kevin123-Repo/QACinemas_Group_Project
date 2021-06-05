@@ -59,6 +59,9 @@ function App() {
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
+            <Route path="/Payments">
+              <Payments />
+            </Route>
           </Switch>
         </div>
         <FooterBar />

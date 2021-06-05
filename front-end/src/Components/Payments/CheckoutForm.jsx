@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CardElement, useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement} from "@stripe/react-stripe-js";
+import { useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement} from "@stripe/react-stripe-js";
 import { Spinner } from 'reactstrap';
 import axios from "axios";
 import CardSection from "./CardSection";
