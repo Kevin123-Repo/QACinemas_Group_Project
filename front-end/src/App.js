@@ -19,8 +19,7 @@ import Payments from './Components/Payments/Payments';
 function App() {
   return (
     <>
-      <Payments />
-      {/* <Router>
+      <Router>
         <NavBar/>
         <div className="container-fluid main-content">
           <Switch>
@@ -60,10 +59,13 @@ function App() {
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
+            <Route path="/Payments">
+              <Payments />
+            </Route>
           </Switch>
         </div>
         <FooterBar />
-      </Router>  */}
+      </Router> 
     </>
   );
 }

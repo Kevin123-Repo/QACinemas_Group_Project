@@ -21,7 +21,6 @@
 
 .main-content {
   margin-top:8%;
-  margin-bottom: 6%;
   width:80%
 }
 
@@ -77,6 +76,12 @@
   color: #0f4b5a;
   font-size: 1.3vw;
 }
+
+.payment-form {
+  margin-left: 20vw;
+  width: 35vw;
+}
+
 /* .App {
   text-align: center;
 }
