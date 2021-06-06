@@ -15,7 +15,6 @@ const BookingForm = (props) => {
             .then((res) => {
                 const DATA = res.data;
                 setData(DATA);
-                console.log(DATA);
                 setIsLoaded(true)
             }).catch((err) => {
                 console.log(err.message);
@@ -26,7 +25,7 @@ const BookingForm = (props) => {
     if (isLoaded) {
         return (
             <>
-                <Container className="booking-div" style={{ width: '50vw' }}>
+                <Container className="booking-div">
                     <FormBooking data = {data}/>
                 </Container>
             </>
@@ -40,5 +39,3 @@ const BookingForm = (props) => {
 }
 
 export default BookingForm;
-
-//post request

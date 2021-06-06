@@ -15,6 +15,7 @@ import ListingGallery from './Components/Listings/ListingGallery';
 import MovieInfo from './Components/Listings/MovieInfo';
 import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
+import Payments from './Components/Payments/Payments';
 
 
 function App() {
@@ -60,9 +61,10 @@ function App() {
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
+            <Route path="/Payments" render={(props) => <Payments {...props}/>}/>
             <Route path="/TicketBooking">
-            <TicketBooking/>
-          </Route>
+              <TicketBooking/>
+            </Route>
           </Switch>
         </div>
         <FooterBar />

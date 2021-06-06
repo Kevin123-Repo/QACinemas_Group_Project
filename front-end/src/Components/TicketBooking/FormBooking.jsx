@@ -1,12 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import axios from "axios";
-import { Row, Col, Button, Form, FormGroup, Label, Input, Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import InteractiveCalendar from './InteractiveCalender';
+import { Row, Col, Button, Form, Input, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-
-
+import { Redirect } from "react-router-dom";
 
 const FormBooking = ({ data }) => {
 
@@ -30,10 +27,25 @@ const FormBooking = ({ data }) => {
     const [times, setTimes] = useState([]);
     const [days, setDays] = useState([]);
     const [date, setDate] = useState(new Date());
+    const [redirect, setRedirect] = useState(null);
 
     const changeDate = (date) => {
         setDate(date);
     };
+
+    const validateForm = () => {
+        if (seats === "Seats" || name === "" || selectedMovie === "Movies" || selectedTime === "Times") {
+            alert("Please complete the form before continuing");
+            return false;
+        }
+
+        if ((adults + child + concession) !== seats) {
+            alert("Number of Seats must be equal to number of tickets");
+            return false;
+        }
+
+        return true;
+    }
 
     useEffect(() => {
         let daysArr = [];
@@ -52,28 +64,26 @@ const FormBooking = ({ data }) => {
 
     const submitBooking=(e)=>{
         e.preventDefault();
-
-        const obj = {
-            movieTitle : selectedMovie,
-            date : date,
-            time : selectedTime,
-            name : name, 
-            numberOfSeats: seats,
-            adults : adults,
-            child: child,
-            concession: concession
+        if (validateForm()) {
+            setRedirect("/Payments");
         }
-        axios
-            .post("http://localhost:8080/bookings/post", obj)
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            })
-        }
+    }
 
-    return (
+    if (redirect) {
+        return <Redirect to = {{
+            pathname: redirect,
+            state: { 
+                movieTitle : selectedMovie,
+                date : date,
+                time : selectedTime,
+                name : name, 
+                numberOfSeats: seats,
+                adults : (adults === "Adults")? 0 : adults,
+                child: (child === "Children")? 0 : child,
+                concession: (concession === "Concession")? 0 : concession 
+            } 
+        }}/>
+    } else return (
         <>
             <Form onSubmit={submitBooking}>
                 <h3 style={{ fontWeight: 'bold' }}>Ticket Booking</h3>
@@ -82,24 +92,8 @@ const FormBooking = ({ data }) => {
 
                 <br />
 
-                <h5 style={{ fontWeight: 'bold' }}>Select the Movie</h5>
-                <Dropdown isOpen={dropdownOpenMovie} toggle={() => setDropdownOpenMovie(prevState => !prevState)} size="sm" >
-                    <DropdownToggle caret>
-                        {selectedMovie}
-                    </DropdownToggle>
-                    <DropdownMenu flip={false}>
-                        {
-                            data.map((obj, i) => (
-                                <DropdownItem onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
-                            ))
-                        }
-                    </DropdownMenu>
-                </Dropdown>
-
-                <br />
-
                 <Row>
-                    <h5 style={{ fontWeight: 'bold' }}>Adult, Children , seats and concessions</h5>
+                    <h5 style={{ fontWeight: 'bold' }}>Adult, Children, Seats and Concessions</h5>
                     <Col className="dropdowns">
                         <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)} size="sm" >
                             <DropdownToggle caret className="booking-dropdown">
@@ -155,6 +149,38 @@ const FormBooking = ({ data }) => {
                     </Col>
                 </Row>
 
+                <br />
+                
+                <Row>
+                    <h5 style={{ fontWeight: 'bold' }}>Select the Movie and Time</h5>
+                    <Col className="dropdowns">
+                        <Dropdown isOpen={dropdownOpenMovie} toggle={() => setDropdownOpenMovie(prevState => !prevState)} size="sm" >
+                            <DropdownToggle caret className="booking-dropdown">
+                                {selectedMovie}
+                            </DropdownToggle>
+                            <DropdownMenu flip={false}>
+                                {
+                                    data.map((obj, i) => (
+                                        <DropdownItem onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
+                                    ))
+                                }
+                            </DropdownMenu>
+                        </Dropdown>
+                        <Dropdown isOpen={dropdownOpenMovieTimes} toggle={() => setDropdownOpenMovieTimes(prevState => !prevState)} size="sm" >
+                            <DropdownToggle caret className="booking-dropdown">
+                            {selectedTime}
+                            </DropdownToggle>
+                            <DropdownMenu flip={false}>
+                                {
+                                    times.map((time, i) => (
+                                        <DropdownItem onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
+                                    ))
+                                }
+                            </DropdownMenu>
+                        </Dropdown>
+                    </Col>
+                </Row>
+
                 <br/>
 
                 <div>
@@ -163,27 +189,10 @@ const FormBooking = ({ data }) => {
                         minDate={new Date()}
                         onChange={changeDate}
                         value={date}
-                        tileDisabled={({ activeStartDate, date, view }) => !days.includes(date.getDay())}
+                        tileDisabled={({ date }) => !days.includes(date.getDay())}
                     />
                 </div>
-
-                <br />
-
-                <h5 style={{ fontWeight: 'bold' }}>Select the time</h5>
-                <Dropdown isOpen={dropdownOpenMovieTimes} toggle={() => setDropdownOpenMovieTimes(prevState => !prevState)} size="sm" >
-                    <DropdownToggle caret>
-                       {selectedTime}
-                    </DropdownToggle>
-                    <DropdownMenu flip={false}>
-                        {
-                            times.map((time, i) => (
-                                <DropdownItem onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
-                            ))
-                        }
-                    </DropdownMenu>
-                </Dropdown>
-                <br />
-                <Button color="primary" type="submit">Send</Button>
+                <Button id="booking-btn" color="primary" type="submit">Send</Button>
             </Form>
         </>
     );
