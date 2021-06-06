@@ -20,17 +20,16 @@ const CommentsForm = ({ handleUpdate }) => {
             "rating": rating,
             "movieTitle": movieTitle
         };
-        console.log(dataTosend);
+
         axios
             .post("http://localhost:8080/discussions/post", dataTosend)
             .then((response) => {
                 console.log(response);
-
             })
             .catch((error) => {
-                console.error(error);
-
+                console.error(error.message);
             });
+
         setUsername("Anonymous");
         setComment("Comment");
         setRating("");
@@ -42,14 +41,11 @@ const CommentsForm = ({ handleUpdate }) => {
         axios
             .get("http://localhost:8080/movies/getAll")
             .then((response) => {
-                // console.log(response);
                 setMovie(response.data);
                 setIsLoading(false);
-
             })
             .catch((error) => {
-                console.error(error);
-
+                console.error(error.message);
             });
     }, [])
 
