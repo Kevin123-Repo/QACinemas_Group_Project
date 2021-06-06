@@ -87,6 +87,34 @@
   display:inherit;
 }
 
+#username-col {
+  width: 150px;
+}
+
+#comment-col {
+  width: 500px;
+}
+
+#film-col {
+  width: 100px;
+}
+
+#rating-col {
+  width: 50px;
+}
+
+#board-title {
+  text-align: center;
+}
+
+.board-div input,select{
+  margin-right: 10px;
+}
+
+.comment-form {
+  text-align: center;
+}
+
 .booking-div {
   width: 50vw;
   padding-left: 7vw;
