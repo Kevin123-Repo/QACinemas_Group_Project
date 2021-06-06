@@ -33,6 +33,20 @@ const FormBooking = ({ data }) => {
         setDate(date);
     };
 
+    const validateForm = () => {
+        if (seats === "Seats" || name === "" || selectedMovie === "Movies" || selectedTime === "Times") {
+            alert("Please complete the form before continuing");
+            return false;
+        }
+
+        if ((adults + child + concession) !== seats) {
+            alert("Number of Seats must be equal to number of tickets");
+            return false;
+        }
+
+        return true;
+    }
+
     useEffect(() => {
         let daysArr = [];
         for (let obj of data) {
@@ -50,7 +64,9 @@ const FormBooking = ({ data }) => {
 
     const submitBooking=(e)=>{
         e.preventDefault();
-        setRedirect("/Payments");
+        if (validateForm()) {
+            setRedirect("/Payments");
+        }
     }
 
     if (redirect) {
