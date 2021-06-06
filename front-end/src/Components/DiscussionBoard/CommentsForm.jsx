@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import BadWordsFilter from "bad-words";
 
 const CommentsForm = ({ handleUpdate }) => {
 
@@ -10,13 +9,12 @@ const CommentsForm = ({ handleUpdate }) => {
     const [movieTitle, setMovieTitle] = useState("N/A");
     const [movie, setMovie] = useState("");
     const [isLoading, setIsLoading] = useState(true);
-    const filter = new BadWordsFilter();
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const dataTosend = {
-            "username": filter.clean(username),
-            "comment": filter.clean(comment),
+            "username": username,
+            "comment": comment,
             "rating": rating,
             "movieTitle": movieTitle
         };
