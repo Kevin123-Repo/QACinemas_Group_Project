@@ -19,13 +19,14 @@ const FooterBar = () => {
 
     return (
         <div className="footer-div">
+            <div class="b-example-divider"></div>
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">QA Cinema</NavbarBrand>
+                {/* <NavbarBrand href="/"><img src={Logo} width="35" height="30" alt="" /></NavbarBrand> */}
                 <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
+                <Collapse id="footer-links" isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink><Link to="/">Home</Link></NavLink>
+                            <NavLink><Link exact to="/">Home</Link></NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink><Link to="/About">About</Link></NavLink>
@@ -34,7 +35,6 @@ const FooterBar = () => {
                             <NavLink><Link to="/ContactPage">Contact Us</Link></NavLink>
                         </NavItem>
                     </Nav>
-                    <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
                 </Collapse>
             </Navbar>
         </div>

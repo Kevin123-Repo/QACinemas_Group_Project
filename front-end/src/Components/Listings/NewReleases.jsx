@@ -74,7 +74,7 @@ const NewReleases = () => {
                     activeIndex={activeIndex}
                     next={next}
                     previous={previous}
-                    interval={true} // Auto-play (off for testing, on for live)
+                    interval={false} // Auto-play
                 >
                     {slides}
                     <CarouselControl direction="prev" onClickHandler={previous} />
