@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import BadWordsFilter from "bad-words";
 
 const CommentsForm = ({ handleUpdate }) => {
 
@@ -10,27 +9,25 @@ const CommentsForm = ({ handleUpdate }) => {
     const [movieTitle, setMovieTitle] = useState("N/A");
     const [movie, setMovie] = useState("");
     const [isLoading, setIsLoading] = useState(true);
-    const filter = new BadWordsFilter();
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const dataTosend = {
-            "username": filter.clean(username),
-            "comment": filter.clean(comment),
+            "username": username,
+            "comment": comment,
             "rating": rating,
             "movieTitle": movieTitle
         };
-        console.log(dataTosend);
+
         axios
             .post("http://localhost:8080/discussions/post", dataTosend)
             .then((response) => {
                 console.log(response);
-
             })
             .catch((error) => {
-                console.error(error);
-
+                console.error(error.message);
             });
+
         setUsername("Anonymous");
         setComment("Comment");
         setRating("");
@@ -42,21 +39,18 @@ const CommentsForm = ({ handleUpdate }) => {
         axios
             .get("http://localhost:8080/movies/getAll")
             .then((response) => {
-                // console.log(response);
                 setMovie(response.data);
                 setIsLoading(false);
-
             })
             .catch((error) => {
-                console.error(error);
-
+                console.error(error.message);
             });
     }, [])
 
     if (isLoading === false) {
         return (
             <>
-                <form onSubmit={handleSubmit}>
+                <form className="comment-form" onSubmit={handleSubmit}>
                     <label>Username</label>
                     <input
                         id="username"
