@@ -1,12 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import axios from "axios";
-import { Row, Col, Button, Form, FormGroup, Label, Input, Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import InteractiveCalendar from './InteractiveCalender';
+import { Row, Col, Button, Form, Input, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-
-
+import { Redirect } from "react-router-dom";
 
 const FormBooking = ({ data }) => {
 
@@ -30,6 +27,7 @@ const FormBooking = ({ data }) => {
     const [times, setTimes] = useState([]);
     const [days, setDays] = useState([]);
     const [date, setDate] = useState(new Date());
+    const [redirect, setRedirect] = useState(null);
 
     const changeDate = (date) => {
         setDate(date);
@@ -52,28 +50,24 @@ const FormBooking = ({ data }) => {
 
     const submitBooking=(e)=>{
         e.preventDefault();
+        setRedirect("/Payments");
+    }
 
-        const obj = {
-            movieTitle : selectedMovie,
-            date : date,
-            time : selectedTime,
-            name : name, 
-            numberOfSeats: seats,
-            adults : adults,
-            child: child,
-            concession: concession
-        }
-        axios
-            .post("http://localhost:8080/bookings/post", obj)
-            .then((res) => {
-                console.log(res);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            })
-        }
-
-    return (
+    if (redirect) {
+        return <Redirect to = {{
+            pathname: redirect,
+            state: { 
+                movieTitle : selectedMovie,
+                date : date,
+                time : selectedTime,
+                name : name, 
+                numberOfSeats: seats,
+                adults : (adults === "Adults")? 0 : adults,
+                child: (child === "Children")? 0 : child,
+                concession: (concession === "Concession")? 0 : concession 
+            } 
+        }}/>
+    } else return (
         <>
             <Form onSubmit={submitBooking}>
                 <h3 style={{ fontWeight: 'bold' }}>Ticket Booking</h3>

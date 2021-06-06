@@ -26,7 +26,7 @@ const BookingForm = (props) => {
     if (isLoaded) {
         return (
             <>
-                <Container className="booking-div" style={{ width: '50vw' }}>
+                <Container className="booking-div">
                     <FormBooking data = {data}/>
                 </Container>
             </>

@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement} from "@stripe/react-stripe-js";
-import { Spinner } from 'reactstrap';
+import { Row, Spinner } from 'reactstrap';
 import axios from "axios";
 import CardSection from "./CardSection";
 
-const CheckoutForm = ({name}) => {
+const CheckoutForm = ({bookingInfo}) => {
 
     const stripe = useStripe();
     const elements = useElements();
     const [successMessage, setSuccessMessage] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
     const [paymentProcessing, setPaymentProcessing] = useState(false);
+
+    const PRICE = (bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -28,13 +30,14 @@ const CheckoutForm = ({name}) => {
         } else {
             setPaymentProcessing(true);
             console.log(result.token);
-            axios.post("http://localhost:8080/payment", result.token)
+            axios.post("http://localhost:8080/payment", {price: PRICE, token: result.token, booking: bookingInfo})
                 .then((res) => {
                     setPaymentProcessing(false);
                     setSuccessMessage("Payment Successful");
                     console.log(res);
                 }).catch((err) => {
                     console.error(err.message);
+                    setErrorMessage(err.message);
                 });
         }
     };
@@ -43,12 +46,15 @@ const CheckoutForm = ({name}) => {
         <>
             <div className="payment-form">
                 <form onSubmit={handleSubmit}>
-                    <CardSection name={name}/>
-                    <button disabled={!stripe} className="btn-pay">Buy Now</button>
+                    <CardSection name={bookingInfo.name}/>
+                    <div className="under-form">
+                        <button disabled={!stripe} className="btn-pay">Buy Now</button>
+                        <div className="price-div">{`Total Cost: ${PRICE}`}</div>
+                    </div>
+                </form>
                     {
                         (paymentProcessing)? <Spinner className="card-loading" color="success" children=""/> : <br/>
                     }
-                </form>
             </div>
             <div>
                 <b className="card-error"> {errorMessage} </b>

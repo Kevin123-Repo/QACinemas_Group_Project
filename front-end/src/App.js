@@ -61,12 +61,10 @@ function App() {
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
-            <Route path="/Payments">
-              <Payments />
-            </Route>
+            <Route path="/Payments" render={(props) => <Payments {...props}/>}/>
             <Route path="/TicketBooking">
-            <TicketBooking/>
-          </Route>
+              <TicketBooking/>
+            </Route>
           </Switch>
         </div>
         <FooterBar />

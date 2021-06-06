@@ -20,8 +20,9 @@
 }
 
 .main-content {
-  margin-top:8%;
-  width:80%
+  margin-top:6%;
+  width:80%;
+  min-height: 100vh;
 }
 
 .listings {
@@ -79,6 +80,9 @@
 
 .payment-form {
   margin-left: 20vw;
+  position: relative;
+}
+
 .dropdowns {
   display:inherit;
 }
@@ -86,6 +90,7 @@
 .booking-div {
   width: 50vw;
   padding-left: 7vw;
+  padding-bottom: 2vh;
 }
 
 .booking-dropdown {
@@ -95,6 +100,17 @@
 
 .booking-name {
   width: 35vw;
+}
+
+html, body {
+  height: 100%;
+}
+
+.footer-div {
+  position: relative;
+  /* margin-top: -150px;
+	height: 150px; */
+	clear:both;
 }
 
 /* .App {
