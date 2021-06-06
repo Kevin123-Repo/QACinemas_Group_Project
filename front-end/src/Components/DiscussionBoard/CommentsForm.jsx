@@ -50,7 +50,7 @@ const CommentsForm = ({ handleUpdate }) => {
     if (isLoading === false) {
         return (
             <>
-                <form onSubmit={handleSubmit}>
+                <form className="comment-form" onSubmit={handleSubmit}>
                     <label>Username</label>
                     <input
                         id="username"

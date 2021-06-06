@@ -7,10 +7,10 @@ const CommentsTable = ({data}) => {
             <Table>
                 <thead>
                     <tr>
-                        <th>Username</th>
-                        <th>Comment</th>
-                        <th>Film</th>
-                        <th>Rating</th>
+                        <th id="username-col">Username</th>
+                        <th id="comment-col">Comment</th>
+                        <th id="film-col">Film</th>
+                        <th id="rating-col">Rating</th>
                     </tr>
                 </thead>
                 <tbody>

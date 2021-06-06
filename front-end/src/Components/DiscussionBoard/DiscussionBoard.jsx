@@ -2,6 +2,7 @@ import CommentsForm from "./CommentsForm";
 import CommentsTable from "./CommentsTable"
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Container } from "reactstrap";
 import BadWordsFilter from "bad-words";
 
 const DiscussionBoard = () => {
@@ -35,11 +36,15 @@ const DiscussionBoard = () => {
 
     return (
         <>
-            <h1>Disccusion Board</h1>
+        <Container className="board-div">
+            <div id="board-title">
+                <h1>Discussion Board</h1>
+            </div>
             <CommentsForm handleUpdate={handleUpdate}/>
             <CommentsTable data={data}/>
+        </Container>
         </>
-    )
+    );
 }
 
 export default DiscussionBoard;
