@@ -7,7 +7,6 @@ const CORS = require("cors");
 const MOVIE_ROUTES = require("./Routes/movies");
 const DISCUSSION_BOARD_ROUTES = require("./Routes/discussionboard");
 const BOOKING_ROUTES = require("./Routes/bookings");
-const PAYMENT_ROUTES = require("./Routes/payment");
 const APP = EXPRESS();
 const PORT = 8080;
 
@@ -16,8 +15,7 @@ APP.use(CORS());                       // Disable Cross Origin Resource Sharing 
 APP.use(EXPRESS.json());              // JSON Body Parser
 APP.use(MOVIE_ROUTES);               //
 APP.use(BOOKING_ROUTES);            // Routes for different collections
-APP.use(PAYMENT_ROUTES);           //
-APP.use(DISCUSSION_BOARD_ROUTES); //
+APP.use(DISCUSSION_BOARD_ROUTES);  //
 
 // Connect to MongoDB
 MONGOOSE

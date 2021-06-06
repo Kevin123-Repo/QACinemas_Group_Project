@@ -76,24 +76,8 @@ const FormBooking = ({ data }) => {
 
                 <br />
 
-                <h5 style={{ fontWeight: 'bold' }}>Select the Movie</h5>
-                <Dropdown isOpen={dropdownOpenMovie} toggle={() => setDropdownOpenMovie(prevState => !prevState)} size="sm" >
-                    <DropdownToggle caret>
-                        {selectedMovie}
-                    </DropdownToggle>
-                    <DropdownMenu flip={false}>
-                        {
-                            data.map((obj, i) => (
-                                <DropdownItem onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
-                            ))
-                        }
-                    </DropdownMenu>
-                </Dropdown>
-
-                <br />
-
                 <Row>
-                    <h5 style={{ fontWeight: 'bold' }}>Adult, Children , seats and concessions</h5>
+                    <h5 style={{ fontWeight: 'bold' }}>Adult, Children, Seats and Concessions</h5>
                     <Col className="dropdowns">
                         <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)} size="sm" >
                             <DropdownToggle caret className="booking-dropdown">
@@ -149,6 +133,38 @@ const FormBooking = ({ data }) => {
                     </Col>
                 </Row>
 
+                <br />
+                
+                <Row>
+                    <h5 style={{ fontWeight: 'bold' }}>Select the Movie and Time</h5>
+                    <Col className="dropdowns">
+                        <Dropdown isOpen={dropdownOpenMovie} toggle={() => setDropdownOpenMovie(prevState => !prevState)} size="sm" >
+                            <DropdownToggle caret className="booking-dropdown">
+                                {selectedMovie}
+                            </DropdownToggle>
+                            <DropdownMenu flip={false}>
+                                {
+                                    data.map((obj, i) => (
+                                        <DropdownItem onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
+                                    ))
+                                }
+                            </DropdownMenu>
+                        </Dropdown>
+                        <Dropdown isOpen={dropdownOpenMovieTimes} toggle={() => setDropdownOpenMovieTimes(prevState => !prevState)} size="sm" >
+                            <DropdownToggle caret className="booking-dropdown">
+                            {selectedTime}
+                            </DropdownToggle>
+                            <DropdownMenu flip={false}>
+                                {
+                                    times.map((time, i) => (
+                                        <DropdownItem onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
+                                    ))
+                                }
+                            </DropdownMenu>
+                        </Dropdown>
+                    </Col>
+                </Row>
+
                 <br/>
 
                 <div>
@@ -157,27 +173,10 @@ const FormBooking = ({ data }) => {
                         minDate={new Date()}
                         onChange={changeDate}
                         value={date}
-                        tileDisabled={({ activeStartDate, date, view }) => !days.includes(date.getDay())}
+                        tileDisabled={({ date }) => !days.includes(date.getDay())}
                     />
                 </div>
-
-                <br />
-
-                <h5 style={{ fontWeight: 'bold' }}>Select the time</h5>
-                <Dropdown isOpen={dropdownOpenMovieTimes} toggle={() => setDropdownOpenMovieTimes(prevState => !prevState)} size="sm" >
-                    <DropdownToggle caret>
-                       {selectedTime}
-                    </DropdownToggle>
-                    <DropdownMenu flip={false}>
-                        {
-                            times.map((time, i) => (
-                                <DropdownItem onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
-                            ))
-                        }
-                    </DropdownMenu>
-                </Dropdown>
-                <br />
-                <Button color="primary" type="submit">Send</Button>
+                <Button id="booking-btn" color="primary" type="submit">Send</Button>
             </Form>
         </>
     );

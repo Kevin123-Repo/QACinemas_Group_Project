@@ -29,12 +29,10 @@ const CheckoutForm = ({bookingInfo}) => {
             setErrorMessage(result.error.message);
         } else {
             setPaymentProcessing(true);
-            console.log(result.token);
-            axios.post("http://localhost:8080/payment", {price: PRICE, token: result.token, booking: bookingInfo})
+            axios.post("http://localhost:8080/bookings/payment", {price: PRICE, token: result.token, booking: bookingInfo})
                 .then((res) => {
                     setPaymentProcessing(false);
                     setSuccessMessage("Payment Successful");
-                    console.log(res);
                 }).catch((err) => {
                     console.error(err.message);
                     setErrorMessage(err.message);
@@ -53,7 +51,7 @@ const CheckoutForm = ({bookingInfo}) => {
                     </div>
                 </form>
                     {
-                        (paymentProcessing)? <Spinner className="card-loading" color="success" children=""/> : <br/>
+                        (paymentProcessing)? <Spinner className="card-loading" color="success" children=""/> : ""
                     }
             </div>
             <div>

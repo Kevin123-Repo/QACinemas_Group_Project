@@ -96,3 +96,11 @@ input:focus,
   color: #6b7c93;
   margin-left: 6vw;
 }
+
+.under-form .btn-group-sm {
+  display:inline-block
+}
+
+#booking-btn {
+  margin-top: 1vw;
+}

@@ -5,6 +5,52 @@ const MONGOOSE = require("mongoose");
 const SCHEMA = MONGOOSE.Schema;
 
 // Create Schemas
+
+const CARD_SCHEMA = new SCHEMA({
+	brand: {
+		type: String,
+		enum: ["visa", "amex", "jcb", "mastercard", "unionpay", "discover", "diners_club", "cartes_bancaires"],
+		message: "{VALUE} is not supported."
+	},
+	country: String,
+	exp_month: {
+		type: Number, 
+		min: [1, "Month must be between 1 and 12"],
+		max: [12, "Month must be between 1 and 12"]
+	},
+	exp_year: {
+		type: Number,
+		min: [2021, "Exp year must be at least 2021"],
+		max: [2031, "Exp year must be before 2032"]
+	},
+	funding: String,
+	last4: {
+		type: String,
+		required: [true, "Last 4 digits are required"]
+	}
+});
+
+const PAYMENT_METHOD_SCHEMA = new SCHEMA({
+	card: CARD_SCHEMA,
+	type: {
+		type: String,
+		required: [true, "Type is required"]
+	}
+});
+
+const PAYMENT_INFO_SCHEMA = new SCHEMA({
+	amount: {
+		type: Number,
+		required: [true, "Payment amount is required"]
+	},
+	paid: {
+		type: Boolean,
+		required: [true, "Paid is either truth or false"]
+	},
+	payment_method_details: PAYMENT_METHOD_SCHEMA,
+	receipt_url: String
+});
+
 const BOOKING_SCHEMA = new SCHEMA({
     movieTitle: {
 		type: String,
@@ -30,7 +76,8 @@ const BOOKING_SCHEMA = new SCHEMA({
 	},
 	adults: Number, 
 	child: Number,
-	concession: Number
+	concession: Number,
+	paymentInfo: PAYMENT_INFO_SCHEMA
 });
 
 module.exports = MONGOOSE.model("Booking", BOOKING_SCHEMA);
