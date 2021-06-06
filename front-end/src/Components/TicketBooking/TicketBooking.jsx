@@ -6,7 +6,7 @@ const TicketBooking = (props) => {
         <>
             <BookingForm/>
         </>
-    )
+    );
 }
 
 export default TicketBooking;

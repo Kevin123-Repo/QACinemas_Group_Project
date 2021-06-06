@@ -12,7 +12,7 @@ const CheckoutForm = ({bookingInfo}) => {
     const [errorMessage, setErrorMessage] = useState(null);
     const [paymentProcessing, setPaymentProcessing] = useState(false);
 
-    const PRICE = (bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99);
+    const PRICE = +((bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99)).toFixed(2);
 
     const handleSubmit = async (event) => {
         event.preventDefault();

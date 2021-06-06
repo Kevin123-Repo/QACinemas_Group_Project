@@ -34,12 +34,17 @@ const FormBooking = ({ data }) => {
     };
 
     const validateForm = () => {
+
+        let adultsTickets = (adults === "Adults")? 0 : parseInt(adults);
+        let childTickets =  (child === "Children")? 0 : parseInt(child);
+        let concessionTickets = (concession === "Concession")? 0 : parseInt(concession);
+
         if (seats === "Seats" || name === "" || selectedMovie === "Movies" || selectedTime === "Times") {
             alert("Please complete the form before continuing");
             return false;
         }
 
-        if ((adults + child + concession) !== seats) {
+        if ((adultsTickets + childTickets + concessionTickets) !== parseInt(seats)) {
             alert("Number of Seats must be equal to number of tickets");
             return false;
         }
