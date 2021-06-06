@@ -24,7 +24,7 @@ const NavBar = () => {
   return (
     <div>
       <Navbar color="light" light expand="md" fixed="top">
-        <NavbarBrand href="/">QA Cinema</NavbarBrand>
+        <NavbarBrand><Link to="/"><img id="navbarLogo" src={Logo} alt="" /></Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -32,19 +32,19 @@ const NavBar = () => {
               <NavLink><Link to="/">Home</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Listings</NavLink>
+            <NavLink><Link to="/Listings">Listings</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Bookings</NavLink>
+              <NavLink><Link to="/TicketBooking">Bookings</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink> <Link to="/Classifications">Classifications</Link></NavLink>
+              <NavLink><Link to="/Classifications">Classifications</Link></NavLink>
             </NavItem>
             <NavItem>
               <NavLink><Link to="/Screens">Screens</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">New Releases</NavLink>
+              <NavLink><Link to="/NewReleases">New Releases</Link></NavLink>
             </NavItem>
 
             <UncontrolledDropdown nav inNavbar>
@@ -74,7 +74,7 @@ const NavBar = () => {
               <NavLink href="/Discussion">Discussion</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
+          <NavbarText></NavbarText>
         </Collapse>
       </Navbar >
     </div >

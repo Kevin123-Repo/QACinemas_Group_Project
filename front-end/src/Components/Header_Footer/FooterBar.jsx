@@ -19,24 +19,26 @@ const FooterBar = () => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md" fixed="bottom">
-                <NavbarBrand href="/">QA Cinema</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
-                        <NavItem>
-                            <NavLink><Link to="/">Home</Link></NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink><Link to="/About">About</Link></NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink><Link to="/ContactPage">Contact Us</Link></NavLink>
-                        </NavItem>
-                    </Nav>
-                    <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
-                </Collapse>
-            </Navbar>
+            <footer class="footer mt-auto">
+                <Navbar color="light" light expand="md">
+                    <NavbarBrand href="/">QA Cinema</NavbarBrand>
+                    <NavbarToggler onClick={toggle} />
+                    <Collapse isOpen={isOpen} navbar>
+                        <Nav className="mr-auto" navbar>
+                            <NavItem>
+                                <NavLink><Link to="/">Home</Link></NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink><Link to="/About">About</Link></NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink><Link to="/ContactPage">Contact Us</Link></NavLink>
+                            </NavItem>
+                        </Nav>
+                        <NavbarText><img src={Logo} width="35" height="30" alt="" /></NavbarText>
+                    </Collapse>
+                </Navbar>
+            </footer>
         </div>
     );
 }
