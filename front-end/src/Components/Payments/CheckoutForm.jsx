@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcElement} from "@stripe/react-stripe-js";
-import { Row, Spinner } from 'reactstrap';
+import { Spinner, Button } from 'reactstrap';
 import axios from "axios";
 import CardSection from "./CardSection";
 
@@ -46,7 +46,7 @@ const CheckoutForm = ({bookingInfo}) => {
                 <form onSubmit={handleSubmit}>
                     <CardSection name={bookingInfo.name}/>
                     <div className="under-form">
-                        <button disabled={!stripe} className="btn-pay">Buy Now</button>
+                        <Button disabled={!stripe} color="primary" type="submit">Send</Button>
                         <div className="price-div">{`Total Cost: ${PRICE}`}</div>
                     </div>
                 </form>

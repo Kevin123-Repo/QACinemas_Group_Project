@@ -1,7 +1,7 @@
-import regularSeatingPlan from '../../Images/Screens-RegularSeatingPlan.jpg';
-import deluxeSeatingPlan from '../../Images/Screens-DeluxeSeatingPlan.jpg';
-import regularScreenPhoto from '../../Images/Screens-RegularScreenPhoto.jpg';
-import deluxeScreenPhoto from '../../Images/Screens-DeluxeScreenPhoto.jpg';
+import regularSeatingPlan from '../../Images/ScreensOriginalImages/Screens-OriginalRegularSeatingPlan.jpg';
+import deluxeSeatingPlan from '../../Images/ScreensOriginalImages/Screens-OriginalDeluxeSeatingPlan.jpg';
+import regularScreenPhoto from '../../Images/ScreensOriginalImages/Screens-OriginalRegularScreenPhoto.jpg';
+import deluxeScreenPhoto from '../../Images/ScreensOriginalImages/Screens-OriginalDeluxeScreenPhoto.jpg';
 import React, { useState } from 'react';
 import {
   Carousel,
@@ -63,7 +63,7 @@ const Screens = () => {
           onExited={() => setAnimating(false)}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
+          <img className={"screens-imgs"} src={item.src} alt={item.altText} />
           <CarouselCaption captionText={item.caption} />
         </CarouselItem>
       );
@@ -71,12 +71,12 @@ const Screens = () => {
   
     return (
       <>
-        <Container>
-          <h1 style={{textAlign: "center"}}>Screens</h1>
+        <Container className="screens-div">
           <Carousel
             activeIndex={activeIndex}
             next={next}
             previous={previous}
+            interval={false} // Auto-play
           >
             {slides}
             <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />

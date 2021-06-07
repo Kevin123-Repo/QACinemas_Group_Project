@@ -4,7 +4,7 @@ import { Col, Row, Container } from "reactstrap";
 const Homepage = () => {
 
     return (
-        <Container>
+        <Container className="homepage-div">
             <Row>
                 <Col lg="4">
                     <h2>Welcome!</h2>

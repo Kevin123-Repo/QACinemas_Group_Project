@@ -9,8 +9,8 @@
 }
 
 .carousel {
-  width:1000px;
-  height:800px;
+  width:65vw;
+  height:38vw;
   margin: auto;
 }
 
@@ -22,10 +22,11 @@
 .main-content {
   padding-top: 2%;
   width:80%;
-  min-height: 100vh;
+  min-height: 79.4vh;
 }
 
 .listings {
+  margin-bottom: 20px;
   margin-left: 20vw;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -190,6 +191,10 @@ html, body {
   background-color: #e0e2e3!important;
 }
 
+.about-div {
+  margin-bottom: 20px;
+}
+
 .about-div .card {
   background-color: #ffffff2e;
 }
@@ -202,4 +207,87 @@ html, body {
 .booking-div .btn-primary:hover {
   background-color: #15809b !important;
   border-color: #15809b !important;
+}
+
+.under-form .btn-primary {
+  background-color: #0f4b5a !important;
+  border-color: #0f4b5a !important;
+}
+
+.under-form .btn-primary:hover {
+  background-color: #15809b !important;
+  border-color: #15809b !important;
+}
+
+#booking-btn {
+  margin-top: 5px;
+}
+
+.bottom-row {
+  margin-bottom: 20px;
+}
+
+.classification-div .card{
+  background-color: #ffffff2e;
+}
+
+.screens-imgs {
+  height: 38vw;
+  width:65vw;
+}
+
+.times-div {
+  margin-top: 70px;
+  color: #0f4b5a;
+}
+
+.screens-div {
+  margin-bottom: 40px;
+}
+
+.map-div {
+  margin-left: 20px;
+}
+
+.map-info {
+  text-align: center;
+}
+
+.cinema-front {
+  width: 350px;
+  height: 220px;
+  margin-left: 100px
+}
+
+.gettingThere-div, .homepage-div, .booking-div, .classification-div, .about-div, .contact-div, .places-div, .board-div {
+  color: #0f4b5a;
+}
+
+.about-div table, .places-div table, .board-div table {
+  color: #0f4b5a;
+}
+
+.contact-div label {
+  color: #0f4b5a;
+  font-weight: 400;
+}
+
+.contact-div button {
+  margin-top: 5px;
+}
+
+.contact-div .btn-primary {
+  background-color: #0f4b5a !important;
+  border-color: #0f4b5a !important;
+}
+
+.contact-div .btn-primary:hover {
+  background-color: #15809b !important;
+  border-color: #15809b !important;
+}
+
+.places-imgs {
+  height: 500px;
+  width: 600px;
+  margin-left: 15px;
 }
