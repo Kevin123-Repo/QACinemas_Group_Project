@@ -15,15 +15,15 @@ import ListingGallery from './Components/Listings/ListingGallery';
 import MovieInfo from './Components/Listings/MovieInfo';
 import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
+import SearchLinksPage from './Components/Searchbar/SearchLinksPage';
 import Payments from './Components/Payments/Payments';
 import OrderSummary from './Components/Payments/OrderSummary';
-
 
 function App() {
   return (
     <>
-      <Router>   
-        <NavBar/>
+      <Router>
+        <NavBar />
         <div className="container-fluid main-content">
           <Switch>
             <Route exact path="/">
@@ -51,25 +51,28 @@ function App() {
               <Screens />
             </Route>
             <Route path="/Listings">
-              <ListingGallery/>
+              <ListingGallery />
             </Route>
             <Route path="/NewReleases">
-              <NewReleases/>
+              <NewReleases />
             </Route>
             <Route path="/movies/:movie">
-              <MovieInfo/>
+              <MovieInfo />
             </Route>
             <Route path="/Discussion">
               <DiscussionBoard />
             </Route>
-            <Route path="/Payments" render={(props) => <Payments {...props}/>}/>
+            <Route path="/Payments" render={(props) => <Payments {...props} />} />
             <Route path="/TicketBooking">
-              <TicketBooking/>
+                <TicketBooking />
+            </Route>
+            <Route path="/search/:query">
+              <SearchLinksPage />
             </Route>
             <Route path="/OrderSummary" render={(props) => <OrderSummary {...props}/>}/>
           </Switch>
         </div>
-        <FooterBar />
+          <FooterBar />
       </Router> 
     </>
   );
