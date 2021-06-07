@@ -74,7 +74,7 @@ const ListingGallery = () => {
                     activeIndex={activeIndex}
                     next={next}
                     previous={previous}
-                    interval={false} // Auto-play (off for testing, on for live)
+                    interval={true} // Auto-play (off for testing, on for live)
                 >
                     {slides}
                     <CarouselControl direction="prev" onClickHandler={previous} />

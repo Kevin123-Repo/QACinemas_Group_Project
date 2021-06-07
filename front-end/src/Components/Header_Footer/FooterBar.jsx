@@ -18,7 +18,7 @@ const FooterBar = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div>
+        <div className="footer-div">
             <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">QA Cinema</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
