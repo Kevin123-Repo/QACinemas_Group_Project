@@ -8,21 +8,48 @@ const CheckoutForm = ({bookingInfo}) => {
 
     const stripe = useStripe();
     const elements = useElements();
+
     const [successMessage, setSuccessMessage] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
     const [paymentProcessing, setPaymentProcessing] = useState(false);
 
-    const PRICE = +((bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99)).toFixed(2);
+    const [address_city, setAddress_city] = useState("");
+    const [address_country, setAddress_country] = useState("GB");
+    const [address_line1, setAddress_line1] = useState("");
+    const [address_line2, setAddress_line2] = useState("");
+    const [address_zip, setAddress_zip] = useState("");
+    const [email, setEmail] = useState("");
+
+    const name = bookingInfo.name;
+    const PRICE = +((bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99)).toFixed(2); // 2 Decimal places + str -> num conversion (unary +)
+
+    const validateForm = () => {
+        if (address_line1 === "") {
+            setErrorMessage("Address line 1 is a required field");
+            return false;
+        } else if (address_city === "") {
+            setErrorMessage("City is a required field");
+            return false;
+        } else if (address_zip === "") {
+            setErrorMessage("Postal Code is a required field");
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!stripe || !elements) {
+        if (!stripe || !elements || !validateForm()) {
             return;
         }
 
+        const data = {name, address_line1, address_line2, address_city, address_country, address_zip, email};
+        bookingInfo.billing_details = data;
         const card = elements.getElement(CardNumberElement, CardExpiryElement, CardCvcElement);
-        const result = await stripe.createToken(card);
+        const result = await stripe.createToken(card, data);
+
         if (result.error) {
             console.log(result.error.message);
             setSuccessMessage(null);
@@ -44,7 +71,21 @@ const CheckoutForm = ({bookingInfo}) => {
         <>
             <div className="payment-form">
                 <form onSubmit={handleSubmit}>
-                    <CardSection name={bookingInfo.name}/>
+                    <CardSection 
+                        name={bookingInfo.name} 
+                        city={address_city} 
+                        setCity={setAddress_city} 
+                        country={address_country} 
+                        setCountry={setAddress_country} 
+                        line1={address_line1} 
+                        setLine1={setAddress_line1} 
+                        line2={address_line2} 
+                        setLine2={setAddress_line2} 
+                        address_zip={address_zip} 
+                        setAddress_zip={setAddress_zip} 
+                        email={email}
+                        setEmail={setEmail}
+                    />
                     <div className="under-form">
                         <Button disabled={!stripe} color="primary" type="submit">Send</Button>
                         <div className="price-div">{`Total Cost: ${PRICE}`}</div>

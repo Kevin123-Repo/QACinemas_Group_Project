@@ -1,6 +1,6 @@
 .card-error {
-  color: red;
-  margin-left: 22vw;
+  color: #d66363;
+  margin-left: 31vw;
 }
 
 .card-success {
@@ -71,8 +71,9 @@ input:focus,
 
 .price-div {
   display:inline-block;
-  color: #6b7c93;
+  color: #0f4b5a;
   margin-left: 6vw;
+  font-weight: 400;
 }
 
 .under-form .btn-group-sm {

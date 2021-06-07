@@ -88,7 +88,7 @@
 }
 
 .payment-form {
-  margin-left: 20vw;
+  margin-left: 25vw;
   position: relative;
 }
 
@@ -294,4 +294,34 @@ html, body {
 
 .comment-form button:hover {
   background-color: #0f4b5a;
+}
+
+.map-div {
+  height: 50%!important;
+  width: 30%!important;
+}
+
+.gettingThere-div {
+  margin-bottom: 20px;
+}
+
+.payment-form label {
+  color: #0f4b5a;
+  font-weight: 400;
+}
+
+.country-dropdown {
+  min-width: 7vw;
+  background-color: #0f4b5a;
+  border-color: #0f4b5a !important;
+}
+
+.country-dropdown:hover {
+  background-color: #15809b;
+  border-color: #15809b !important;
+}
+
+.country-list {
+  height: 350px;
+  overflow: auto;
 }
