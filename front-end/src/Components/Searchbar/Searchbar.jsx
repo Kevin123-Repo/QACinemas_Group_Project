@@ -18,7 +18,7 @@ const Searchbar = () => {
             <Row>
                 <FormGroup>
                 
-                    <Input type="text" id="movieSearch" onInput={handleFilter} placeholder="Search"/>
+                    <Input type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term"/>
                     <Link to={searchQuery}><button type="submit">Submit</button></Link>
                     
                 </FormGroup>
