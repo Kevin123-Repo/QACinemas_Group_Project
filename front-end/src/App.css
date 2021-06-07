@@ -291,3 +291,7 @@ html, body {
   width: 600px;
   margin-left: 15px;
 }
+
+.comment-form button:hover {
+  background-color: #0f4b5a;
+}

@@ -28,8 +28,7 @@ button:hover {
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-input,
-.StripeElement {
+.payment-form input, .payment-form .StripeElement {
   display: block;
   margin: 10px 0 5px 0;
   max-width: 500px;
