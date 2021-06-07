@@ -11,11 +11,12 @@ const OrderSummary = (props) => {
             Children: child, 
             Concession: concession, 
             Seats: numberOfSeats, 
-            Price
+            Price: `£${Price}`
         };
     }
+
     const bookingInfo = formatBooking(props.location.state);
-    console.log(bookingInfo);
+
     return (
         <div className="order-summary-div">
             <div id="summary-title">

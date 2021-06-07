@@ -1,11 +1,13 @@
 .card-error {
   color: #d66363;
-  margin-left: 31vw;
+  margin-left: 23vw;
+  font-size: 2vw;
 }
 
 .card-success {
-  color: green;
-  margin-left: 29vw;
+  color: #35bb35;
+  margin-left: 17vw;
+  font-size: 2vw;
 }
 
 .card-loading {

@@ -21,7 +21,6 @@ const CheckoutForm = ({bookingInfo}) => {
     const [address_line2, setAddress_line2] = useState("");
     const [address_zip, setAddress_zip] = useState("");
     const [email, setEmail] = useState("");
-    const [receipt, setReceipt] = useState("");
 
     const name = bookingInfo.name;
     const PRICE = +((bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99)).toFixed(2); // 2 Decimal places + str -> num conversion (unary +)
@@ -65,11 +64,31 @@ const CheckoutForm = ({bookingInfo}) => {
             setPaymentProcessing(true);
             axios.post("http://localhost:8080/bookings/payment", {price: PRICE, token: result.token, booking: bookingInfo})
                 .then((res) => {
-                    console.log(res.data);
-                    setReceipt(res.data);
-                    setRedirect("/OrderSummary");
+                    const data = {
+                        service_id: 'service_6hyhf2k',
+                        template_id: 'template_3g35ied',
+                        user_id: 'user_ZU83c2XlWYoKypqo2h3DF',
+                        template_params: {
+                            'to_name': name,
+                            'reply_to': 'QACinemas@madeupmail.com',
+                            'message' : res.data
+                        }
+                    };
+                    axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
+                        .then((res) => {
+                            setErrorMessage(null);
+                            setSuccessMessage("Payment processed and receipt sent via Email.");
+                            setTimeout(() => setRedirect("/OrderSummary"), 2000);
+                        }).catch((err) => {
+                            console.error(err.message);
+                            setPaymentProcessing(false);
+                            setSuccessMessage(null);
+                            setErrorMessage(err.message);
+                        });
                 }).catch((err) => {
                     console.error(err.message);
+                    setPaymentProcessing(false);
+                    setSuccessMessage(null);
                     setErrorMessage(err.message);
                 });
         }
@@ -77,7 +96,6 @@ const CheckoutForm = ({bookingInfo}) => {
 
     if (redirect) {
         bookingInfo.Price = PRICE;
-        bookingInfo.Receipt = receipt;
         return <Redirect to = {{
             pathname: redirect,
             state: bookingInfo
@@ -87,19 +105,19 @@ const CheckoutForm = ({bookingInfo}) => {
             <div className="payment-form">
                 <form onSubmit={handleSubmit}>
                     <CardSection 
-                        name={bookingInfo.name} 
-                        city={address_city} 
-                        setCity={setAddress_city} 
-                        country={address_country} 
-                        setCountry={setAddress_country} 
-                        line1={address_line1} 
-                        setLine1={setAddress_line1} 
-                        line2={address_line2} 
-                        setLine2={setAddress_line2} 
-                        address_zip={address_zip} 
-                        setAddress_zip={setAddress_zip} 
-                        email={email}
-                        setEmail={setEmail}
+                        name           = {bookingInfo.name} 
+                        city           = {address_city} 
+                        setCity        = {setAddress_city} 
+                        country        = {address_country} 
+                        setCountry     = {setAddress_country} 
+                        line1          = {address_line1} 
+                        setLine1       = {setAddress_line1} 
+                        line2          = {address_line2} 
+                        setLine2       = {setAddress_line2} 
+                        address_zip    = {address_zip} 
+                        setAddress_zip = {setAddress_zip} 
+                        email          = {email}
+                        setEmail       = {setEmail}
                     />
                     <div className="under-form">
                         <Button disabled={!stripe} color="primary" type="submit">Send</Button>
