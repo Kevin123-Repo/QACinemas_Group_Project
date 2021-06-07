@@ -17,7 +17,6 @@ import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
 import Payments from './Components/Payments/Payments';
 
-
 function App() {
   return (
     <>
