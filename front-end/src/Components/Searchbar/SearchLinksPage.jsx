@@ -6,8 +6,6 @@ import axios from 'axios';
 const SearchLinksPage = () => {
 
     let { query } = useParams();
-    // let link = `/movies/${query}`;
-
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -18,7 +16,7 @@ const SearchLinksPage = () => {
             }).catch((err) => {
                 console.log(err.message);
             })
-    }, []);
+    }, [data]);
     
     const movieLinks = data.map(movie => {
         let relevantSearchTerms = []
