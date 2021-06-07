@@ -37,7 +37,7 @@ const CommentsForm = ({ handleUpdate }) => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/movies/getAll")
+            .get("http://localhost:8080/movies/getCurrent")
             .then((response) => {
                 setMovie(response.data);
                 setIsLoading(false);
