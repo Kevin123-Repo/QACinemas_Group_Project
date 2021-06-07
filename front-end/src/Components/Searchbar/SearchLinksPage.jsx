@@ -19,16 +19,32 @@ const SearchLinksPage = () => {
                 console.log(err.message);
             })
     }, []);
-
-    console.log(data);
     
-    // Type in film title exactly to return a working link
     const movieLinks = data.map(movie => {
-        return(
+        let relevantSearchTerms = []
+         
+        if (movie.title.toLowerCase().includes(query.toLowerCase())) {
+           relevantSearchTerms.push(movie.title + " | ");
+        } 
         
-            <Link to={`../movies/${movie.title}`}><h1>{movie.title}</h1></Link>
+        for (let director of movie.director) {
+            if (director.toLowerCase().includes(query.toLowerCase())) {
+                relevantSearchTerms.push(movie.director + " | ");
+            }
+        }
+
+        for (let actor of movie.actors) {
+            if (actor.toLowerCase().includes(query.toLowerCase())) {
+                relevantSearchTerms.push(actor + " | ");
+            }
+        }
+        
+        return(
+            <>
+                <Link to={`../movies/${movie.title}`}><h1>{movie.title}</h1></Link>
+                <p>Relevant search terms: {relevantSearchTerms}</p>
+            </>
         )
-        // <Link to={link}><h1>{query}</h1></Link>
         });
         
     return(
