@@ -73,7 +73,8 @@ input:focus,
   display:inline-block;
   color: #0f4b5a;
   margin-left: 6vw;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: x-large;
 }
 
 .under-form .btn-group-sm {

@@ -16,6 +16,7 @@ import MovieInfo from './Components/Listings/MovieInfo';
 import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
 import Payments from './Components/Payments/Payments';
+import OrderSummary from './Components/Payments/OrderSummary';
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
             <Route path="/TicketBooking">
               <TicketBooking/>
             </Route>
+            <Route path="/OrderSummary" render={(props) => <OrderSummary {...props}/>}/>
           </Switch>
         </div>
         <FooterBar />

@@ -325,3 +325,19 @@ html, body {
   height: 350px;
   overflow: auto;
 }
+
+#summary-title {
+  text-align: center;
+}
+
+.order-summary-div {
+  width: 30vw;
+  margin-left: 25vw;
+  margin-top: 40px;
+  font-size: x-large;
+  color: #0f4b5a;
+}
+
+.order-summary-div table {
+  color: #0f4b5a;
+}

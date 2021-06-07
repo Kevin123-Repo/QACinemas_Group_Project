@@ -3,6 +3,7 @@ import { useElements, useStripe, CardNumberElement, CardExpiryElement, CardCvcEl
 import { Spinner, Button } from 'reactstrap';
 import axios from "axios";
 import CardSection from "./CardSection";
+import { Redirect } from 'react-router';
 
 const CheckoutForm = ({bookingInfo}) => {
 
@@ -12,6 +13,7 @@ const CheckoutForm = ({bookingInfo}) => {
     const [successMessage, setSuccessMessage] = useState(null);
     const [errorMessage, setErrorMessage] = useState(null);
     const [paymentProcessing, setPaymentProcessing] = useState(false);
+    const [redirect, setRedirect] = useState(null);
 
     const [address_city, setAddress_city] = useState("");
     const [address_country, setAddress_country] = useState("GB");
@@ -19,9 +21,11 @@ const CheckoutForm = ({bookingInfo}) => {
     const [address_line2, setAddress_line2] = useState("");
     const [address_zip, setAddress_zip] = useState("");
     const [email, setEmail] = useState("");
+    const [receipt, setReceipt] = useState("");
 
     const name = bookingInfo.name;
     const PRICE = +((bookingInfo.adults * 7.99) + (bookingInfo.child * 5.99) + (bookingInfo.concession * 3.99)).toFixed(2); // 2 Decimal places + str -> num conversion (unary +)
+
 
     const validateForm = () => {
         if (address_line1 === "") {
@@ -32,6 +36,9 @@ const CheckoutForm = ({bookingInfo}) => {
             return false;
         } else if (address_zip === "") {
             setErrorMessage("Postal Code is a required field");
+            return false;
+        } else if (email === "") {
+            setErrorMessage("Email is a required field");
             return false;
         } else {
             return true;
@@ -58,8 +65,9 @@ const CheckoutForm = ({bookingInfo}) => {
             setPaymentProcessing(true);
             axios.post("http://localhost:8080/bookings/payment", {price: PRICE, token: result.token, booking: bookingInfo})
                 .then((res) => {
-                    setPaymentProcessing(false);
-                    setSuccessMessage("Payment Successful");
+                    console.log(res.data);
+                    setReceipt(res.data);
+                    setRedirect("/OrderSummary");
                 }).catch((err) => {
                     console.error(err.message);
                     setErrorMessage(err.message);
@@ -67,7 +75,14 @@ const CheckoutForm = ({bookingInfo}) => {
         }
     };
 
-    return (
+    if (redirect) {
+        bookingInfo.Price = PRICE;
+        bookingInfo.Receipt = receipt;
+        return <Redirect to = {{
+            pathname: redirect,
+            state: bookingInfo
+        }}/>
+    } else return (
         <>
             <div className="payment-form">
                 <form onSubmit={handleSubmit}>

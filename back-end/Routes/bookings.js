@@ -35,8 +35,8 @@ ROUTER.post("/bookings/payment", async(req, res, next) => {
         let bookingObj = req.body.booking;
         bookingObj.paymentInfo = payInfoObj;  // Add payment info to booking object
         const DOC = new BOOKING(bookingObj); // New document using model
-        const CREATED = await DOC.save();
-        res.status(201).send(CREATED);
+        await DOC.save();
+        res.status(201).send(CHARGE.receipt_url);
     } catch(err) {
         next(new Error(err.message));
     }
