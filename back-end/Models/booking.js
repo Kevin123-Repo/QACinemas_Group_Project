@@ -51,6 +51,15 @@ const PAYMENT_INFO_SCHEMA = new SCHEMA({
 	receipt_url: String
 });
 
+const BILLING_DETAILS_SCHEMA = new SCHEMA({
+	name: String,
+	address_line1: String, 
+	address_line2: String,
+	address_city: String,
+	address_country: String,
+	address_zip: String,
+});
+
 const BOOKING_SCHEMA = new SCHEMA({
     movieTitle: {
 		type: String,
@@ -77,6 +86,8 @@ const BOOKING_SCHEMA = new SCHEMA({
 	adults: Number, 
 	child: Number,
 	concession: Number,
+	email: String,
+	billing_details: BILLING_DETAILS_SCHEMA,
 	paymentInfo: PAYMENT_INFO_SCHEMA
 });
 

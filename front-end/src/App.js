@@ -17,6 +17,7 @@ import NewReleases from './Components/Listings/NewReleases';
 import DiscussionBoard from './Components/DiscussionBoard/DiscussionBoard';
 import SearchLinksPage from './Components/Searchbar/SearchLinksPage';
 import Payments from './Components/Payments/Payments';
+import OrderSummary from './Components/Payments/OrderSummary';
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
             <Route path="/search/:query">
               <SearchLinksPage />
             </Route>
+            <Route path="/OrderSummary" render={(props) => <OrderSummary {...props}/>}/>
           </Switch>
         </div>
           <FooterBar />

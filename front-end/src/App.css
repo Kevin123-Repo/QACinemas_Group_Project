@@ -9,8 +9,8 @@
 }
 
 .carousel {
-  width:1000px;
-  height:800px;
+  width:65vw;
+  height:38vw;
   margin: auto;
 }
 
@@ -20,13 +20,22 @@
 }
 
 .main-content {
-  margin-top:6%;
+  padding-top: 2%;
   width:80%;
-  min-height: 100vh;
+  min-height: 79.4vh;
 }
 
 .listings {
-  margin-top: 7vw;
+  margin-bottom: 20px;
+  margin-left: 20vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 38vw;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius:1em;;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
 }
 
 .listings .carousel {
@@ -79,7 +88,7 @@
 }
 
 .payment-form {
-  margin-left: 20vw;
+  margin-left: 25vw;
   position: relative;
 }
 
@@ -137,4 +146,204 @@ html, body {
 .footer-div {
   position: relative;
 	clear:both;
+}
+
+.nav-link .active {
+  font-weight: bold;
+  color: #0f4b5a !important;
+}
+
+.nav-link :hover {
+  color: #0f4b5a !important;
+
+}
+
+#footer-links .nav-link a {
+  color: rgb(171 166 166);
+}
+
+.b-example-divider {
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+}
+
+#footer-links {
+  justify-content: center;
+}
+
+#homepage-img {
+  height: 400px;
+  width: 450px;
+}
+
+#root {
+  background-image: linear-gradient(#f8f9fa, #44474f);
+}
+
+.footer-div .bg-light {
+  background-color: #464950!important;
+}
+
+.bg-light {
+  background-color: #e0e2e3!important;
+}
+
+.about-div {
+  margin-bottom: 20px;
+}
+
+.about-div .card {
+  background-color: #ffffff2e;
+}
+
+.booking-div .btn-primary {
+  background-color: #0f4b5a !important;
+  border-color: #0f4b5a !important;
+}
+
+.booking-div .btn-primary:hover {
+  background-color: #15809b !important;
+  border-color: #15809b !important;
+}
+
+.under-form .btn-primary {
+  background-color: #0f4b5a !important;
+  border-color: #0f4b5a !important;
+}
+
+.under-form .btn-primary:hover {
+  background-color: #15809b !important;
+  border-color: #15809b !important;
+}
+
+#booking-btn {
+  margin-top: 5px;
+}
+
+.bottom-row {
+  margin-bottom: 20px;
+}
+
+.classification-div .card{
+  background-color: #ffffff2e;
+}
+
+.screens-imgs {
+  height: 38vw;
+  width:65vw;
+}
+
+.times-div {
+  margin-top: 70px;
+  color: #0f4b5a;
+}
+
+.screens-div {
+  margin-bottom: 40px;
+}
+
+.map-div {
+  margin-left: 20px;
+}
+
+.map-info {
+  text-align: center;
+}
+
+.cinema-front {
+  width: 350px;
+  height: 220px;
+  margin-left: 100px
+}
+
+.gettingThere-div, .homepage-div, .booking-div, .classification-div, .about-div, .contact-div, .places-div, .board-div {
+  color: #0f4b5a;
+}
+
+.about-div table, .places-div table, .board-div table {
+  color: #0f4b5a;
+}
+
+.contact-div label {
+  color: #0f4b5a;
+  font-weight: 400;
+}
+
+.contact-div button {
+  margin-top: 5px;
+}
+
+.contact-div .btn-primary {
+  background-color: #0f4b5a !important;
+  border-color: #0f4b5a !important;
+}
+
+.contact-div .btn-primary:hover {
+  background-color: #15809b !important;
+  border-color: #15809b !important;
+}
+
+.places-imgs {
+  height: 500px;
+  width: 600px;
+  margin-left: 15px;
+}
+
+.comment-form button:hover {
+  background-color: #0f4b5a;
+}
+
+.map-div {
+  height: 50%!important;
+  width: 30%!important;
+}
+
+.gettingThere-div {
+  margin-bottom: 20px;
+}
+
+.payment-form label {
+  color: #0f4b5a;
+  font-weight: 400;
+}
+
+.country-dropdown {
+  min-width: 7vw;
+  background-color: #0f4b5a;
+  border-color: #0f4b5a !important;
+}
+
+.country-dropdown:hover {
+  background-color: #15809b;
+  border-color: #15809b !important;
+}
+
+.country-list {
+  height: 350px;
+  overflow: auto;
+}
+
+#summary-title {
+  text-align: center;
+}
+
+.order-summary-div {
+  width: 30vw;
+  margin-left: 25vw;
+  margin-top: 20px;
+  font-size: 1.5vw;
+  color: #0f4b5a;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius:0.5em;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  padding: 10px;
+}
+
+.order-summary-div table {
+  color: #0f4b5a;
 }

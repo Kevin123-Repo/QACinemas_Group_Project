@@ -1,10 +1,7 @@
 const Comment = (props) => {
+
     const { comment } = props;
-    const myString = comment.comment;
-    console.log(myString);
     
-
-
     return (
         <tr>
             <td>{comment.username}</td>
@@ -12,8 +9,7 @@ const Comment = (props) => {
             <td>{comment.movieTitle}</td>
             <td>{comment.rating}</td>
         </tr>
-    )
-
+    );
 }
 
 export default Comment;

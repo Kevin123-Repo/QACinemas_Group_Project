@@ -24,13 +24,13 @@ const NavBar = () => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md" fixed="top">
+      <Navbar color="light" light expand="md">
         <NavbarBrand><Link to="/"><img id="navbarLogo" src={Logo} alt="" /></Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink><Link to="/">Home</Link></NavLink>
+              <NavLink><Link exact to="/">Home</Link></NavLink>
             </NavItem>
             <NavItem>
             <NavLink><Link to="/Listings">Listings</Link></NavLink>
@@ -79,6 +79,7 @@ const NavBar = () => {
           <Searchbar/>
         </Collapse>
       </Navbar >
+      <div class="b-example-divider"></div>
     </div >
   );
 }

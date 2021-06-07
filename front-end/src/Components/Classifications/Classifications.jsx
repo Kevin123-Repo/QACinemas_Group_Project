@@ -1,17 +1,11 @@
-import U from '../../Images/Film Ratings/U.PNG'
-import PG from '../../Images/Film Ratings/PG.PNG'
-import TWELVE from '../../Images/Film Ratings/12.PNG'
-import TWELVEA from '../../Images/Film Ratings/12A.PNG'
-import FIFTHTEEN from '../../Images/Film Ratings/15.PNG'
-import EIGHTEEN from '../../Images/Film Ratings/18.PNG'
+import U from '../../Images/Film Ratings/U_Alpha.PNG'
+import PG from '../../Images/Film Ratings/PG_Alpha.PNG'
+import TWELVE from '../../Images/Film Ratings/12_Alpha.PNG'
+import TWELVEA from '../../Images/Film Ratings/12A_Alpha.PNG'
+import FIFTHTEEN from '../../Images/Film Ratings/15_Alpha.PNG'
+import EIGHTEEN from '../../Images/Film Ratings/18_Alpha.PNG'
 import React, { useState } from 'react';
-
-
-
-
-
 import { Collapse, CardFooter, Card, CardTitle, Row, Col, CardBody } from 'reactstrap';
-
 
 const Classifications = () => {
 
@@ -22,7 +16,6 @@ const Classifications = () => {
     const [isOpen15, setIsOpen15] = useState(false);
     const [isOpen18, setIsOpen18] = useState(false);
 
-
     const toggleU = () => setIsOpenU(!isOpenU);
     const togglePG = () => setIsOpenPG(!isOpenPG);
     const toggle12A = () => setIsOpen12A(!isOpen12A);
@@ -30,10 +23,8 @@ const Classifications = () => {
     const toggle15 = () => setIsOpen15(!isOpen15);
     const toggle18 = () => setIsOpen18(!isOpen18);
 
-
-
     return (
-        <>
+        <div className="classification-div">
             <h1><center> <u> Classifications </u> </center> </h1>
             <Row>
                 <Col sm="6">
@@ -43,7 +34,6 @@ const Classifications = () => {
                         </CardBody>
                         <Collapse isOpen={isOpenU}>
                             <CardTitle onClick={toggleU}><b>Universal(U)</b></CardTitle>
-
                             <Card>
                                 <CardBody>
                                     This ratings implies the movie is suitable for anyone aged four and above.
@@ -82,10 +72,6 @@ const Classifications = () => {
                                 </CardFooter>
                             </Card>
                         </Collapse>
-
-
-
-
                     </Card>
                 </Col>
             </Row>
@@ -98,7 +84,6 @@ const Classifications = () => {
                         </CardBody>
                         <Collapse isOpen={isOpen12A}>
                             <CardTitle onClick={toggle12A}><b>Parental Guidance(PG)</b></CardTitle>
-
                             <Card>
                                 <CardBody>
                                     This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight.
@@ -112,10 +97,6 @@ const Classifications = () => {
                                 </CardFooter>
                             </Card>
                         </Collapse>
-
-
-
-
                     </Card>
                 </Col>
 
@@ -126,15 +107,13 @@ const Classifications = () => {
                         </CardBody>
                         <Collapse isOpen={isOpen12}>
                             <CardTitle onClick={toggle12}><b>Parental Guidance(PG)</b></CardTitle>
-
                             <Card>
                                 <CardBody>
                                     All the same rules as 12A.
                                     Again not suitable for anyone younger than 12.
                                     Children under 12 must be accompanied by an adult to view these movies.
                                     Also no one younger than 12 can purchase or rent a 12 rated work.
-
-                             </CardBody>
+                                </CardBody>
                                 <CardFooter>
                                     <center>
                                         <a href="https://www.bbfc.co.uk/rating/12" target="_blank">Additional Info</a>
@@ -144,12 +123,9 @@ const Classifications = () => {
                         </Collapse>
                     </Card>
                 </Col>
-
-
             </Row >
 
-            <Row>
-
+            <Row className="bottom-row">
                 <Col sm="6">
                     <Card body>
                         <CardBody>
@@ -157,12 +133,10 @@ const Classifications = () => {
                         </CardBody>
                         <Collapse isOpen={isOpen15}>
                             <CardTitle onClick={toggle15}><b>Parental Guidance(PG)</b></CardTitle>
-
                             <Card>
                                 <CardBody>
                                     Anyone younger than 15 cannot watch these movies in a cinema.
                                     Anyone younger than 15 cannot buy or rent movies with this rating.
-
                              </CardBody>
                                 <CardFooter>
                                     <center>
@@ -181,12 +155,10 @@ const Classifications = () => {
                         </CardBody>
                         <Collapse isOpen={isOpen18}>
                             <CardTitle onClick={toggle18}><b>18</b></CardTitle>
-
                             <Card>
                                 <CardBody>
                                     No one younger than may watch these movies in a cinema, nor can they purchase or rent 18 rated movies.
                                     Adults should be free to decide what entertainment they themselves view.
-
                              </CardBody>
                                 <CardFooter>
                                     <center>
@@ -197,19 +169,9 @@ const Classifications = () => {
                         </Collapse>
                     </Card>
                 </Col>
-
-
             </Row>
-
-
-
-
-        </>
+        </div>
     );
 };
-
-
-
-
 
 export default Classifications;

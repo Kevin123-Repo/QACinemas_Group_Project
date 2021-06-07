@@ -78,10 +78,10 @@ const FormBooking = ({ data }) => {
         return <Redirect to = {{
             pathname: redirect,
             state: { 
+                name : name, 
                 movieTitle : selectedMovie,
                 date : date,
                 time : selectedTime,
-                name : name, 
                 numberOfSeats: seats,
                 adults : (adults === "Adults")? 0 : adults,
                 child: (child === "Children")? 0 : child,
@@ -202,6 +202,5 @@ const FormBooking = ({ data }) => {
         </>
     );
 }
-
 
 export default FormBooking;
