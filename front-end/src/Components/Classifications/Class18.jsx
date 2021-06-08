@@ -16,19 +16,21 @@ const Class18 = () => {
                 <CardTitle onClick={toggle18}><b>18</b></CardTitle>
                 <Card>
                     <CardBody>
-                        No one younger than may watch these movies in a cinema, nor can they purchase or rent 18 rated movies.
+                        No one younger than 18 may watch these movies in a cinema, nor can they purchase or rent 18 rated movies.
                         Adults should be free to decide what entertainment they themselves view.
          </CardBody>
                     <Button color="primary" onClick={toggle12Rules} style={{ marginBottom: '1rem' }}>Conditions</Button>
                     <Collapse isOpen={isOpen12Rules}>
                         <Card>
                             <CardBody>
+                                There are almost no guidance on what is permiited within these rated movies but there are exceptions in the
+                                following areas
                                 <ul>
-                                    <li>Any References to drugs must be have clear educational purpose</li>
-                                    <li>Infreguent use of only mild bad language</li>
-                                    <li>Occasional nudity, no sexual context</li>
-                                    <li>Only mild sexual behaviour like kissing </li>
-                                    <li>Mild violence is acceptable if it is justified by context (i.e. comedic)</li>
+                                    <li>Movies should not be created through the commision of a criminal offence</li>
+                                    <li>Where material or treatment appears to us to risk harm to individuals or,
+                                        through their behaviour,to society</li>
+                                    <li>where there are more explicit images of sexual
+                                        activity in the context of a sex work</li>
                                 </ul>
                             </CardBody>
                         </Card>

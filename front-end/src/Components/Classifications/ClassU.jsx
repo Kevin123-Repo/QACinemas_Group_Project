@@ -17,10 +17,10 @@ const ClassU = () => {
                 <CardTitle onClick={toggleU}><b>Universal(U)</b></CardTitle>
                 <Card>
                     <CardBody>
-                        This ratings implies the movie is suitable for anyone aged four and above.
-                        Although with children this is a guideline as it can be hard to envisage what topics are scaring children.
-                        A general rule for any films aiming for a U rating is to have a positive theme throughout the film.
-                        Minalisation of violence, threat or horror is the best practice although inclusion of any should be
+                        This rating implies the movie is suitable for anyone aged four and above.
+                        Although with children this is a guideline as it can be hard to envisage what topics could cause distress to children.
+                        A general rule for any films aiming for a U rating is to have a positive theme throughout.
+                        Minalisation of violence, threat or horror is the best practice although inclusion of any should offer reassuring couterbalances to offset it.
                         </CardBody>
 
                     <Button color="primary" onClick={toggleURules} style={{ marginBottom: '1rem' }}>Conditions</Button>
@@ -28,11 +28,11 @@ const ClassU = () => {
                         <Card>
                             <CardBody>
                                 <ul>
-                                    <li>Any References to drugs must be have clear educational purpose</li>
-                                    <li>Infreguent use of only mild bad language</li>
-                                    <li>Occasional nudity, no sexual context</li>
-                                    <li>Only mild sexual behaviour like kissing </li>
-                                    <li>Mild violence is acceptable if it is justified by context (i.e. comedic)</li>
+                                    <li>Any references to drugs must have clear educational purpose.</li>
+                                    <li>Infrequent use of only very mild bad language.</li>
+                                    <li>Occasional nudity, no sexual context.</li>
+                                    <li>Only mild sexual behaviour like kissing.</li>
+                                    <li>Mild violence is acceptable if it is justified by context. (i.e. comedic)</li>
                                 </ul>
                             </CardBody>
                         </Card>

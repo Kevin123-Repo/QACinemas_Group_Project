@@ -18,7 +18,7 @@ const Class12A = () => {
                 <Card>
                     <CardBody>
                         Generally not suited to children under the age of 12. Children under the age of 12 can watch any movies with this rating as long as they are accompanied
-                        by an adult. As an advasery we recommend that adults should check the ratings information for the film in advance so they can make a more informed decision
+                        by an adult. As an advisory we recommend that adults should check the ratings information for the film in advance so they can make a more informed decision
                         as to whether any scenes within this film will cause particular distress to their children
                     </CardBody>
 
@@ -27,11 +27,11 @@ const Class12A = () => {
                         <Card>
                             <CardBody>
                                 <ul>
-                                    <li>Any References to drugs must be have clear educational purpose</li>
-                                    <li>Infreguent use of only mild bad language</li>
-                                    <li>Occasional nudity, no sexual context</li>
-                                    <li>Only mild sexual behaviour like kissing </li>
-                                    <li>Mild violence is acceptable if it is justified by context (i.e. comedic)</li>
+                                    <li>Misuse of drugs must be infrequent and should not be glamorised</li>
+                                    <li>Moderate bad language and use of strong languagemay be permitted</li>
+                                    <li>Nudity ina sexual context must be brief and discreet</li>
+                                    <li>Sexual activity may be briefly and discreetly portrayed</li>
+                                    <li>There may be moderate violence but it should not dwell on detail</li>
                                 </ul>
                             </CardBody>
                         </Card>

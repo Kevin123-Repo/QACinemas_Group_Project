@@ -18,7 +18,7 @@ const ClassPG = () => {
                 <Card>
                     <CardBody>
                         This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight.
-                        Children without the company of a parent can purchase tickets for these movies.
+                        Children of any age without the company of a parent can purchase tickets for these movies.
                         As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
                     </CardBody>
                     <Button color="primary" onClick={togglePGRules} style={{ marginBottom: '1rem' }}>Conditions</Button>

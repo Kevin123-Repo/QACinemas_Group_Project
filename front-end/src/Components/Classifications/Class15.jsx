@@ -25,11 +25,11 @@ const Class15 = () => {
                         <Card>
                             <CardBody>
                                 <ul>
-                                    <li>Any References to drugs must be have clear educational purpose</li>
-                                    <li>Infreguent use of only mild bad language</li>
-                                    <li>Occasional nudity, no sexual context</li>
-                                    <li>Only mild sexual behaviour like kissing </li>
-                                    <li>Mild violence is acceptable if it is justified by context (i.e. comedic)</li>
+                                    <li>Drugs may be consumed but promotion or encouragement of drug misuse is prohibited</li>
+                                    <li>Strong language is permitted verys strong language may appear infrequently</li>
+                                    <li>No constraints on nudity</li>
+                                    <li>Sexual activity can be portrayed but not in strong detail</li>
+                                    <li>Violence may be strong but should not dwell on the infliction of pain or injury</li>
                                 </ul>
                             </CardBody>
                         </Card>
