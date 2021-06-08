@@ -15,8 +15,9 @@ const SearchLinksPage = () => {
                 setData(DATA);
             }).catch((err) => {
                 console.log(err.message);
+                setData([]);
             })
-    }, [data]);
+    }, [query]);
     
     const movieLinks = data.map(movie => {
         let relevantSearchTerms = []
@@ -41,13 +42,21 @@ const SearchLinksPage = () => {
             <>
                 <Link to={`../movies/${movie.title}`}><h1>{movie.title}</h1></Link>
                 <p>Relevant search terms: {relevantSearchTerms}</p>
+                
             </>
         )
         });
-        
-    return(
-        movieLinks
-    )
+    
+    if (data.length) {  
+        return(
+            movieLinks
+        ) 
+    } else {
+        return (
+            <h2>No results</h2>
+        );
+    }
+    
 }
 
 export default SearchLinksPage;
