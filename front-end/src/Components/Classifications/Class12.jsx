@@ -1,4 +1,4 @@
-import TWELVE from '../../Images/Film Ratings/12_ALPHA.PNG'
+import TWELVE from '../../Images/Film Ratings/12_Alpha.PNG'
 import React, { useState } from 'react'
 import { Collapse, CardFooter, Card, CardTitle, CardBody, Button } from 'reactstrap';
 
