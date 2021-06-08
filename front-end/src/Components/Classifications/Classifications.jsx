@@ -33,21 +33,18 @@ const Classifications = () => {
                     </Card>
                 </Col>
             </Row>
-
             <Row className="middle-row">
                 <Col sm="6">
                     <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
                         <Class12A />
                     </Card>
                 </Col>
-
                 <Col sm="6">
                     <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
                         <Class12 />
                     </Card>
                 </Col>
             </Row >
-
             <Row className="bottom-row">
                 <Col sm="6">
                     <Card body style={{ backgroundColor: 'rgb(239 80 147)', borderColor: 'black' }}>
