@@ -18,7 +18,22 @@ const SearchLinksPage = () => {
                 setData([]);
             })
     }, [query]);
+
+    const siteTerms = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About", "Contact Page", "Screens", "Listings", "New Releases", "Discussion", "Payments", "Ticket Booking"]
+    let siteLinksCounter = 0;
     
+    const siteLinks = siteTerms.map(siteTerm => {
+        if (siteTerm.toLowerCase().includes(query.toLowerCase())) {
+            siteLinksCounter++;
+            return(
+                <>
+                    <Link to={`../${siteTerm.replace(/\s/g, '')}`}><h1>{siteTerm}</h1></Link>
+                </>
+            )
+        }
+        })
+
+
     const movieLinks = data.map(movie => {
         let relevantSearchTerms = []
          
@@ -47,16 +62,20 @@ const SearchLinksPage = () => {
         )
         });
     
-    if (data.length) {  
+    if (data.length || siteLinksCounter>0) {  
         return(
-            movieLinks
+            <>
+            {siteLinks}
+            <br/>
+            <br/>
+            {movieLinks}
+            </>
         ) 
     } else {
         return (
-            <h2>No results</h2>
+            <h2>No search results</h2>
         );
     }
-    
 }
 
 export default SearchLinksPage;
