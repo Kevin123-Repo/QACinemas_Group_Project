@@ -19,9 +19,9 @@ const SearchLinksPage = () => {
             })
     }, [query]);
 
-    const siteTerms = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About", "Contact Page", "Screens", "Listings", "New Releases", "Discussion", "Payments", "Ticket Booking"]
+    const siteTerms = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About", "Contact Page", "Screens", "Listings", "New Releases", "Discussion", "Ticket Booking"]
     let siteLinksCounter = 0;
-    
+
     const siteLinks = siteTerms.map(siteTerm => {
         if (siteTerm.toLowerCase().includes(query.toLowerCase())) {
             siteLinksCounter++;
