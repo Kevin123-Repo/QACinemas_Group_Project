@@ -21,7 +21,7 @@ const Classifications = () => {
     return (
         <div className="classification-div">
             <h1><center> <u> Classifications </u> </center> </h1>
-            <Row>
+            <Row className="top-row">
                 <Col sm="6">
                     <Card body style={{ backgroundColor: 'rgb(62 182 73)', borderColor: 'black' }}>
                         <ClassU />
@@ -34,7 +34,7 @@ const Classifications = () => {
                 </Col>
             </Row>
 
-            <Row>
+            <Row className="middle-row">
                 <Col sm="6">
                     <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
                         <Class12A />
