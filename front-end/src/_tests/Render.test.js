@@ -12,4 +12,27 @@ describe("Did pages render correctly test", () => {
 
     });
 
+    test('Listings page rendered correctly', () => {
+        render(<ListingGallery />);
+        waitFor(()=>{
+            expect(document.querySelector(".listingImgs")).toBeInTheDocument();
+        });
+    });
+
+    test('Booking page rendered correctly', () => {
+        render(<TicketBooking />);
+        waitFor(()=>{
+            expect(screen.getByText('Ticket Booking')).toBeInTheDocument();
+        });
+
+    });
+
+    test('Classificiation page rendered correctly', () => {
+        render(<Classifications />);
+        const classificationImage = document.querySelector('#u');
+        expect(classificationImage).toBeInTheDocument();
+
+    });
+
+
 });
