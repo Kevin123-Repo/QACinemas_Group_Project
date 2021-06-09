@@ -621,3 +621,13 @@ html, body {
 #movieSearch {
   margin-right: 10px;
 }
+
+.listing-info {
+  position: absolute;
+  top: 300px;
+  left: 5vw;
+}
+
+.listing-info img{
+  height: 12vw;
+}
