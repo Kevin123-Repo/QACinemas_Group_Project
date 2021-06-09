@@ -80,7 +80,7 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
               src=""
             />
             <h3>
-              Jhon Fred Agudelo
+              Jhon Urrego
             </h3>
             <h5>
               Contact Details
@@ -154,6 +154,12 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
   </table>
   <div
     className="card"
+    style={
+      Object {
+        "backgroundColor": "#0b2effcc",
+        "color": "white",
+      }
+    }
   >
     <div
       className="card-body"
@@ -174,26 +180,14 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
         className="card-body"
       >
         <p>
-          Founded by Scrum co-creator Ken Schwaber as objective oriented organisation. Through professional training courses,certifications and active learning all based on a competency models people will be handed the tools to enable them to solve complex solutions as a solo entity or in teams. Support will be given irregardless of where an individual is on the journey whether that be at the beginning or someone joining halfway through with more experience.
+          Scrum is a project management idea withihn the agile process used during the product development. It can be utilised in any projects that have multiple deadlines, complex requirements and a degree of uniqueness. Inside scrums each series of iteraion known as sprints are your typical stages of progress. sprints can last however long you want although the most common length for sprints are between two and four weeks.
         </p>
         <p>
-          Originally when organisations begun using scrum less than 50% of them were developing with incremntal iteraions which is the core of any Scrum. These were later coined the term 'Flaccid Scrum' where teams were using the vocabulary but not creating a shippable icrement of functionality within a single Sprint. The idea of Scrum is more of a project management skill and therefore the steep learning curve always troubled developers on the Scrum team. While the teachers of scrum did not have a software engineering background they were also not fully qualified to teach this in a development drive aspect.
+           Scrums functions best when the team is self organising and cross functional. This means that there is no leader that assigns a person to a task or tells someone how to solve a problem. Cross functional means that everyone inside takes a feature from an idea to implementation. Within the agile process you have a product owner who represents the customer/business and guides the team to building the product they want. A scrum master is also present to help manage the whole process of using scrum to ensure its performing at the most efficient levels.
         </p>
-        Three initiatives were lauched to solve this issue
-        <ol>
-          <li>
-            Creating Scrum Developer Program
-          </li>
-          A course developed specifically targettiong .NET technology stack. Collaborating with Microsoft gave them access to a base of solid trainers, coaches and a fully integrated technology stack. Lauching alongside Visual Studio in 2010 the next step was to find new partners and publish courses that targetted other technology stacks
-          <li>
-            Formalising the Scrum Body
-          </li>
-          As popularity for Scrum grew so did the confusion and misunderstanding. Therefore Jeff Sutherland and Ken Schwaber produced a body of knowledge know as 'The Scrum Guide'
-          <li>
-            Improving the quality and consistency of training
-          </li>
-          Part of the problem with'Flaccid Scrum' was being due to inconsistent training. There were many differing ideas about the fundamentals, done was defined differently and many where unable to answer questions about development dynaimcs during the Sprint. This final initiative was introduced to bring more transparency as a result bring more consistent results.
-        </ol>
+        <p>
+          The primary purpose of scrum development is to ensure that at the end of each sprint you have a product that is in a publishable state. Through using product backlogs a list of to-do's can be listed and prioritised so everyone on the team knows what the most important features are and they can begin work on that first. From this product backlog a sprint backlog can be formed. A product backlog can be thought of as all the things that needs to be completed for this project to be consider complete whereas a sprint backlog is a list of things to complete for the upcoming sprint.
+        </p>
       </div>
       <div
         className="card-footer"
@@ -216,24 +210,20 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
 <div
   className="classification-div"
 >
-  <h1>
-    <center>
-       
-      <u>
-         Classifications 
-      </u>
-       
-    </center>
-     
-  </h1>
   <div
-    className="row"
+    className="top-row row"
   >
     <div
       className="col-sm-6"
     >
       <div
         className="card card-body"
+        style={
+          Object {
+            "backgroundColor": "rgb(62 182 73)",
+            "borderColor": "black",
+          }
+        }
       >
         <div
           className="card-body"
@@ -242,6 +232,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
              
             <img
               height="150"
+              id="u"
               onClick={[Function]}
               src="U_Alpha.PNG"
               width="150"
@@ -266,7 +257,50 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             <div
               className="card-body"
             >
-              This ratings implies the movie is suitable for anyone aged four and above. Although with children this is a guideline as it can be hard to envisage what topics are scaring children. A general rule for any films aiming for a U rating is to have a positive theme throughout the film. Minalisation of violence, threat or horror is the best practice although inclusion of any should be rebuffed in a reassuring manner.
+              This rating implies the movie is suitable for anyone aged four and above. Although with children this is a guideline as it can be hard to envisage what topics could cause distress to children. A general rule for any films aiming for a U rating is to have a positive theme throughout. Minalisation of violence, threat or horror is the best practice although inclusion of any should offer reassuring couterbalances to offset it.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Any references to drugs must have clear educational purpose.
+                    </li>
+                    <li>
+                      Infrequent use of only very mild bad language.
+                    </li>
+                    <li>
+                      Occasional nudity, no sexual context.
+                    </li>
+                    <li>
+                      Only mild sexual behaviour like kissing.
+                    </li>
+                    <li>
+                      Mild violence is acceptable if it is justified by context. (i.e. comedic)
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               className="card-footer"
@@ -289,6 +323,12 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
+        style={
+          Object {
+            "backgroundColor": "rgb(249 172 25)",
+            "borderColor": "black",
+          }
+        }
       >
         <div
           className="card-body"
@@ -321,7 +361,50 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             <div
               className="card-body"
             >
-              This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight. Children without the company of a parent can purchase tickets for these movies. As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
+              This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight. Children of any age without the company of a parent can purchase tickets for these movies. As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      References to illegal drugs or drug misuse must be innocuous or carry a suitable anti-drug message.
+                    </li>
+                    <li>
+                      Mild bad language only
+                    </li>
+                    <li>
+                      Nudity is allowed with no sexual context.
+                    </li>
+                    <li>
+                      Sexual activity can be implied, but should be discreet.
+                    </li>
+                    <li>
+                      Violence will usually be mild.
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               className="card-footer"
@@ -341,13 +424,19 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="middle-row row"
   >
     <div
       className="col-sm-6"
     >
       <div
         className="card card-body"
+        style={
+          Object {
+            "backgroundColor": "rgb(244 126 33)",
+            "borderColor": "black",
+          }
+        }
       >
         <div
           className="card-body"
@@ -371,7 +460,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             onClick={[Function]}
           >
             <b>
-              Parental Guidance(PG)
+              12A
             </b>
           </div>
           <div
@@ -380,7 +469,50 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             <div
               className="card-body"
             >
-              This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight. Children without the company of a parent can purchase tickets for these movies. As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
+              Generally not suited to children under the age of 12. Children under the age of 12 can watch any movies with this rating as long as they are accompanied by an adult. As an advisory we recommend that adults should check the ratings information for the film in advance so they can make a more informed decision as to whether any scenes within this film will cause particular distress to their children
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Misuse of drugs must be infrequent and should not be glamorised
+                    </li>
+                    <li>
+                      Moderate bad language and use of strong languagemay be permitted
+                    </li>
+                    <li>
+                      Nudity ina sexual context must be brief and discreet
+                    </li>
+                    <li>
+                      Sexual activity may be briefly and discreetly portrayed
+                    </li>
+                    <li>
+                      There may be moderate violence but it should not dwell on detail
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               className="card-footer"
@@ -403,6 +535,12 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
+        style={
+          Object {
+            "backgroundColor": "rgb(244 126 33)",
+            "borderColor": "black",
+          }
+        }
       >
         <div
           className="card-body"
@@ -426,7 +564,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             onClick={[Function]}
           >
             <b>
-              Parental Guidance(PG)
+              12
             </b>
           </div>
           <div
@@ -436,6 +574,49 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
               className="card-body"
             >
               All the same rules as 12A. Again not suitable for anyone younger than 12. Children under 12 must be accompanied by an adult to view these movies. Also no one younger than 12 can purchase or rent a 12 rated work.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Misuse of drugs must be infrequent and should not be glamorised
+                    </li>
+                    <li>
+                      Moderate bad language and use of strong languagemay be permitted
+                    </li>
+                    <li>
+                      Nudity ina sexual context must be brief and discreet
+                    </li>
+                    <li>
+                      Sexual activity may be briefly and discreetly portrayed
+                    </li>
+                    <li>
+                      There may be moderate violence but it should not dwell on detail
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               className="card-footer"
@@ -462,6 +643,12 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
+        style={
+          Object {
+            "backgroundColor": "rgb(239 80 147)",
+            "borderColor": "black",
+          }
+        }
       >
         <div
           className="card-body"
@@ -485,7 +672,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             onClick={[Function]}
           >
             <b>
-              Parental Guidance(PG)
+              15
             </b>
           </div>
           <div
@@ -495,6 +682,49 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
               className="card-body"
             >
               Anyone younger than 15 cannot watch these movies in a cinema. Anyone younger than 15 cannot buy or rent movies with this rating.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Drugs may be consumed but promotion or encouragement of drug misuse is prohibited
+                    </li>
+                    <li>
+                      Strong language is permitted verys strong language may appear infrequently
+                    </li>
+                    <li>
+                      No constraints on nudity
+                    </li>
+                    <li>
+                      Sexual activity can be portrayed but not in strong detail
+                    </li>
+                    <li>
+                      Violence may be strong but should not dwell on the infliction of pain or injury
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               className="card-footer"
@@ -517,6 +747,12 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
+        style={
+          Object {
+            "backgroundColor": "rgb(222 31 38)",
+            "borderColor": "black",
+          }
+        }
       >
         <div
           className="card-body"
@@ -549,7 +785,45 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
             <div
               className="card-body"
             >
-              No one younger than may watch these movies in a cinema, nor can they purchase or rent 18 rated movies. Adults should be free to decide what entertainment they themselves view.
+              No one younger than 18 may watch these movies in a cinema, nor can they purchase or rent 18 rated movies. Adults should be free to decide what entertainment they themselves view.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  There are almost no guidance on what is permiited within these rated movies but there are exceptions in the following areas
+                  <ul>
+                    <li>
+                      Movies should not be created through the commision of a criminal offence
+                    </li>
+                    <li>
+                      Where material or treatment appears to us to risk harm to individuals or, through their behaviour,to society
+                    </li>
+                    <li>
+                      where there are more explicit images of sexual activity in the context of a sex work
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div
               className="card-footer"
@@ -735,9 +1009,6 @@ exports[`Snapshot Tests Discussion Board matches snapshot 1`] = `
       Discussion Board
     </h1>
   </div>
-  <h1>
-    Loading
-  </h1>
   <table
     className="table"
   >
@@ -767,6 +1038,9 @@ exports[`Snapshot Tests Discussion Board matches snapshot 1`] = `
     </thead>
     <tbody />
   </table>
+  <h1>
+    Loading
+  </h1>
 </div>
 `;
 
