@@ -1,10 +1,5 @@
-
-
-
-import FIFTHTEEN from '../../Images/Film Ratings/15_Alpha.PNG'
-import EIGHTEEN from '../../Images/Film Ratings/18_Alpha.PNG'
 import React, { useState } from 'react';
-import { Collapse, CardFooter, Card, CardTitle, Row, Col, CardBody } from 'reactstrap';
+import { Card, Row, Col } from 'reactstrap';
 import ClassPG from './ClassPG'
 import ClassU from './ClassU'
 import Class12 from './Class12'
