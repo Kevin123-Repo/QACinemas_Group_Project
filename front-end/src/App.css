@@ -471,3 +471,23 @@ html, body {
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
   color: #0b8bab;
 }
+
+.about-table {
+  width: 100%;
+}
+
+.PersonInfo {
+  width: 211px;
+  height: 50%;
+  background-color: #ffffffe0;
+  text-align: center;
+  border-radius: 1em;
+  border: 3px solid #0b8bab;
+}
+
+#scrum-info-div{
+  margin-top: 20px;
+  background-color: #ffffffe0;
+  color: #0b8bab;
+  border: 3px solid #0b8bab;
+}
