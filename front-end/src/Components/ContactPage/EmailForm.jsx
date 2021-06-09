@@ -17,7 +17,7 @@ const EmailForm = () => {
 
     return (
         <>
-            <Container style= {{height: '500px', width: '500px'}}>
+            <Container id="contact-form-div">
                 <h3 style = {{fontWeight: 'italic'}}>Contact the manager!</h3>
                 <Form onSubmit={sendEmail}>
                     

@@ -491,3 +491,27 @@ html, body {
   color: #0b8bab;
   border: 3px solid #0b8bab;
 }
+
+#contact-form-div {
+  width: 500px;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius:0.5em;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+#address-info-div {
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius:0.5em;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  padding-left: 10px;
+  width: 250px;
+  margin-left: 40px;
+}
