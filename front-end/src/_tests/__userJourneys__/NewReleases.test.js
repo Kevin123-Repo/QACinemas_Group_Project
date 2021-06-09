@@ -26,7 +26,7 @@ describe("User journeys for the New Releases page", () => {
     test('Testing new releases image redirect,', async () => {
         render(<App />);
         const linkElement = screen.getByRole('link', { name: 'New Releases' });
-        linkElement.click();
+        linkElement.click(); 
         const image = await screen.findByAltText("0");
         expect(image).toBeInTheDocument();
 
