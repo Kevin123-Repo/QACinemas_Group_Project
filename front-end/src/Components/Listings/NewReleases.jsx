@@ -7,6 +7,7 @@ import {
     CarouselControl,
     CarouselCaption
 } from 'reactstrap';
+import comingSoon from '../../Images/comingsoon.png';
 
 const NewReleases = () => {
 
@@ -69,19 +70,23 @@ const NewReleases = () => {
 
     if (isLoaded) {
         return (
-            <div className="listings">    
-                <Carousel
-                    activeIndex={activeIndex}
-                    next={next}
-                    previous={previous}
-                    interval={false} // Auto-play
-                >
-                    {slides}
-                    <CarouselControl direction="prev" onClickHandler={previous} />
-                    <CarouselControl direction="next" onClickHandler={next} />
-                </Carousel>
-            </div>
-            // <h1> PlaceHolder </h1>
+            <>
+                <div className="listing-info">
+                    <img src={comingSoon} alt=""></img>
+                </div>
+                <div className="listings">    
+                    <Carousel
+                        activeIndex={activeIndex}
+                        next={next}
+                        previous={previous}
+                        interval={false} // Auto-play
+                    >
+                        {slides}
+                        <CarouselControl direction="prev" onClickHandler={previous} />
+                        <CarouselControl direction="next" onClickHandler={next} />
+                    </Carousel>
+                </div>
+            </>
         );
     } else {
         return (

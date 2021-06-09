@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../../Images/QA-logo-2019.png'
+import Logo from '../../Images/QA-logo-2019_blue.png'
 import {
   Collapse,
   Navbar,
@@ -47,6 +47,9 @@ const NavBar = () => {
             <NavItem>
               <NavLink><Link to="/NewReleases">New Releases</Link></NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink><Link to="/Discussion">Discussion</Link></NavLink>
+            </NavItem>
 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -71,9 +74,6 @@ const NavBar = () => {
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <NavItem>
-              <NavLink href="/Discussion">Discussion</NavLink>
-            </NavItem>
           </Nav>
           <NavbarText></NavbarText>
           <Searchbar/>

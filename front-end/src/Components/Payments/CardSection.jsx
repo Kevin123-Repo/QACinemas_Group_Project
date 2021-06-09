@@ -35,19 +35,18 @@ const CardSection = (props) => {
         <Input type="text" placeholder={"City"} value={city} onChange={(e) => setCity(e.target.value)}/>
 
         <label htmlFor="cardName">Country</label>
-        {/* <Input type="text" placeholder={"Country"} value={country} onChange={(e) => setCountry(e.target.value)}/> */}
-      <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)} size="sm" >
-        <DropdownToggle caret className="country-dropdown">
-          {country}
-        </DropdownToggle>
-        <DropdownMenu className="country-list" flip={false}>
-          {
-            countries.map((country, i) => (
-              <DropdownItem key={i} value={country} onClick={(e) => setCountry(e.target.value)}>{country}</DropdownItem>
-            ))
-          }
-        </DropdownMenu>
-      </Dropdown>
+        <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)} size="sm" >
+          <DropdownToggle caret className="country-dropdown">
+            {country}
+          </DropdownToggle>
+          <DropdownMenu className="country-list" flip={false}>
+            {
+              countries.map((country, i) => (
+                <DropdownItem key={i} value={country} onClick={(e) => setCountry(e.target.value)}>{country}</DropdownItem>
+              ))
+            }
+          </DropdownMenu>
+        </Dropdown>
 
         <label htmlFor="cardName">Postal Code</label>
         <Input type="text" placeholder={"Postal Code"} value={address_zip} onChange={(e) => setAddress_zip(e.target.value)}/>

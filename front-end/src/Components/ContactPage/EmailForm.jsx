@@ -17,7 +17,7 @@ const EmailForm = () => {
 
     return (
         <>
-            <Container style= {{height: '500px', width: '500px'}}>
+            <Container id="contact-form-div">
                 <h3 style = {{fontWeight: 'italic'}}>Contact the manager!</h3>
                 <Form onSubmit={sendEmail}>
                     
@@ -33,7 +33,7 @@ const EmailForm = () => {
 
                     <FormGroup>
                         <Label for="exampleText">Enter your message here!</Label>
-                        <Input type="textarea" rows="5" name="message" id="exampleText" />
+                        <Input type="textarea" rows="8" name="message" id="exampleText" />
                     </FormGroup>
 
                     <Button color="primary" type="submit">Send</Button>
