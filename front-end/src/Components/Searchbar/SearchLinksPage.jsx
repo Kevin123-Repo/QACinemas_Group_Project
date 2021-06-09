@@ -19,7 +19,7 @@ const SearchLinksPage = () => {
             })
     }, [query]);
 
-    const siteTerms = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About", "Contact Page", "Screens", "Listings", "New Releases", "Discussion", "Ticket Booking"]
+    const siteTerms = ["Opening Times", "Getting There", "Classifications", "Places To Go", "About", "Contact Page", "Screens", "Listings", "New Releases", "Discussion", "Ticket Booking"];
     let siteLinksCounter = 0;
 
     const siteLinks = siteTerms.map(siteTerm => {
@@ -29,7 +29,7 @@ const SearchLinksPage = () => {
                 <>
                     <Link to={`../${siteTerm.replace(/\s/g, '')}`}><h1>{siteTerm}</h1></Link>
                 </>
-            )
+            );
         }
         })
 
@@ -65,6 +65,7 @@ const SearchLinksPage = () => {
     if (data.length || siteLinksCounter>0) {  
         return(
             <>
+            <h2>Search Results:</h2>
             {siteLinks}
             <br/>
             <br/>

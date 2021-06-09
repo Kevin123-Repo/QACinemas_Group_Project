@@ -534,7 +534,6 @@ html, body {
 
 #places-table td {
   vertical-align: top;
-  /* padding-left: 20px */
 }
 
 #places-table p {
@@ -569,7 +568,7 @@ html, body {
 #homepage-div {
   padding-top: 2%;
   min-height: 79.4vh;
-  color: rgb(255 255 255 / 68%);
+  color: #0b8bab;
 }
 
 #homepage-div .row {
@@ -606,4 +605,8 @@ html, body {
 
 .homepage-imgs {
   width: 100%;
+}
+
+#movieSearch {
+  margin-right: 10px;
 }

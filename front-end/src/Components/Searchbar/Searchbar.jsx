@@ -15,14 +15,12 @@ const Searchbar = () => {
 
     return(
         <>  
-            
             <Form inline>
                 <FormGroup>
                     <Input type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term"/> 
                 </FormGroup>
                 <Link to={searchQuery}><Button color="primary "type="submit" id="movieSearchSubmit">Submit</Button></Link>
             </Form>
-            
         </>
     );
 }
