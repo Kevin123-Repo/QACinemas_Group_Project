@@ -1,5 +1,856 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshot Tests About matches snapshot 1`] = `
+<div
+  className="about-div container"
+>
+  <h1>
+    <center>
+       
+      <u>
+         About 
+      </u>
+       
+    </center>
+     
+  </h1>
+  <table
+    className="table table-bordered"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="PeronInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Anoush Lowton
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              email
+            </p>
+            <p>
+              <a
+                href=""
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PeronInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              George Ryalls
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              email
+            </p>
+            <p>
+              <a
+                href=""
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PeronInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Jhon Fred Agudelo
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              email
+            </p>
+            <p>
+              <a
+                href=""
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PeronInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Kevin Tse
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              email
+            </p>
+            <p>
+              <a
+                href=""
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PeronInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Raphael Fywell
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              email
+            </p>
+            <p>
+              <a
+                href=""
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div
+    className="card"
+  >
+    <div
+      className="card-body"
+    />
+    <div
+      className="card-title"
+    >
+      <center>
+        <b>
+          About Scrum
+        </b>
+      </center>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        <p>
+          Founded by Scrum co-creator Ken Schwaber as objective oriented organisation. Through professional training courses,certifications and active learning all based on a competency models people will be handed the tools to enable them to solve complex solutions as a solo entity or in teams. Support will be given irregardless of where an individual is on the journey whether that be at the beginning or someone joining halfway through with more experience.
+        </p>
+        <p>
+          Originally when organisations begun using scrum less than 50% of them were developing with incremntal iteraions which is the core of any Scrum. These were later coined the term 'Flaccid Scrum' where teams were using the vocabulary but not creating a shippable icrement of functionality within a single Sprint. The idea of Scrum is more of a project management skill and therefore the steep learning curve always troubled developers on the Scrum team. While the teachers of scrum did not have a software engineering background they were also not fully qualified to teach this in a development drive aspect.
+        </p>
+        Three initiatives were lauched to solve this issue
+        <ol>
+          <li>
+            Creating Scrum Developer Program
+          </li>
+          A course developed specifically targettiong .NET technology stack. Collaborating with Microsoft gave them access to a base of solid trainers, coaches and a fully integrated technology stack. Lauching alongside Visual Studio in 2010 the next step was to find new partners and publish courses that targetted other technology stacks
+          <li>
+            Formalising the Scrum Body
+          </li>
+          As popularity for Scrum grew so did the confusion and misunderstanding. Therefore Jeff Sutherland and Ken Schwaber produced a body of knowledge know as 'The Scrum Guide'
+          <li>
+            Improving the quality and consistency of training
+          </li>
+          Part of the problem with'Flaccid Scrum' was being due to inconsistent training. There were many differing ideas about the fundamentals, done was defined differently and many where unable to answer questions about development dynaimcs during the Sprint. This final initiative was introduced to bring more transparency as a result bring more consistent results.
+        </ol>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <center>
+          <a
+            href="https://www.scrum.org/"
+            target="_blank"
+          >
+            Scrum.org
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Classifications matches snapshot 1`] = `
+<div
+  className="classification-div"
+>
+  <h1>
+    <center>
+       
+      <u>
+         Classifications 
+      </u>
+       
+    </center>
+     
+  </h1>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              height="150"
+              onClick={[Function]}
+              src="U_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Universal(U)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              This ratings implies the movie is suitable for anyone aged four and above. Although with children this is a guideline as it can be hard to envisage what topics are scaring children. A general rule for any films aiming for a U rating is to have a positive theme throughout the film. Minalisation of violence, threat or horror is the best practice although inclusion of any should be rebuffed in a reassuring manner.
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/U"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              height="150"
+              onClick={[Function]}
+              src="PG_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Parental Guidance(PG)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight. Children without the company of a parent can purchase tickets for these movies. As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/pg"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              height="150"
+              onClick={[Function]}
+              src="12A_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Parental Guidance(PG)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight. Children without the company of a parent can purchase tickets for these movies. As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/12"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              height="150"
+              onClick={[Function]}
+              src="12_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Parental Guidance(PG)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              All the same rules as 12A. Again not suitable for anyone younger than 12. Children under 12 must be accompanied by an adult to view these movies. Also no one younger than 12 can purchase or rent a 12 rated work.
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/12"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="bottom-row row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              height="150"
+              onClick={[Function]}
+              src="15_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Parental Guidance(PG)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              Anyone younger than 15 cannot watch these movies in a cinema. Anyone younger than 15 cannot buy or rent movies with this rating.
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/15"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              height="150"
+              onClick={[Function]}
+              src="18_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              18
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              No one younger than may watch these movies in a cinema, nor can they purchase or rent 18 rated movies. Adults should be free to decide what entertainment they themselves view.
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/18"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Contact Page matches snapshot 1`] = `
+<div
+  className="contact-div container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <h1
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Contact Us
+      </h1>
+    </div>
+  </div>
+  <br />
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+    >
+      <h3>
+        Learning Center
+      </h3>
+      <p>
+        8th Floor
+        <br />
+        St James Buildings
+        <br />
+        79 Oxford Street
+        <br />
+        Manchester
+        <br />
+        M1 6FQ
+      </p>
+    </div>
+    <div
+      className="col"
+    >
+       
+      <div
+        className="container"
+        style={
+          Object {
+            "height": "500px",
+            "width": "500px",
+          }
+        }
+      >
+        <h3
+          style={
+            Object {
+              "fontWeight": "italic",
+            }
+          }
+        >
+          Contact the manager!
+        </h3>
+        <form
+          className=""
+          onSubmit={[Function]}
+        >
+          <div
+            className="form-group"
+          >
+            <label
+              className=""
+              htmlFor="exampleEmail"
+            >
+              Name
+            </label>
+            <input
+              className="form-control"
+              id="nameText"
+              name="name"
+              placeholder="Enter your name here!"
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              className=""
+              disabled={true}
+              htmlFor="exampleEmail"
+            >
+              Email
+            </label>
+            <input
+              className="form-control"
+              id="exampleEmail"
+              name="email"
+              placeholder="Enter your email here!"
+              type="email"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              className=""
+              htmlFor="exampleText"
+            >
+              Enter your message here!
+            </label>
+            <textarea
+              className="form-control"
+              id="exampleText"
+              name="message"
+              rows="5"
+            />
+          </div>
+          <button
+            aria-label={null}
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+       
+    </div>
+    <div
+      className="col"
+    >
+       
+      <img
+        alt="Inside of Cinema"
+        src="Homepage-Cinema.jpg"
+        width="100%"
+      />
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Discussion Board matches snapshot 1`] = `
+<div
+  className="board-div container"
+>
+  <div
+    id="board-title"
+  >
+    <h1>
+      Discussion Board
+    </h1>
+  </div>
+  <h1>
+    Loading
+  </h1>
+  <table
+    className="table"
+  >
+    <thead>
+      <tr>
+        <th
+          id="username-col"
+        >
+          Username
+        </th>
+        <th
+          id="comment-col"
+        >
+          Comment
+        </th>
+        <th
+          id="film-col"
+        >
+          Film
+        </th>
+        <th
+          id="rating-col"
+        >
+          Rating
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Snapshot Tests Getting There matches snapshot 1`] = `
+<div
+  className="gettingThere-div container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-4"
+    >
+      <h1>
+        Public Transport
+      </h1>
+    </div>
+    <div
+      className="col-lg-4"
+    />
+    <div
+      className="col-lg-1"
+    >
+      <h1>
+        Address
+      </h1>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-5"
+    >
+      <p>
+        You'll find us at Cardigan Fields, Kirkstall Rd, Burley, Leeds LS4 2DG. You can get here by bus or by tube!
+        <br />
+        The closest station is Burley Park.
+      </p>
+    </div>
+    <div
+      className="col-lg-1"
+    />
+    <div
+      className="map-info col-lg-6"
+    >
+      <p>
+        Please refer to the Map for exact location.
+      </p>
+      <div>
+        Loading...
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-1"
+    >
+      <h1>
+        Parking
+      </h1>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <p>
+        Our facilities has state of the art accessability. Parking included! All available parking spaces and disabled priority spaces will be at the front of the venue!
+      </p>
+      <img
+        alt=""
+        className="cinema-front"
+        src="cinema_front.png"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Snapshot Tests Homepage matches snapshot 1`] = `
 <div
   className="homepage-div container"
@@ -38,4 +889,358 @@ exports[`Snapshot Tests Homepage matches snapshot 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`Snapshot Tests Listing Gallery matches snapshot 1`] = `
+<h1>
+   Loading... 
+</h1>
+`;
+
+exports[`Snapshot Tests New Releases matches snapshot 1`] = `
+<h1>
+   Loading... 
+</h1>
+`;
+
+exports[`Snapshot Tests Opening Times matches snapshot 1`] = `
+<div
+  className="times-div container"
+>
+  <h1
+    align="center"
+  >
+    <img
+      alt="Clock"
+      height="55"
+      src="Clock_QA_Colour.png"
+      width="55"
+    />
+     Opening Times 
+    <img
+      alt="Clock"
+      height="55"
+      src="Clock_QA_Colour.png"
+      width="55"
+    />
+  </h1>
+  <h5
+    align="center"
+  >
+    Monday: 10:00 - 23:00
+  </h5>
+  <h5
+    align="center"
+  >
+    Tuesday: 10:00 - 23:00
+  </h5>
+  <h5
+    align="center"
+  >
+    Wednesday: 10:00 - 23:00
+  </h5>
+  <h5
+    align="center"
+  >
+    Thursday: 10:00 - 23:00
+  </h5>
+  <h5
+    align="center"
+  >
+    Friday: 10:00 - 00:00
+  </h5>
+  <h5
+    align="center"
+  >
+    Saturday: 10:00 - 00:00
+  </h5>
+  <h5
+    align="center"
+  >
+    Sunday: 10:00 - 22:00
+  </h5>
+</div>
+`;
+
+exports[`Snapshot Tests Places To Go matches snapshot 1`] = `
+<div
+  className="places-div container"
+>
+  <h1
+    align="center"
+  >
+    Places to go
+  </h1>
+  <table
+    className="table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="ToGoInfo"
+          >
+            <img
+              alt="Frankie and Bennys"
+              className="places-imgs"
+              src="FrankieAndBennys.jpg"
+            />
+            <h2
+              align="center"
+            >
+              Frankie and Bennys
+            </h2>
+            <p>
+              Frankie and Benny's is the perfect way to start and end your day. With a delicious breakfast menu filled with our favourite breakfast and brunch food items to our American and Italian menu. Enjoy our sizzling steaks, speciality pizza, American burgers and hearty pasta dishes - the options are endless! Our lively atmosphere makes it great for families to enjoy a great day out but it's also relaxing enough to enjoy a quite meal with friends.
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0113 203 8888
+            </p>
+            <p>
+              <a
+                href="https://www.frankieandbennys.com/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="ToGoInfo"
+          >
+            <img
+              alt="Nandos"
+              className="places-imgs"
+              src="Nandos.jpg"
+            />
+            <h2
+              align="center"
+            >
+              Nandos
+            </h2>
+            <p>
+              We're the home of the legendary Portuguese, flame grilled PERI-PERI chicken. You're guaranteed great food with excellent value for money, served in a warm, fun and vibrant atmosphere. Your senses will be fired up by the addictive flavour of our delicious chicken, grilled to perfection and served with pride and passion.
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0113 279 6309
+            </p>
+            <p>
+              <a
+                href="https://www.nandos.co.uk/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="ToGoInfo"
+          >
+            <img
+              alt="Hollywood Bowl"
+              className="places-imgs"
+              src="HollywoodBowl.jpg"
+            />
+            <h2
+              align="center"
+            >
+              Hollywood Bowl
+            </h2>
+            <p>
+              At Hollywood Bowl we have brilliant entertainment packages for all the family – including kids big and small! We're not just great for families: let out your competitive side against friends or colleagues. You can find everything you need for the perfect game including our fully licenced bar and fantastic deals on food and drink in our American inpired diner. With 32 lanes to bowl along, we bring the fun and entertainment. 
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0844 826 1466
+            </p>
+            <p>
+              <a
+                href="https://www.hollywoodbowl.co.uk/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="ToGoInfo"
+          >
+            <img
+              alt="LaserZone"
+              className="places-imgs"
+              src="LaserZone.jpg"
+            />
+            <h2
+              align="center"
+            >
+              LaserZone
+            </h2>
+            <p>
+              LaserZone is out of this world! Beyond the airlock lies a 4000sqft galactic labyrinth filled with swirling smoke, strange sounds, flashing lights...and enemies! Explore our multi-level, fully supervised arena, armed with state of the art laser packs and phasors. Score points by zapping your opponents and destroying their bases.
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0113 279 0000
+            </p>
+            <p>
+              <a
+                href="https://www.laserzone.co.uk/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Snapshot Tests Screens matches snapshot 1`] = `
+<div
+  className="screens-div container"
+>
+  <div
+    className="carousel slide"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="carousel-inner"
+    >
+      <div
+        className="carousel-item active"
+      >
+        <img
+          alt="Regular Screen"
+          className="screens-imgs"
+          src="Screens-OriginalRegularScreenPhoto.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Regular Screen
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <img
+          alt="Regular Seating Plan"
+          className="screens-imgs"
+          src="Screens-OriginalRegularSeatingPlan.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Regular Seating Plan
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <img
+          alt="Deluxe Screen"
+          className="screens-imgs"
+          src="Screens-OriginalDeluxeScreenPhoto.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Deluxe Screen
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <img
+          alt="Deluxe Seating Plan"
+          className="screens-imgs"
+          src="Screens-OriginalDeluxeSeatingPlan.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Deluxe Seating Plan
+          </p>
+        </div>
+      </div>
+    </div>
+    <a
+      className="carousel-control-prev"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+      tabIndex="0"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-prev-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Previous
+      </span>
+    </a>
+    <a
+      className="carousel-control-next"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+      tabIndex="0"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-next-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Next
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Ticket Booking matches snapshot 1`] = `
+<h1>
+   Loading... 
+</h1>
 `;
