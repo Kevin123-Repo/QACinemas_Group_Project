@@ -268,7 +268,7 @@ html, body {
   margin-left: 100px
 }
 
-.gettingThere-div, .homepage-div, .booking-div, .about-div, .contact-div, .places-div, .board-div {
+.gettingThere-div, .booking-div, .about-div, .contact-div, .places-div, .board-div {
   color: #0b8bab;
 }
 
@@ -564,4 +564,46 @@ html, body {
 
 .map-info p {
   margin-left: 40px;
+}
+
+#homepage-div {
+  padding-top: 2%;
+  min-height: 79.4vh;
+  color: rgb(255 255 255 / 68%);
+}
+
+#homepage-div .row {
+  margin-right: 0;
+  /* justify-content: center; */
+}
+
+#homepage-info {
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius:0.5em;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  font-size: larger;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#homepage-info .row {
+  justify-content: center;
+  text-align: center;
+}
+
+#homepage-div .carousel {
+  margin: 0;
+  width: 100vw;
+  height: 20vw;
+}
+
+#homepage-div .carousel-inner {
+  height: 20vw;
+}
+
+.homepage-imgs {
+  width: 100%;
 }
