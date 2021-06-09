@@ -18,37 +18,37 @@ const Classifications = () => {
 
             <Row className="top-row">
                 <Col sm="6">
-                    <Card body style={{ backgroundColor: 'rgb(62 182 73)', borderColor: 'black' }}>
+                    <Card body id="classU">
                         <ClassU />
                     </Card>
                 </Col>
                 <Col sm="6">
-                    <Card body style={{ backgroundColor: 'rgb(249 172 25)', borderColor: 'black' }}>
+                    <Card body id="classPG">
                         <ClassPG />
                     </Card>
                 </Col>
             </Row>
             <Row className="middle-row">
                 <Col sm="6">
-                    <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
+                    <Card body id="class12A">
                         <Class12A />
                     </Card>
                 </Col>
                 <Col sm="6">
-                    <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
+                    <Card body id="class12">
                         <Class12 />
                     </Card>
                 </Col>
             </Row >
             <Row className="bottom-row">
                 <Col sm="6">
-                    <Card body style={{ backgroundColor: 'rgb(239 80 147)', borderColor: 'black' }}>
+                    <Card body id="class15">
                         <Class15 />
                     </Card>
                 </Col>
 
                 <Col sm="6">
-                    <Card body style={{ backgroundColor: 'rgb(222 31 38)', borderColor: 'black' }}>
+                    <Card body id="class18">
                         <Class18 />
                     </Card>
                 </Col>

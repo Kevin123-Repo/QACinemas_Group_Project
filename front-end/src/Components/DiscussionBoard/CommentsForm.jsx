@@ -51,7 +51,7 @@ const CommentsForm = ({ handleUpdate }) => {
     if (isLoading === false) {
         return (
             <>
-                <Form onSubmit={handleSubmit}>
+                <Form className="discussion-form" onSubmit={handleSubmit}>
                     <FormGroup row>
                         <Label for="username" sm={1}>Username</Label>
                         <Col sm={10}>
@@ -69,24 +69,6 @@ const CommentsForm = ({ handleUpdate }) => {
                         </Col>
                     </FormGroup>
                     <FormGroup row>
-                        <Label for="rating" sm={1}>Rating</Label>
-                        <Col sm={10}>
-
-                           <select class="form-select" aria-label="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
-                                <option></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-
-                            <FormText color="muted">
-                                Not required
-                            </FormText>
-                        </Col>
-                    </FormGroup>
-                    <FormGroup row>
                         <Label for="movie" sm={1}>Movie</Label>
                         <Col sm={10}>
                             <select class="form-select" aria-label="movie"  value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}>
@@ -100,13 +82,25 @@ const CommentsForm = ({ handleUpdate }) => {
                             </FormText>
                         </Col>
                     </FormGroup>
-
-                    <FormGroup check row>
-                        <Col sm={{ size: 10, offset: 5 }}>
-                            <Button>Submit</Button>
+                    <FormGroup row>
+                        <Label for="rating" sm={1}>Rating</Label>
+                        <Col sm={10}>
+                           <select class="form-select" aria-label="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
+                                <option></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <FormText color="muted">
+                                Not required
+                            </FormText>
                         </Col>
-
                     </FormGroup>
+
+                    <Button>Submit</Button>
+
                 </Form>
             </>
         );

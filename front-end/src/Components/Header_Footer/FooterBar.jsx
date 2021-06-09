@@ -21,10 +21,9 @@ const FooterBar = () => {
         <div className="footer-div">
             <div class="b-example-divider"></div>
             <Navbar color="light" light expand="md">
-                {/* <NavbarBrand href="/"><img src={Logo} width="35" height="30" alt="" /></NavbarBrand> */}
                 <NavbarToggler onClick={toggle} />
                 <Collapse id="footer-links" isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav className="mr-auto ml-auto" navbar>
                         <NavItem>
                             <NavLink><Link exact to="/">Home</Link></NavLink>
                         </NavItem>
