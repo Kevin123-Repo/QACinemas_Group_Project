@@ -457,6 +457,17 @@ html, body {
   opacity: 1;
 }
 
+.payment-form .form-control::placeholder {
+  color:#0b8bab;
+  opacity: 1;
+}
+
+.payment-form .form-control:focus {
+  background-color: #9fbad1;
+  border: 1px solid #2b292d;
+  color: white;
+}
+
 .navbar .btn-primary {
   background-color: #0b8bab !important;
   border-color: #0b8bab !important;
@@ -486,7 +497,7 @@ html, body {
 
 #scrum-info-div{
   margin-top: 20px;
-  background-color: #ffffffe0;
+  background-color: #000000;
   color: #0b8bab;
   border: 3px solid #0b8bab;
 }
