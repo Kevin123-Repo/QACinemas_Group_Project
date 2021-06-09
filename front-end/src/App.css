@@ -310,9 +310,8 @@ html, body {
 }
 
 .places-imgs {
-  height: 500px;
-  width: 600px;
-  margin-left: 15px;
+  height: 400px;
+  width: 500px;
 }
 
 .comment-form button:hover {
@@ -514,4 +513,37 @@ html, body {
   padding-left: 10px;
   width: 250px;
   margin-left: 40px;
+}
+
+.toGoInfo {
+  width: 540px;
+  height: 728px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  border-radius:0.5em;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+}
+
+#places-table {
+  width: 100%;
+}
+
+#places-table td {
+  vertical-align: top;
+  /* padding-left: 20px */
+}
+
+#places-table p {
+  margin-bottom: 0.5rem!important;
+}
+
+.places-img-container {
+  height: 404px;
+  width: 504px;
+  margin-left: 10px;
+  border: 2px solid white;
 }
