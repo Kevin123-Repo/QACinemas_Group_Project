@@ -232,6 +232,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
              
             <img
               height="150"
+              id="u"
               onClick={[Function]}
               src="U_Alpha.PNG"
               width="150"
