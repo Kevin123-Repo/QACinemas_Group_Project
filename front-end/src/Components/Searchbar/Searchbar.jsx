@@ -23,7 +23,7 @@ const Searchbar = () => {
                     
                 
                 </FormGroup>
-                <Link to={searchQuery}><button type="submit" id="movieSearchSubmit">Submit</button></Link>
+                <Link to={searchQuery}><button type="submit" id="movieSearchSubmit" >Submit</button></Link>
             </Form>
             
         </>
