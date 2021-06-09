@@ -40,8 +40,8 @@ const DiscussionBoard = () => {
             <div id="board-title">
                 <h1>Discussion Board</h1>
             </div>
-            <CommentsForm handleUpdate={handleUpdate}/>
             <CommentsTable data={data}/>
+            <CommentsForm handleUpdate={handleUpdate}/>
         </Container>
         </>
     );

@@ -1,172 +1,55 @@
-import U from '../../Images/Film Ratings/U_Alpha.PNG'
-import PG from '../../Images/Film Ratings/PG_Alpha.PNG'
-import TWELVE from '../../Images/Film Ratings/12_Alpha.PNG'
-import TWELVEA from '../../Images/Film Ratings/12A_Alpha.PNG'
-import FIFTHTEEN from '../../Images/Film Ratings/15_Alpha.PNG'
-import EIGHTEEN from '../../Images/Film Ratings/18_Alpha.PNG'
 import React, { useState } from 'react';
-import { Collapse, CardFooter, Card, CardTitle, Row, Col, CardBody } from 'reactstrap';
+import { Card, Row, Col } from 'reactstrap';
+import ClassPG from './ClassPG'
+import ClassU from './ClassU'
+import Class12 from './Class12'
+import Class12A from './Class12A';
+import Class15 from './Class15';
+import Class18 from './Class18';
+
 
 const Classifications = () => {
 
-    const [isOpenU, setIsOpenU] = useState(false);
-    const [isOpenPG, setIsOpenPG] = useState(false);
-    const [isOpen12A, setIsOpen12A] = useState(false);
-    const [isOpen12, setIsOpen12] = useState(false);
-    const [isOpen15, setIsOpen15] = useState(false);
     const [isOpen18, setIsOpen18] = useState(false);
-
-    const toggleU = () => setIsOpenU(!isOpenU);
-    const togglePG = () => setIsOpenPG(!isOpenPG);
-    const toggle12A = () => setIsOpen12A(!isOpen12A);
-    const toggle12 = () => setIsOpen12(!isOpen12);
-    const toggle15 = () => setIsOpen15(!isOpen15);
     const toggle18 = () => setIsOpen18(!isOpen18);
 
     return (
         <div className="classification-div">
-            <h1><center> <u> Classifications </u> </center> </h1>
-            <Row>
-                <Col sm="6">
-                    <Card body>
-                        <CardBody>
-                            <center> <img src={U} width="150" height="150" onClick={toggleU} /></center>
-                        </CardBody>
-                        <Collapse isOpen={isOpenU}>
-                            <CardTitle onClick={toggleU}><b>Universal(U)</b></CardTitle>
-                            <Card>
-                                <CardBody>
-                                    This ratings implies the movie is suitable for anyone aged four and above.
-                                    Although with children this is a guideline as it can be hard to envisage what topics are scaring children.
-                                    A general rule for any films aiming for a U rating is to have a positive theme throughout the film.
-                                    Minalisation of violence, threat or horror is the best practice although inclusion of any should be rebuffed in a reassuring manner.
-                             </CardBody>
-                                <CardFooter>
-                                    <center>
-                                        <a href="https://www.bbfc.co.uk/rating/U" target="_blank">Additional Info</a>
-                                    </center>
-                                </CardFooter>
-                            </Card>
-                        </Collapse>
 
+            <Row className="top-row">
+                <Col sm="6">
+                    <Card body style={{ backgroundColor: 'rgb(62 182 73)', borderColor: 'black' }}>
+                        <ClassU />
                     </Card>
                 </Col>
                 <Col sm="6">
-                    <Card body>
-                        <CardBody>
-                            <center> <img src={PG} width="150" height="150" onClick={togglePG} /></center>
-                        </CardBody>
-                        <Collapse isOpen={isOpenPG}>
-                            <CardTitle onClick={togglePG}><b>Parental Guidance(PG)</b></CardTitle>
-
-                            <Card>
-                                <CardBody>
-                                    This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight.
-                                    Children without the company of a parent can purchase tickets for these movies.
-                                    As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
-                             </CardBody>
-                                <CardFooter>
-                                    <center>
-                                        <a href="https://www.bbfc.co.uk/rating/pg" target="_blank">Additional Info</a>
-                                    </center>
-                                </CardFooter>
-                            </Card>
-                        </Collapse>
+                    <Card body style={{ backgroundColor: 'rgb(249 172 25)', borderColor: 'black' }}>
+                        <ClassPG />
                     </Card>
                 </Col>
             </Row>
-
-            <Row>
+            <Row className="middle-row">
                 <Col sm="6">
-                    <Card body>
-                        <CardBody>
-                            <center> <img src={TWELVEA} width="150" height="150" onClick={toggle12A} /></center>
-                        </CardBody>
-                        <Collapse isOpen={isOpen12A}>
-                            <CardTitle onClick={toggle12A}><b>Parental Guidance(PG)</b></CardTitle>
-                            <Card>
-                                <CardBody>
-                                    This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight.
-                                    Children without the company of a parent can purchase tickets for these movies.
-                                    As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
-                             </CardBody>
-                                <CardFooter>
-                                    <center>
-                                        <a href="https://www.bbfc.co.uk/rating/12" target="_blank">Additional Info</a>
-                                    </center>
-                                </CardFooter>
-                            </Card>
-                        </Collapse>
+                    <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
+                        <Class12A />
                     </Card>
                 </Col>
-
                 <Col sm="6">
-                    <Card body>
-                        <CardBody>
-                            <center> <img src={TWELVE} width="150" height="150" onClick={toggle12} /></center>
-                        </CardBody>
-                        <Collapse isOpen={isOpen12}>
-                            <CardTitle onClick={toggle12}><b>Parental Guidance(PG)</b></CardTitle>
-                            <Card>
-                                <CardBody>
-                                    All the same rules as 12A.
-                                    Again not suitable for anyone younger than 12.
-                                    Children under 12 must be accompanied by an adult to view these movies.
-                                    Also no one younger than 12 can purchase or rent a 12 rated work.
-                                </CardBody>
-                                <CardFooter>
-                                    <center>
-                                        <a href="https://www.bbfc.co.uk/rating/12" target="_blank">Additional Info</a>
-                                    </center>
-                                </CardFooter>
-                            </Card>
-                        </Collapse>
+                    <Card body style={{ backgroundColor: 'rgb(244 126 33)', borderColor: 'black' }}>
+                        <Class12 />
                     </Card>
                 </Col>
             </Row >
-
             <Row className="bottom-row">
                 <Col sm="6">
-                    <Card body>
-                        <CardBody>
-                            <center> <img src={FIFTHTEEN} width="150" height="150" onClick={toggle15} /></center>
-                        </CardBody>
-                        <Collapse isOpen={isOpen15}>
-                            <CardTitle onClick={toggle15}><b>Parental Guidance(PG)</b></CardTitle>
-                            <Card>
-                                <CardBody>
-                                    Anyone younger than 15 cannot watch these movies in a cinema.
-                                    Anyone younger than 15 cannot buy or rent movies with this rating.
-                             </CardBody>
-                                <CardFooter>
-                                    <center>
-                                        <a href="https://www.bbfc.co.uk/rating/15" target="_blank">Additional Info</a>
-                                    </center>
-                                </CardFooter>
-                            </Card>
-                        </Collapse>
+                    <Card body style={{ backgroundColor: 'rgb(239 80 147)', borderColor: 'black' }}>
+                        <Class15 />
                     </Card>
                 </Col>
 
                 <Col sm="6">
-                    <Card body>
-                        <CardBody>
-                            <center> <img src={EIGHTEEN} width="150" height="150" onClick={toggle18} /></center>
-                        </CardBody>
-                        <Collapse isOpen={isOpen18}>
-                            <CardTitle onClick={toggle18}><b>18</b></CardTitle>
-                            <Card>
-                                <CardBody>
-                                    No one younger than may watch these movies in a cinema, nor can they purchase or rent 18 rated movies.
-                                    Adults should be free to decide what entertainment they themselves view.
-                             </CardBody>
-                                <CardFooter>
-                                    <center>
-                                        <a href="https://www.bbfc.co.uk/rating/18" target="_blank">Additional Info</a>
-                                    </center>
-                                </CardFooter>
-                            </Card>
-                        </Collapse>
+                    <Card body style={{ backgroundColor: 'rgb(222 31 38)', borderColor: 'black' }}>
+                        <Class18 />
                     </Card>
                 </Col>
             </Row>
