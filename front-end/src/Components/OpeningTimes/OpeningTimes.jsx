@@ -1,5 +1,4 @@
-import {Container} from 'reactstrap';
-import Clock from '../../Images/Clock_QA_Colour.png';
+import { Container } from 'reactstrap';
 import FaqAccordion from './FaqAccordion';
 const OpeningTimes = () =>{
 
