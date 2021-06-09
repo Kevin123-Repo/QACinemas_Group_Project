@@ -12,6 +12,7 @@ import OpeningTimes from '../Components/OpeningTimes/OpeningTimes';
 import ContactPage from '../Components/ContactPage/ContactPage';
 import GettingThere from '../Components/Getting_There/GettingThere';
 import DiscussionBoard from '../Components/DiscussionBoard/DiscussionBoard';
+import PlacesToGo from '../Components/PlacesToGo/PlacesToGo';
 
 
 describe("Did pages render correctly test", () => {
@@ -90,13 +91,13 @@ describe("Did pages render correctly test", () => {
     });
 
     test('Places to go rendered correctly', () => {
-        render(<GettingThere />);
+        render(<PlacesToGo />);
         waitFor(()=>{
             expect(screen.getByText('Nandos')).toBeInTheDocument();
         });
     });
 
-    test('Contact us page rendered correctly', () => {
+    test('Discussion board rendered correctly', () => {
         render(<DiscussionBoard />);
         waitFor(()=>{
             expect(screen.getByLabelText('Rating')).toBeInTheDocument();
