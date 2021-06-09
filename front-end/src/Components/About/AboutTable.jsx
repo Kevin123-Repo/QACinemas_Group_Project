@@ -29,7 +29,7 @@ const AboutTable = () => {
                         <td>
                             <Person
                                 //img={ }
-                                name='Jhon Fred Agudelo'
+                                name='Jhon Urrego'
                                 email='email'
                                 github=''
                             />
