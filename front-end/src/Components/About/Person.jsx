@@ -1,6 +1,6 @@
-const Person = ({ name, email, github, img }) => {
+const Person = ({ name, email, github }) => {
     return (
-        <div className='PeronInfo'>
+        <div className='PersonInfo'>
             <img src="" alt="" />
             <h3>{name}</h3>
             <h5>Contact Details</h5>

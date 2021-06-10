@@ -1,7 +1,9 @@
 const Place = ({img, name, info, number, website}) => {
     return(
-        <div className = 'ToGoInfo'>
-            <img src = {img} alt={name} className={'places-imgs'}/>
+        <div className = 'toGoInfo'>
+            <div className="places-img-container">
+                <img src={img} alt={name} className={'places-imgs'}/>
+            </div>
             <h2 align ='center'>{name}</h2>
             <p>{info}</p>
             <h5>Contact Details:</h5>

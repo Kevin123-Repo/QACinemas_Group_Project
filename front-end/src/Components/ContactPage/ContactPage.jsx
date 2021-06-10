@@ -8,24 +8,26 @@ const ContactPage = () => {
             <Container className="contact-div">
                 <Row>
                     <Col style={{ display: 'flex', justifyContent: 'center' }} >
-                        <h1 style={{ fontWeight: 'bold' }} >Contact Us</h1></Col>
+                        <h1 style={{ fontWeight: 'bold' }} >Contact Us</h1>
+                    </Col>
                 </Row>
                 <br />
                 <Row>
-                    <Col>
-                        <h3>Learning Center</h3>
-                        <p>8th Floor
-                        <br />
-                         St James Buildings
-                        <br />
-                        79 Oxford Street
-                        <br />
-                        Manchester
-                        <br />
-                        M1 6FQ</p>
+                    <Col lg="3">
+                        <div id="address-info-div">
+                            <h3>Learning Center</h3>
+                            <p>8th Floor
+                            <br />
+                            St James Buildings
+                            <br />
+                            79 Oxford Street
+                            <br />
+                            Manchester
+                            <br />
+                            M1 6FQ</p>
+                        </div>
                     </Col>
-                    <Col> <EmailForm /> </Col>
-                    <Col> <img src={contactImage} width="100%" alt="Inside of Cinema" /> </Col>
+                    <Col lg="6"> <EmailForm /> </Col>
                 </Row>
             </Container>
         </>
