@@ -23,11 +23,17 @@ MONGOOSE
         useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
     }).then(() => {
         console.log("MongoDB Connection Succesful");
-        // Listen for traffic on PORT
-        APP.listen(PORT, (err) => {
-            if (err) console.log(err);
-            console.log(`App listening at http://localhost:${PORT}`);
-        });
     }).catch((err) => { 
         console.log("MongoDB Connection Failed!!!");
     });
+
+// Listen for traffic on PORT
+let server = APP.listen(PORT, (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(`App listening at http://localhost:${PORT}`);
+    }
+});
+
+module.exports = server;

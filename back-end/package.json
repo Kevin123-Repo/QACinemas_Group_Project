@@ -4,14 +4,20 @@
   "description": "QA Cinema project back-end",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "mocha --exit tests",
+    "coverage": "nyc npm test"
   },
   "author": "Anoush Lowton, Raphael Fywell, George Ryalls, Kevin Tse, Jhon Urrego",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mocha": "^9.0.0",
     "mongoose": "^5.12.12",
+    "nyc": "^15.1.0",
     "stripe": "^8.151.0"
   }
 }

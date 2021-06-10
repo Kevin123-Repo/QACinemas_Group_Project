@@ -6,8 +6,8 @@ const SCHEMA = MONGOOSE.Schema;
 
 // Create Schemas
 const DISCUSSION_BOARD_SCHEMA = new SCHEMA({
-    username: String,
-	comment: {
+  username: String,
+  comment: {
 		type: String,
 		max: [280, "Comment must be less than 280 characters"]
 	},
