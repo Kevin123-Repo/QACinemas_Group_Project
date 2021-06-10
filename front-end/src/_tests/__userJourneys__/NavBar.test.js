@@ -10,6 +10,7 @@ test('Footer navigations works', () => {
     const linkElement = screen.getByRole('link', { name: 'About' });
     expect(linkElement).toHaveAttribute('href', '/About');
     linkElement.click();
+    console.log(document.URL);
     const infoElement = screen.getByText('Anoush Lowton');
     expect(infoElement).toBeInTheDocument();
     const linkElement2 = screen.getByRole('link', { name: 'Contact Us' });
