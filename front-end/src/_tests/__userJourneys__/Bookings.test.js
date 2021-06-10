@@ -2,8 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import TicketBooking from '../../Components/TicketBooking/TicketBooking';
 import App from '../../App';
-import FormBooking from '../../Components/TicketBooking/FormBooking';
- 
+
 describe("User journeys for the Bookings page", () => {
 
     test('Test Booking form validation on empty form', async () => {

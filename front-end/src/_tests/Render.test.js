@@ -1,6 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import App from '../../src/App'
 import Homepage from '../../src/Components/Homepage';
 import ListingGallery from '../Components/Listings/ListingGallery';
 import TicketBooking from '../Components/TicketBooking/TicketBooking';

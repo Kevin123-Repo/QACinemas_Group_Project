@@ -1,10 +1,7 @@
-import { findByAltText, getByTestId, render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ListingGallery from '../../Components/Listings/ListingGallery';
 import App from '../../App';
 
-
- 
 describe("User journey for the Screen page", () => {
  
     test('Testing carousel anchor tag,', async () => {
@@ -21,7 +18,4 @@ describe("User journey for the Screen page", () => {
         expect(image1).toBeInTheDocument();
  
     })
-
-
-  
 });

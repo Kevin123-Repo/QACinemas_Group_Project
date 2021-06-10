@@ -1,10 +1,7 @@
-import { findByAltText, getByTestId, render, screen, waitFor } from '@testing-library/react';
+import { render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ListingGallery from '../../Components/Listings/ListingGallery';
 import App from '../../App';
 
-
- 
 describe("User journeys for the New Releases page", () => {
  
     test('Testing carousel anchor tag,', async () => {

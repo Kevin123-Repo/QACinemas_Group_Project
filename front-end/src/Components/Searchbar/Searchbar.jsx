@@ -19,7 +19,7 @@ const Searchbar = () => {
                 <FormGroup>
                     <Input type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term"/> 
                 </FormGroup>
-                <Link to={searchQuery}><Button color="primary "type="submit" id="movieSearchSubmit">Submit</Button></Link>
+                <Link to={searchQuery} aria-label="search-link"><Button aria-label="search-btn" color="primary "type="submit" id="movieSearchSubmit">Submit</Button></Link>
             </Form>
         </>
     );

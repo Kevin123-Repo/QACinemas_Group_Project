@@ -1,7 +1,5 @@
-import { findByAltText, getByTestId, render, screen, waitFor,fireEvent } from '@testing-library/react';
+import { render, screen,fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ListingGallery from '../../Components/Listings/ListingGallery';
-import App from '../../App';
 import DiscussionBoard from '../../Components/DiscussionBoard/DiscussionBoard';
  
 describe("User journeys for the Discussion page", () => {
@@ -20,8 +18,8 @@ describe("User journeys for the Discussion page", () => {
         const submitButton = screen.getByRole("button", { name: "Submit" });
         submitButton.click();
 
-        const tdata = await screen.findByRole("cell", { name: "dsafdsufhdusf" });
+        const tdata = await screen.findAllByRole("cell", { name: "dsafdsufhdusf" }, {timeout: 3000});
 
-        expect(tdata).toBeInTheDocument();
+        expect(tdata[0]).toBeInTheDocument();
     })
 });

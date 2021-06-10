@@ -19,7 +19,7 @@ describe('Testing the discussion board routes', function() {
     it('Should complete post request with status 201', function(done) {
         CHAI.request(APP)
             .post('/discussions/post')
-            .send({'name': 'test', 'comment': 'test comment', 'rating':'2', 'movieTitle': 'Inception'})
+            .send({'username': 'test', 'comment': 'test comment', 'rating':'2', 'movieTitle': 'Inception'})
             .end(function(err, response) {
                 EXPECT(err).to.be.null;
                 EXPECT(response).to.have.status(201);
