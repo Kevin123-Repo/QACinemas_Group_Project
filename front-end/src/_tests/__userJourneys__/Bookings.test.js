@@ -17,19 +17,19 @@ test('Test Booking form validation on empty form', async () => {
 });
 
 
-test('Testing successful Booking page journey', async () => {
-    render(<App />);
+// test('Testing successful Booking page journey', async () => {
+//     render(<App />);
 
-    const linkElement = screen.getByRole('link', { name: 'Bookings' });
-    linkElement.click();
-    const infoElement = await screen.findByPlaceholderText('Enter your name');
-    infoElement.click();
-    fireEvent.change(infoElement, { target: { value: 'Qwerty' } });
+//     const linkElement = screen.getByRole('link', { name: 'Bookings' });
+//     linkElement.click();
+//     const infoElement = await screen.findByPlaceholderText('Enter your name');
+//     infoElement.click();
+//     fireEvent.change(infoElement, { target: { value: 'Qwerty' } });
 
-    // const adultElement = screen.getByRole('', {});
-    // const seatElement = screen.getByRole('', {});
+//     const adultElement = screen.getByRole('', {});
+//     const seatElement = screen.getByRole('', {});
 
-    // fireEvent.change(nameElement, { target: { value: 'Qwerty' } });
-    // fireEvent.change(adultElement, { target: { value: 2 } });
-    // fireEvent.change(seatElement, { target: { value: 2 } });
-})
+//     fireEvent.change(nameElement, { target: { value: 'Qwerty' } });
+//     fireEvent.change(adultElement, { target: { value: 2 } });
+//     fireEvent.change(seatElement, { target: { value: 2 } });
+// })
