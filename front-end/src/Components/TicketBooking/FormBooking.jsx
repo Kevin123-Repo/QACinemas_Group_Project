@@ -107,7 +107,7 @@ const FormBooking = ({ data }) => {
                             <DropdownMenu flip={false}>
                                 {
                                     dropDownItems.map((item) => (
-                                        <DropdownItem key={item} value={item} onClick={(e) => setAdults(e.target.value)}>{item}</DropdownItem>
+                                        <DropdownItem aria-label={`adult${item}`} key={item} value={item} onClick={(e) => setAdults(e.target.value)}>{item}</DropdownItem>
                                     ))
                                 }
                             </DropdownMenu>
@@ -146,7 +146,7 @@ const FormBooking = ({ data }) => {
                             <DropdownMenu flip={false}>
                                 {
                                     dropDownItems.map((item) => (
-                                        <DropdownItem key={item} value={item} onClick={(e) => setSeats(e.target.value)}>{item}</DropdownItem>
+                                        <DropdownItem aria-label={`seat${item}`} key={item} value={item} onClick={(e) => setSeats(e.target.value)}>{item}</DropdownItem>
                                     ))
                                 }
                             </DropdownMenu>
@@ -166,7 +166,7 @@ const FormBooking = ({ data }) => {
                             <DropdownMenu flip={false}>
                                 {
                                     data.map((obj, i) => (
-                                        <DropdownItem onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
+                                        <DropdownItem aria-label={`movie${i}`} onClick={(e) => setSelectedMovie(obj.title)} key={i} >{obj.title}</DropdownItem>
                                     ))
                                 }
                             </DropdownMenu>
@@ -178,7 +178,7 @@ const FormBooking = ({ data }) => {
                             <DropdownMenu flip={false}>
                                 {
                                     times.map((time, i) => (
-                                        <DropdownItem onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
+                                        <DropdownItem aria-label={`time${i}`} onClick={(e) => setSelectedTime(time)} key={i} >{time}</DropdownItem>
                                     ))
                                 }
                             </DropdownMenu>

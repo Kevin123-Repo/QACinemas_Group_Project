@@ -11,7 +11,7 @@ const Class15 = () => {
     return (
         <>
             <CardBody>
-                <center> <img src={FIFTHTEEN} width="150" height="150" onClick={toggle15} /></center>
+                <center> <img aria-label="fifteen" src={FIFTHTEEN} width="150" height="150" onClick={toggle15} /></center>
             </CardBody>
             <Collapse isOpen={isOpen15}>
                 <CardTitle onClick={toggle15}><b>15</b></CardTitle>

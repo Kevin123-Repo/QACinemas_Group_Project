@@ -10,7 +10,7 @@ const Class18 = () => {
     return (
         <>
             <CardBody>
-                <center> <img src={EIGHTEEN} width="150" height="150" onClick={toggle18} /></center>
+                <center> <img aria-label="eighteen" src={EIGHTEEN} width="150" height="150" onClick={toggle18} /></center>
             </CardBody>
             <Collapse isOpen={isOpen18}>
                 <CardTitle onClick={toggle18}><b>18</b></CardTitle>
