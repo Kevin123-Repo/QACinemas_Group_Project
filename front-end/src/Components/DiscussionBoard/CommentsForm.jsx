@@ -111,7 +111,7 @@ const CommentsForm = ({ handleUpdate }) => {
                         </Col>
                     </FormGroup>
 
-                    <Button>Enter!</Button>
+                    <Button>Submit</Button>
 
                 </Form>
             </>

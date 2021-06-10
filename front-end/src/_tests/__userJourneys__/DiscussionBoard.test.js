@@ -2,32 +2,26 @@ import { findByAltText, getByTestId, render, screen, waitFor,fireEvent } from '@
 import '@testing-library/jest-dom';
 import ListingGallery from '../../Components/Listings/ListingGallery';
 import App from '../../App';
-
-
+import DiscussionBoard from '../../Components/DiscussionBoard/DiscussionBoard';
  
 describe("User journeys for the Discussion page", () => {
  
     test('Testing discussion post creation,', async () => {
-        render(<App />);
-        const linkElement = screen.getByRole('link', { name: 'Discussion' });
-        linkElement.click();
+        render(<DiscussionBoard />);
 
         const userName = await screen.findByDisplayValue("Anonymous");
-        userName.click();
-        fireEvent.change(userName, { target: { value: 'q/qwsfawwqe12*/' } })
+        fireEvent.change(userName, { target: { value: 'dsafdsufhdusf' } })
+        expect(userName.value).toBe("dsafdsufhdusf");
        
         const userComment = await screen.findByDisplayValue("Comment");
-        userComment.click();
         fireEvent.change(userComment, { target: { value: 'This movie was good!' } })
+        expect(userComment.value).toBe("This movie was good!");
 
-        const submitButton = screen.getByRole("button", { name: "Enter!" });
+        const submitButton = screen.getByRole("button", { name: "Submit" });
         submitButton.click();
 
-        waitFor(() => {
-            expect(screen.getByText("q/qwsfawwqe12*/")).toBeInTheDocument();
-        });
- 
+        const tdata = await screen.findByRole("cell", { name: "dsafdsufhdusf" });
+
+        expect(tdata).toBeInTheDocument();
     })
-
-
 });
