@@ -5,23 +5,23 @@ const AboutTable = () => {
 
     return (
         <>
-            <Table bordered>
+            <table className="about-table">
                 <tbody>
                     <tr>
                         <td>
                             <Person
                                 //img={ }
                                 name='Anoush Lowton'
-                                email='email'
-                                github=''
+                                email='ALowton@QA.com'
+                                github='https://github.com/ALowtonQA'
                             />
                         </td>
                         <td>
                             <Person
                                 //img={ }
                                 name='George Ryalls'
-                                email='email'
-                                github=''
+                                email='gryalls@qa.com'
+                                github='https://github.com/GeorgeRQA'
                             />
                         </td>
 
@@ -30,16 +30,16 @@ const AboutTable = () => {
                             <Person
                                 //img={ }
                                 name='Jhon Urrego'
-                                email='email'
-                                github=''
+                                email='JUrregoAgudelo@qa.com'
+                                github='https://github.com/JhonQA'
                             />
                         </td>
                         <td>
                             <Person
                                 // img={ }
                                 name='Kevin Tse'
-                                email='email'
-                                github=''
+                                email='KTse@qa.com'
+                                github='https://github.com/Kevin123-QA'
                             />
                         </td>
 
@@ -48,13 +48,13 @@ const AboutTable = () => {
                             <Person
                                 // img={ }
                                 name='Raphael Fywell'
-                                email='email'
-                                github=''
+                                email='RFywell@qa.com'
+                                github='https://github.com/raphyfqa'
                             />
                         </td>
                     </tr>
                 </tbody>
-            </Table>
+            </table>
         </>
     )
 }

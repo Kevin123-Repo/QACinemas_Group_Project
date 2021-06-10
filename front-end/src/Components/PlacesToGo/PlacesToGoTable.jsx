@@ -9,7 +9,7 @@ const PlacesToGoTable = () => {
 
     return (
         <>
-            <Table>
+            <table id="places-table">
                 <tbody>
                     <tr>
                         <td>
@@ -44,7 +44,7 @@ const PlacesToGoTable = () => {
                         </td>  
                     </tr>
                 </tbody>
-            </Table>
+            </table>
         </>
     )
 }

@@ -90,15 +90,15 @@ const FormBooking = ({ data }) => {
         }}/>
     } else return (
         <>
-            <Form onSubmit={submitBooking}>
+            <Form className="booking-form" onSubmit={submitBooking}>
                 <h3 style={{ fontWeight: 'bold' }}>Ticket Booking</h3>
                 <h5 style={{ fontWeight: 'bold' }}>Name:</h5>
                 <Input type="text" className="booking-name" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
 
                 <br />
 
+                <h5 style={{ fontWeight: 'bold' }}>Adult, Children, Concessions and Seats</h5>
                 <Row>
-                    <h5 style={{ fontWeight: 'bold' }}>Adult, Children, Seats and Concessions</h5>
                     <Col className="dropdowns">
                         <Dropdown isOpen={dropdownOpen} toggle={() => setDropdownOpen(prevState => !prevState)} size="sm" >
                             <DropdownToggle caret className="booking-dropdown">
@@ -156,8 +156,8 @@ const FormBooking = ({ data }) => {
 
                 <br />
                 
+                <h5 style={{ fontWeight: 'bold' }}>Select the Movie and Time</h5>
                 <Row>
-                    <h5 style={{ fontWeight: 'bold' }}>Select the Movie and Time</h5>
                     <Col className="dropdowns">
                         <Dropdown isOpen={dropdownOpenMovie} toggle={() => setDropdownOpenMovie(prevState => !prevState)} size="sm" >
                             <DropdownToggle caret className="booking-dropdown">
