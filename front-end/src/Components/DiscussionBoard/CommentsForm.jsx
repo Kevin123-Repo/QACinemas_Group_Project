@@ -11,8 +11,19 @@ const CommentsForm = ({ handleUpdate }) => {
     const [movie, setMovie] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
+    const validateForm = () => {
+
+        if (username === "" || comment === "") {
+            alert("Please enter a username and comment");
+            return false;
+        }
+
+        return true;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+    if(validateForm()){
         const dataTosend = {
             "username": username,
             "comment": comment,
@@ -34,6 +45,7 @@ const CommentsForm = ({ handleUpdate }) => {
         setRating("");
         setMovieTitle("N/A");
         handleUpdate();
+        }
     }
 
     useEffect(() => {
@@ -71,7 +83,7 @@ const CommentsForm = ({ handleUpdate }) => {
                     <FormGroup row>
                         <Label for="movie" sm={1}>Movie</Label>
                         <Col sm={10}>
-                            <select class="form-select" aria-label="movie"  value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}>
+                            <select class="form-select" name="movie" aria-label="movie"  value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}>
                             <option></option>
                                 {movie.map((movie) => (
                                     <option key={movie.title}>{movie.title}</option>
@@ -85,7 +97,7 @@ const CommentsForm = ({ handleUpdate }) => {
                     <FormGroup row>
                         <Label for="rating" sm={1}>Rating</Label>
                         <Col sm={10}>
-                           <select class="form-select" aria-label="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
+                           <select class="form-select" name="rating" aria-label="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
                                 <option></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>

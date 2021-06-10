@@ -79,7 +79,7 @@ const NavBar = () => {
           <Searchbar/>
         </Collapse>
       </Navbar >
-      <div class="b-example-divider"></div>
+      <div className="b-example-divider"></div>
     </div >
   );
 }
