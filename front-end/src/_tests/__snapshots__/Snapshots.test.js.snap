@@ -1191,58 +1191,177 @@ exports[`Snapshot Tests Opening Times matches snapshot 1`] = `
 <div
   className="times-div container"
 >
-  <h1
-    align="center"
+  <div
+    class="Accordion"
+    className="accordion"
   >
-    <img
-      alt="Clock"
-      height="55"
-      src="Clock_QA_Colour.png"
-      width="55"
-    />
-     Opening Times 
-    <img
-      alt="Clock"
-      height="55"
-      src="Clock_QA_Colour.png"
-      width="55"
-    />
-  </h1>
-  <h5
-    align="center"
-  >
-    Monday: 10:00 - 23:00
-  </h5>
-  <h5
-    align="center"
-  >
-    Tuesday: 10:00 - 23:00
-  </h5>
-  <h5
-    align="center"
-  >
-    Wednesday: 10:00 - 23:00
-  </h5>
-  <h5
-    align="center"
-  >
-    Thursday: 10:00 - 23:00
-  </h5>
-  <h5
-    align="center"
-  >
-    Friday: 10:00 - 00:00
-  </h5>
-  <h5
-    align="center"
-  >
-    Saturday: 10:00 - 00:00
-  </h5>
-  <h5
-    align="center"
-  >
-    Sunday: 10:00 - 22:00
-  </h5>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        Opening Times
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse show"
+      >
+        <div
+          className="card-body"
+        >
+          <h5
+            align="center"
+          >
+            Monday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Tuesday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Wednesday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Thursday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Friday: 10:00 - 00:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Saturday: 10:00 - 00:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Sunday: 10:00 - 22:00
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        Where can we find you?
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/GettingThere"
+            onClick={[Function]}
+          >
+            Getting There
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        Where can we visit nearby?
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/PlacesToGo"
+            onClick={[Function]}
+          >
+            Places To Visit
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        How can we contact a manager?
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/ContactPage"
+            onClick={[Function]}
+          >
+            Contact Us
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        About
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/About"
+            onClick={[Function]}
+          >
+            About
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
