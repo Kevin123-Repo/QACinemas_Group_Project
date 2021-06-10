@@ -1,12 +1,14 @@
-import { findByAltText, getByTestId, render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Classifications from '../../Components/Classifications/Classifications';
-
-test('User journey for classification,',async () => {
+ 
+describe("User journeys for the Discussion page", () => {
+ 
+    test('Testing collapse', async () => {
         render(<Classifications />);
-        const classificationImage =  document.querySelector('#u');
-        classificationImage.click();
-      
-        await expect(document.querySelector('.collapse show')).toBeInTheDocument();
-       
+        const IMG = await screen.findByRole("img", {name: "u"});
+        IMG.click();
+        const TXT = await screen.findByText("four and above", {exact: false});
+        expect(TXT).toBeInTheDocument();
+    });
 });

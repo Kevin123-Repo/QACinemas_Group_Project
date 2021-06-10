@@ -32,7 +32,7 @@ describe("User journeys for the New Releases page", () => {
 
         image.click();
 
-        const movieInfo = await screen.findByText("Title: Fast & Furious 9");
+        const movieInfo = await screen.findByText("Title: ", {exact: false});
         expect(movieInfo).toBeInTheDocument();
  
     })

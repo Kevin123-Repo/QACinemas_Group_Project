@@ -83,7 +83,7 @@ const CommentsForm = ({ handleUpdate }) => {
                     <FormGroup row>
                         <Label for="movie" sm={1}>Movie</Label>
                         <Col sm={10}>
-                            <select class="form-select" aria-label="movie"  value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}>
+                            <select class="form-select" name="movie" aria-label="movie"  value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)}>
                             <option></option>
                                 {movie.map((movie) => (
                                     <option key={movie.title}>{movie.title}</option>
@@ -97,7 +97,7 @@ const CommentsForm = ({ handleUpdate }) => {
                     <FormGroup row>
                         <Label for="rating" sm={1}>Rating</Label>
                         <Col sm={10}>
-                           <select class="form-select" aria-label="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
+                           <select class="form-select" name="rating" aria-label="rating" value={rating} onChange={(e) => setRating(e.target.value)}>
                                 <option></option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>

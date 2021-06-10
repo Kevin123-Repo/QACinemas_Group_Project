@@ -13,7 +13,7 @@ describe("User journey for the search bar", () => {
         const linkElement = screen.getByPlaceholderText("Search Term");
         fireEvent.change(linkElement, { target: { value: 'Inception' } })
         expect(linkElement.value).toBe("Inception");
-
+        
         // window.location.href="http://localhost:3000/search/Inception";
 
 

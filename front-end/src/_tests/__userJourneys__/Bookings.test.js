@@ -1,35 +1,53 @@
-import { fireEvent, render, screen, } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-
+import TicketBooking from '../../Components/TicketBooking/TicketBooking';
 import App from '../../App';
+import FormBooking from '../../Components/TicketBooking/FormBooking';
+ 
+describe("User journeys for the Bookings page", () => {
 
+    test('Test Booking form validation on empty form', async () => {
+        render(<TicketBooking />);
+        const jsdomAlert = window.alert;
+        window.alert = () => {};
+        const infoElement = await screen.findByPlaceholderText('Enter your name');
+        expect(infoElement).toBeInTheDocument();
+        const BTN = await screen.findByRole('button', { name: 'Send' });
+        BTN.click();
+        expect(infoElement).toBeInTheDocument();
+        window.alert = jsdomAlert;
+    });
 
-test('Test Booking form validation on empty form', async () => {
-    render(<App />);
-    const linkElement = screen.getByRole('link', { name: 'Bookings' });
-    linkElement.click();
-    const infoElement = await screen.findByPlaceholderText('Enter your name');
-    expect(infoElement).toBeInTheDocument();
-    const button = screen.getByRole('button', { name: 'Send' });
-    button.click();
-    expect(infoElement).toBeInTheDocument();
+    test('Testing successful Booking page journey', async () => {
+        render(<App />);
+        const linkElement = screen.getByRole('link', { name: 'Bookings' });
+        linkElement.click();
 
+        // Find and set the name input
+        const infoElement = await screen.findByPlaceholderText('Enter your name');
+        fireEvent.change(infoElement, { target: { value: 'Qwerty' } });
+        expect(infoElement.value).toBe("Qwerty");
+        
+        // Find and click the number of adults
+        const adultSelection = await screen.findByLabelText("adult1");
+        adultSelection.click();
+
+        // Find and click the number of adults
+        const seatSelection = await screen.findByLabelText("seat1");
+        seatSelection.click();
+
+        // Find and click the movie
+        const movieSelection = await screen.findByLabelText("movie0");
+        movieSelection.click();
+
+        // Find and click the time
+        const timeSelection = await screen.findByLabelText("time0");
+        timeSelection.click();
+
+        // Find and click the Submit button
+        const BTN = await screen.findByRole('button', { name: 'Send' });
+        BTN.click();
+
+        expect(adultSelection).not.toBeInTheDocument();
+    })
 });
-
-
-// test('Testing successful Booking page journey', async () => {
-//     render(<App />);
-
-//     const linkElement = screen.getByRole('link', { name: 'Bookings' });
-//     linkElement.click();
-//     const infoElement = await screen.findByPlaceholderText('Enter your name');
-//     infoElement.click();
-//     fireEvent.change(infoElement, { target: { value: 'Qwerty' } });
-
-//     const adultElement = screen.getByRole('', {});
-//     const seatElement = screen.getByRole('', {});
-
-//     fireEvent.change(nameElement, { target: { value: 'Qwerty' } });
-//     fireEvent.change(adultElement, { target: { value: 2 } });
-//     fireEvent.change(seatElement, { target: { value: 2 } });
-// })

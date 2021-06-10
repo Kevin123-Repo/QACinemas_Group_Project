@@ -19,7 +19,7 @@ const FooterBar = () => {
 
     return (
         <div className="footer-div">
-            <div class="b-example-divider"></div>
+            <div className="b-example-divider"></div>
             <Navbar color="light" light expand="md">
                 <NavbarToggler onClick={toggle} />
                 <Collapse id="footer-links" isOpen={isOpen} navbar>

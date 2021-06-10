@@ -13,7 +13,7 @@ import ContactPage from '../Components/ContactPage/ContactPage';
 import GettingThere from '../Components/Getting_There/GettingThere';
 import DiscussionBoard from '../Components/DiscussionBoard/DiscussionBoard';
 import PlacesToGo from '../Components/PlacesToGo/PlacesToGo';
-
+import { BrowserRouter } from 'react-router-dom';
 
 describe("Did pages render correctly test", () => {
 
@@ -24,64 +24,52 @@ describe("Did pages render correctly test", () => {
 
     });
 
-    test('Listings page rendered correctly', () => {
-        render(<ListingGallery />);
-        waitFor(()=>{
-            expect(document.querySelector(".listingImgs")).toBeInTheDocument();
-        });
+    test('Listings page rendered correctly', async () => {
+        render(<BrowserRouter> <ListingGallery /> </BrowserRouter>);
+        const IMG = await screen.findByAltText("0");
+        expect(IMG).toBeInTheDocument();
     });
 
-    test('Booking page rendered correctly', () => {
+    test('Booking page rendered correctly', async () => {
         render(<TicketBooking />);
-        waitFor(()=>{
-            expect(screen.getByText('Ticket Booking')).toBeInTheDocument();
-        });
-
+        const txt = await screen.findByText('Ticket Booking');
+        expect(txt).toBeInTheDocument();
     });
 
     test('Classificiation page rendered correctly', () => {
         render(<Classifications />);
         const classificationImage = document.querySelector('#u');
         expect(classificationImage).toBeInTheDocument();
-
     });
 
-    test('Screens page rendered correctly', () => {
+    test('Screens page rendered correctly', async () => {
         render(<Screens />);
-        waitFor(()=>{
-            expect(document.querySelector('.screens-div container')).toBeInTheDocument();
-        });
-
+        const IMG = await screen.findByAltText("Regular Screen");
+        expect(IMG).toBeInTheDocument();
     });
 
-    test('New realases page rendered correctly', () => {
-        render(<NewReleases />);
-        waitFor(()=>{
-            expect(document.querySelector(".listingImgs")).toBeInTheDocument();
-        });
+    test('New realases page rendered correctly', async () => {
+        render(<BrowserRouter> <NewReleases /> </BrowserRouter>);
+        const IMG = await screen.findByAltText("0");
+        expect(IMG).toBeInTheDocument();
     });
 
     test('About page rendered correctly', () => {
         render(<About />);
         const aboutElement = screen.getByText('About Scrum');
         expect(aboutElement).toBeInTheDocument();
-
     });
 
-    test('Opening times rendered correctly', () => {
-        render(<App />);
-        const linkElement = document.querySelector("a[href='/OpeningTimes']");
-        linkElement.click();
-        waitFor(()=>{
-            expect(screen.getByText('Monday')).toBeInTheDocument();
-        });
+    test('Opening times rendered correctly', async () => {
+        render(<BrowserRouter> <OpeningTimes /> </BrowserRouter>);
+        const TXT = await screen.findByText('Monday', { exact: false });
+        expect(TXT).toBeInTheDocument();
     });
 
     test('Contact us page rendered correctly', () => {
         render(<ContactPage />);
         const contactLabel = screen.getByLabelText('Name');
         expect(contactLabel).toBeInTheDocument();
-
     });
 
     test('Getting there rendered correctly', () => {
@@ -92,16 +80,13 @@ describe("Did pages render correctly test", () => {
 
     test('Places to go rendered correctly', () => {
         render(<PlacesToGo />);
-        waitFor(()=>{
-            expect(screen.getByText('Nandos')).toBeInTheDocument();
-        });
+        const TXT = screen.getByText('Nandos');
+        expect(TXT).toBeInTheDocument();
     });
 
-    test('Discussion board rendered correctly', () => {
+    test('Discussion board rendered correctly', async() => {
         render(<DiscussionBoard />);
-        waitFor(()=>{
-            expect(screen.getByLabelText('Rating')).toBeInTheDocument();
-        });
-
+        const INPUT = await screen.findByRole("textbox", { name : "Comment" });
+        expect(INPUT).toBeInTheDocument();
     });
 });

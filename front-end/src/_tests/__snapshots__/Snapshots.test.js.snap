@@ -209,8 +209,8 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
           className="card-body"
         >
           <center>
-             
             <img
+              aria-label="u"
               height="150"
               id="u"
               onClick={[Function]}
@@ -311,6 +311,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
           <center>
              
             <img
+              aria-label="pg"
               height="150"
               onClick={[Function]}
               src="PG_Alpha.PNG"
@@ -414,6 +415,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
           <center>
              
             <img
+              aria-label="twelveA"
               height="150"
               onClick={[Function]}
               src="12A_Alpha.PNG"
@@ -513,6 +515,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
           <center>
              
             <img
+              aria-label="twelve"
               height="150"
               onClick={[Function]}
               src="12_Alpha.PNG"
@@ -616,6 +619,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
           <center>
              
             <img
+              aria-label="fifteen"
               height="150"
               onClick={[Function]}
               src="15_Alpha.PNG"
@@ -715,6 +719,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
           <center>
              
             <img
+              aria-label="eighteen"
               height="150"
               onClick={[Function]}
               src="18_Alpha.PNG"

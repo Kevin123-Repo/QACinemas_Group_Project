@@ -14,7 +14,6 @@ import TicketBooking from '../../src/Components/TicketBooking/TicketBooking';
 import {create} from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 
-
 describe("Snapshot Tests", () => {
 
   test('Homepage matches snapshot', () => {
