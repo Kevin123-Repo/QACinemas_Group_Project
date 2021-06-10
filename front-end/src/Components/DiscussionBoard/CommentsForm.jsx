@@ -99,7 +99,7 @@ const CommentsForm = ({ handleUpdate }) => {
                         </Col>
                     </FormGroup>
 
-                    <Button>Submit</Button>
+                    <Button>Enter!</Button>
 
                 </Form>
             </>
