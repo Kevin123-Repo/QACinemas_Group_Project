@@ -2,11 +2,11 @@ import { findByAltText, getByTestId, render, screen, waitFor } from '@testing-li
 import '@testing-library/jest-dom';
 import Classifications from '../../Components/Classifications/Classifications';
 
-test('User journey for classification,', () => {
+test('User journey for classification,',async () => {
         render(<Classifications />);
-        const classificationImage = document.querySelector('#u');
+        const classificationImage =  document.querySelector('#u');
         classificationImage.click();
-        waitFor(()=>{
-            expect(document.querySelector('.collapse show')).toBeInTheDocument();
-        });
+      
+        await expect(document.querySelector('.collapse show')).toBeInTheDocument();
+       
 });
