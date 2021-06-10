@@ -19,7 +19,7 @@ describe("Did pages render correctly test", () => {
 
     test('Homepage rendered correctly', () => {
         render(<Homepage />);
-        const infoElement = screen.getByText('Welcome!');
+        const infoElement = screen.getByText('Welcome to QA Cinemas! Here you can browse all of our latest films.');
         expect(infoElement).toBeInTheDocument();
 
     });

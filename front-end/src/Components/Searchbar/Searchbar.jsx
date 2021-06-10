@@ -19,11 +19,7 @@ const Searchbar = () => {
                 <FormGroup>
                     <Input type="text" id="movieSearch" onInput={handleFilter} placeholder="Search Term"/> 
                 </FormGroup>
-<<<<<<< HEAD
-                <Link to={searchQuery}><button type="submit" id="movieSearchSubmit" >Submit</button></Link>
-=======
                 <Link to={searchQuery}><Button color="primary "type="submit" id="movieSearchSubmit">Submit</Button></Link>
->>>>>>> dev
             </Form>
         </>
     );
