@@ -19,8 +19,8 @@ APP.use(DISCUSSION_BOARD_ROUTES);  //
 
 // Connect to MongoDB
 MONGOOSE
-    .connect("mongodb://localhost:27017/qacinemas", {
-        useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
+    .connect("mongodb+srv://qacinemas:XTorP2q49ji5@qacinema1.gn9gk.mongodb.net/qacinemas?retryWrites=true&w=majority", {
+        useNewUrlParser: true, useUnifiedTopology: true
     }).then(() => {
         console.log("MongoDB Connection Succesful");
     }).catch((err) => { 

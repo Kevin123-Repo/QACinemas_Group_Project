@@ -34,6 +34,7 @@
 
 .main-content {
   padding-top: 2%;
+  padding-bottom: 5px;
   width:80%;
   min-height: 79.4vh;
 }
@@ -578,13 +579,13 @@ html, body {
 
 #homepage-div {
   padding-top: 2%;
+  padding-bottom: 5px;
   min-height: 79.4vh;
   color: #0b8bab;
 }
 
 #homepage-div .row {
   margin-right: 0;
-  /* justify-content: center; */
 }
 
 #homepage-info {
