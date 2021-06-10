@@ -11,8 +11,19 @@ const CommentsForm = ({ handleUpdate }) => {
     const [movie, setMovie] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
+    const validateForm = () => {
+
+        if (username === "" || comment === "") {
+            alert("Please enter a username and comment");
+            return false;
+        }
+
+        return true;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+    if(validateForm()){
         const dataTosend = {
             "username": username,
             "comment": comment,
@@ -34,6 +45,7 @@ const CommentsForm = ({ handleUpdate }) => {
         setRating("");
         setMovieTitle("N/A");
         handleUpdate();
+        }
     }
 
     useEffect(() => {
