@@ -54,7 +54,7 @@ const ListingGallery = () => {
             key={i}
           >
             <Link to={`/movies/${item.title}`}>
-                <img className={"listingImgs"} src={item.imageUrl} alt={""} />
+                <img className={"listingImgs"} src={item.imageUrl} alt={i} />
             </Link>
             <CarouselCaption captionText={item.title} />
           </CarouselItem>

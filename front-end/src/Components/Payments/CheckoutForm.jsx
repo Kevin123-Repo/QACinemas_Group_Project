@@ -64,17 +64,18 @@ const CheckoutForm = ({bookingInfo}) => {
             setPaymentProcessing(true);
             axios.post("http://localhost:8080/bookings/payment", {price: PRICE, token: result.token, booking: bookingInfo})
                 .then((res) => {
-                    const data = {
+                    const emailData = {
                         service_id: 'service_6hyhf2k',
                         template_id: 'template_3g35ied',
                         user_id: 'user_ZU83c2XlWYoKypqo2h3DF',
                         template_params: {
+                            'email_to': email, 
                             'to_name': name,
                             'reply_to': 'QACinemas@madeupmail.com',
                             'message' : res.data
                         }
                     };
-                    axios.post("https://api.emailjs.com/api/v1.0/email/send", data)
+                    axios.post("https://api.emailjs.com/api/v1.0/email/send", emailData)
                         .then((res) => {
                             setErrorMessage(null);
                             setSuccessMessage("Payment processed and receipt sent via Email.");

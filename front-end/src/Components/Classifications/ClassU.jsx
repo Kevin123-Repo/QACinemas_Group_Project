@@ -11,7 +11,7 @@ const ClassU = () => {
     return (
         <>
             <CardBody>
-                <center> <img src={U} width="150" height="150" onClick={toggleU} /></center>
+                <center><img aria-label="u" src={U} width="150" height="150" onClick={toggleU} id="u"/></center>
             </CardBody>
             <Collapse isOpen={isOpenU}>
                 <CardTitle onClick={toggleU}><b>Universal(U)</b></CardTitle>

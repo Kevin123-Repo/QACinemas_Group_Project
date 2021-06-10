@@ -11,7 +11,7 @@ const ClassPG = () => {
     return (
         <>
             <CardBody>
-                <center> <img src={PG} width="150" height="150" onClick={togglePG} /></center>
+                <center> <img aria-label="pg" src={PG} width="150" height="150" onClick={togglePG} /></center>
             </CardBody>
             <Collapse isOpen={isOpenPG}>
                 <CardTitle onClick={togglePG}><b>Parental Guidance(PG)</b></CardTitle>
