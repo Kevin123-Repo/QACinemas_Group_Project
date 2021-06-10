@@ -33,7 +33,6 @@ const SearchLinksPage = () => {
         }
         })
 
-
     const movieLinks = data.map(movie => {
         let relevantSearchTerms = []
          
