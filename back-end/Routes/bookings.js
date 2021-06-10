@@ -12,7 +12,6 @@ const extractVals = ({brand, country, exp_month, exp_year, funding, last4}) => {
 // Post Requests
 ROUTER.post("/bookings/payment", async(req, res, next) => {
     try {
-        console.log(req.body.token);
         const CHARGE = await STRIPE.charges.create(
         {
             amount: req.body.price * 100,
@@ -21,7 +20,7 @@ ROUTER.post("/bookings/payment", async(req, res, next) => {
             description: `Booking for ${req.body.booking.seats}x ${req.body.booking.movieTitle} tickets - ${req.body.booking.name}`,
             receipt_email: req.body.booking.billing_details.email
         });
-        console.log(CHARGE);
+
         let payInfoObj = {
             amount: CHARGE.amount/100,
             paid: CHARGE.paid,
