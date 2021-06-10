@@ -4,24 +4,14 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
 <div
   className="about-div container"
 >
-  <h1>
-    <center>
-       
-      <u>
-         About 
-      </u>
-       
-    </center>
-     
-  </h1>
   <table
-    className="table table-bordered"
+    className="about-table"
   >
     <tbody>
       <tr>
         <td>
           <div
-            className="PeronInfo"
+            className="PersonInfo"
           >
             <img
               alt=""
@@ -34,11 +24,11 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
               Contact Details
             </h5>
             <p>
-              email
+              ALowton@QA.com
             </p>
             <p>
               <a
-                href=""
+                href="https://github.com/ALowtonQA"
               >
                 GitHub Link
               </a>
@@ -47,7 +37,7 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
         </td>
         <td>
           <div
-            className="PeronInfo"
+            className="PersonInfo"
           >
             <img
               alt=""
@@ -60,11 +50,11 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
               Contact Details
             </h5>
             <p>
-              email
+              gryalls@qa.com
             </p>
             <p>
               <a
-                href=""
+                href="https://github.com/GeorgeRQA"
               >
                 GitHub Link
               </a>
@@ -73,7 +63,7 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
         </td>
         <td>
           <div
-            className="PeronInfo"
+            className="PersonInfo"
           >
             <img
               alt=""
@@ -86,11 +76,11 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
               Contact Details
             </h5>
             <p>
-              email
+              JUrregoAgudelo@qa.com
             </p>
             <p>
               <a
-                href=""
+                href="https://github.com/JhonQA"
               >
                 GitHub Link
               </a>
@@ -99,7 +89,7 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
         </td>
         <td>
           <div
-            className="PeronInfo"
+            className="PersonInfo"
           >
             <img
               alt=""
@@ -112,11 +102,11 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
               Contact Details
             </h5>
             <p>
-              email
+              KTse@qa.com
             </p>
             <p>
               <a
-                href=""
+                href="https://github.com/Kevin123-QA"
               >
                 GitHub Link
               </a>
@@ -125,7 +115,7 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
         </td>
         <td>
           <div
-            className="PeronInfo"
+            className="PersonInfo"
           >
             <img
               alt=""
@@ -138,11 +128,11 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
               Contact Details
             </h5>
             <p>
-              email
+              RFywell@qa.com
             </p>
             <p>
               <a
-                href=""
+                href="https://github.com/raphyfqa"
               >
                 GitHub Link
               </a>
@@ -154,12 +144,7 @@ exports[`Snapshot Tests About matches snapshot 1`] = `
   </table>
   <div
     className="card"
-    style={
-      Object {
-        "backgroundColor": "#0b2effcc",
-        "color": "white",
-      }
-    }
+    id="scrum-info-div"
   >
     <div
       className="card-body"
@@ -218,12 +203,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
-        style={
-          Object {
-            "backgroundColor": "rgb(62 182 73)",
-            "borderColor": "black",
-          }
-        }
+        id="classU"
       >
         <div
           className="card-body"
@@ -323,12 +303,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
-        style={
-          Object {
-            "backgroundColor": "rgb(249 172 25)",
-            "borderColor": "black",
-          }
-        }
+        id="classPG"
       >
         <div
           className="card-body"
@@ -431,12 +406,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
-        style={
-          Object {
-            "backgroundColor": "rgb(244 126 33)",
-            "borderColor": "black",
-          }
-        }
+        id="class12A"
       >
         <div
           className="card-body"
@@ -535,12 +505,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
-        style={
-          Object {
-            "backgroundColor": "rgb(244 126 33)",
-            "borderColor": "black",
-          }
-        }
+        id="class12"
       >
         <div
           className="card-body"
@@ -643,12 +608,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
-        style={
-          Object {
-            "backgroundColor": "rgb(239 80 147)",
-            "borderColor": "black",
-          }
-        }
+        id="class15"
       >
         <div
           className="card-body"
@@ -747,12 +707,7 @@ exports[`Snapshot Tests Classifications matches snapshot 1`] = `
     >
       <div
         className="card card-body"
-        style={
-          Object {
-            "backgroundColor": "rgb(222 31 38)",
-            "borderColor": "black",
-          }
-        }
+        id="class18"
       >
         <div
           className="card-body"
@@ -877,35 +832,34 @@ exports[`Snapshot Tests Contact Page matches snapshot 1`] = `
     className="row"
   >
     <div
-      className="col"
+      className="col-lg-3"
     >
-      <h3>
-        Learning Center
-      </h3>
-      <p>
-        8th Floor
-        <br />
-        St James Buildings
-        <br />
-        79 Oxford Street
-        <br />
-        Manchester
-        <br />
-        M1 6FQ
-      </p>
+      <div
+        id="address-info-div"
+      >
+        <h3>
+          Learning Center
+        </h3>
+        <p>
+          8th Floor
+          <br />
+          St James Buildings
+          <br />
+          79 Oxford Street
+          <br />
+          Manchester
+          <br />
+          M1 6FQ
+        </p>
+      </div>
     </div>
     <div
-      className="col"
+      className="col-lg-6"
     >
        
       <div
         className="container"
-        style={
-          Object {
-            "height": "500px",
-            "width": "500px",
-          }
-        }
+        id="contact-form-div"
       >
         <h3
           style={
@@ -968,7 +922,7 @@ exports[`Snapshot Tests Contact Page matches snapshot 1`] = `
               className="form-control"
               id="exampleText"
               name="message"
-              rows="5"
+              rows="8"
             />
           </div>
           <button
@@ -981,17 +935,6 @@ exports[`Snapshot Tests Contact Page matches snapshot 1`] = `
           </button>
         </form>
       </div>
-       
-    </div>
-    <div
-      className="col"
-    >
-       
-      <img
-        alt="Inside of Cinema"
-        src="Homepage-Cinema.jpg"
-        width="100%"
-      />
        
     </div>
   </div>
@@ -1052,34 +995,37 @@ exports[`Snapshot Tests Getting There matches snapshot 1`] = `
     className="row"
   >
     <div
-      className="col-lg-4"
-    >
-      <h1>
-        Public Transport
-      </h1>
-    </div>
-    <div
-      className="col-lg-4"
-    />
-    <div
-      className="col-lg-1"
-    >
-      <h1>
-        Address
-      </h1>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
       className="col-lg-5"
     >
-      <p>
-        You'll find us at Cardigan Fields, Kirkstall Rd, Burley, Leeds LS4 2DG. You can get here by bus or by tube!
-        <br />
-        The closest station is Burley Park.
-      </p>
+      <br />
+      <div
+        id="travel-info-div"
+      >
+        <h1>
+          Public Transport
+        </h1>
+        <p>
+          You can get here by bus or by train! The closest station is Burley Park.
+        </p>
+        <h1>
+          Address
+        </h1>
+        <p>
+          Cardigan Fields,
+          <br />
+          Kirkstall Rd,
+          <br />
+          Burley,
+          <br />
+          Leeds LS4 2DG
+        </p>
+        <h1>
+          Parking
+        </h1>
+        <p>
+          Parking is available on site. All available parking spaces and disabled priority spaces will be at the front of the venue!
+        </p>
+      </div>
     </div>
     <div
       className="col-lg-1"
@@ -1095,71 +1041,135 @@ exports[`Snapshot Tests Getting There matches snapshot 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-1"
-    >
-      <h1>
-        Parking
-      </h1>
-    </div>
-  </div>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6"
-    >
-      <p>
-        Our facilities has state of the art accessability. Parking included! All available parking spaces and disabled priority spaces will be at the front of the venue!
-      </p>
-      <img
-        alt=""
-        className="cinema-front"
-        src="cinema_front.png"
-      />
-    </div>
-  </div>
 </div>
 `;
 
 exports[`Snapshot Tests Homepage matches snapshot 1`] = `
 <div
-  className="homepage-div container"
+  id="homepage-div"
 >
   <div
     className="row"
   >
     <div
-      className="col-lg-4"
+      className="carousel slide"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
-      <h2>
-        Welcome!
-      </h2>
-      <p>
-        Welcome to QA Cinemas! Here you can browse all of the latest films, book tickets for showings in advance, and get a preview of new releases arriving in the near future!
-      </p>
+      <div
+        className="carousel-inner"
+      >
+        <div
+          className="carousel-item active"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_3.jpg"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_1.jpg"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_4.jpg"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_2.jpg"
+          />
+        </div>
+      </div>
+      <a
+        className="carousel-control-prev"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-prev-icon"
+        />
+        <span
+          className="sr-only"
+        >
+          prev
+        </span>
+      </a>
+      <a
+        className="carousel-control-next"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-next-icon"
+        />
+        <span
+          className="sr-only"
+        >
+          next
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    id="homepage-info"
+  >
+    <div
+      className="row"
+    >
+      <h3>
+         Welcome to QA Cinemas! Here you can browse all of our latest films. 
+      </h3>
+       
       <br />
-      <h2>
-        QA Cinemas
-      </h2>
       <p>
-        QA Cinemas is the UK's premiere multiplex cinema chain, and the best destination to kick back, relax, and forget your worries for a few hours. Grab some popcorn and an extra large soft drink of your choice and be transported to a new world by the magic of cinema. Take your family, friends, or even just that special someone... yourself!
+        You can also book tickets for showings in advance, and get a preview of new releases arriving in the near future!
       </p>
     </div>
     <div
-      className="col-lg-2"
+      className="row"
     />
     <div
-      className="col-lg-4"
+      className="row"
     >
-      <img
-        alt="cinema screen"
-        id="homepage-img"
-        src="Homepage-Cinema.jpg"
-      />
+      <p>
+        QA Cinemas is the UK's premiere multiplex cinema chain, and the best destination to kick back, relax, and forget your worries for a few hours.
+        <br />
+        <br />
+        Grab some popcorn and an extra large soft drink of your choice and be transported to a new world by the magic of cinema.
+        <br />
+        <br />
+        Take your family, friends, or even just that special someone... yourself!
+      </p>
     </div>
   </div>
 </div>
@@ -1246,19 +1256,23 @@ exports[`Snapshot Tests Places To Go matches snapshot 1`] = `
     Places to go
   </h1>
   <table
-    className="table"
+    id="places-table"
   >
     <tbody>
       <tr>
         <td>
           <div
-            className="ToGoInfo"
+            className="toGoInfo"
           >
-            <img
-              alt="Frankie and Bennys"
-              className="places-imgs"
-              src="FrankieAndBennys.jpg"
-            />
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="Frankie and Bennys"
+                className="places-imgs"
+                src="FrankieAndBennys.jpg"
+              />
+            </div>
             <h2
               align="center"
             >
@@ -1284,13 +1298,17 @@ exports[`Snapshot Tests Places To Go matches snapshot 1`] = `
         </td>
         <td>
           <div
-            className="ToGoInfo"
+            className="toGoInfo"
           >
-            <img
-              alt="Nandos"
-              className="places-imgs"
-              src="Nandos.jpg"
-            />
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="Nandos"
+                className="places-imgs"
+                src="Nandos.jpg"
+              />
+            </div>
             <h2
               align="center"
             >
@@ -1318,13 +1336,17 @@ exports[`Snapshot Tests Places To Go matches snapshot 1`] = `
       <tr>
         <td>
           <div
-            className="ToGoInfo"
+            className="toGoInfo"
           >
-            <img
-              alt="Hollywood Bowl"
-              className="places-imgs"
-              src="HollywoodBowl.jpg"
-            />
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="Hollywood Bowl"
+                className="places-imgs"
+                src="HollywoodBowl.jpg"
+              />
+            </div>
             <h2
               align="center"
             >
@@ -1350,13 +1372,17 @@ exports[`Snapshot Tests Places To Go matches snapshot 1`] = `
         </td>
         <td>
           <div
-            className="ToGoInfo"
+            className="toGoInfo"
           >
-            <img
-              alt="LaserZone"
-              className="places-imgs"
-              src="LaserZone.jpg"
-            />
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="LaserZone"
+                className="places-imgs"
+                src="LaserZone.jpg"
+              />
+            </div>
             <h2
               align="center"
             >

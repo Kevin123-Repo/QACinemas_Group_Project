@@ -5,7 +5,7 @@ const ScrumSection = () => {
 
     return (
 
-        <Card style={{ backgroundColor: '#0b2effcc', color: 'white' }}>
+        <Card id="scrum-info-div">
             <CardBody>
 
             </CardBody >

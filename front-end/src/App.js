@@ -24,11 +24,11 @@ function App() {
     <>
       <Router>
         <NavBar />
-        <div className="container-fluid main-content">
-          <Switch>
-            <Route exact path="/">
-              <Homepage />
-            </Route>
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <div className="container-fluid main-content">
             <Route path="/OpeningTimes">
               <OpeningTimes />
             </Route>
@@ -70,8 +70,8 @@ function App() {
               <SearchLinksPage />
             </Route>
             <Route path="/OrderSummary" render={(props) => <OrderSummary {...props}/>}/>
-          </Switch>
-        </div>
+          </div>
+        </Switch>
           <FooterBar />
       </Router> 
     </>
