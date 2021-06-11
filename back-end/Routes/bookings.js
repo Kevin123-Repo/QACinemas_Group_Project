@@ -17,7 +17,7 @@ ROUTER.post("/bookings/payment", async(req, res, next) => {
             amount: req.body.price * 100,
             source: req.body.token.id,
             currency: 'GBP',
-            description: `Booking for ${req.body.booking.seats}x ${req.body.booking.movieTitle} tickets - ${req.body.booking.name}`,
+            description: `Booking for ${req.body.booking.numberOfSeats}x ${req.body.booking.movieTitle} tickets - ${req.body.booking.name}`,
             receipt_email: req.body.booking.billing_details.email
         });
 
