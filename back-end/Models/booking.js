@@ -58,6 +58,7 @@ const BILLING_DETAILS_SCHEMA = new SCHEMA({
 	address_city: String,
 	address_country: String,
 	address_zip: String,
+	email: String
 });
 
 const BOOKING_SCHEMA = new SCHEMA({
@@ -86,7 +87,6 @@ const BOOKING_SCHEMA = new SCHEMA({
 	adults: Number, 
 	child: Number,
 	concession: Number,
-	email: String,
 	billing_details: BILLING_DETAILS_SCHEMA,
 	paymentInfo: PAYMENT_INFO_SCHEMA
 });

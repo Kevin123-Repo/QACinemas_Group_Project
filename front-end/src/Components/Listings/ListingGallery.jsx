@@ -7,6 +7,7 @@ import {
     CarouselControl,
     CarouselCaption
 } from 'reactstrap';
+import nowShowing from '../../Images/nowshowing.png';
 
 const ListingGallery = () => {
 
@@ -53,7 +54,7 @@ const ListingGallery = () => {
             key={i}
           >
             <Link to={`/movies/${item.title}`}>
-                <img className={"listingImgs"} src={item.imageUrl} alt={""} />
+                <img className={"listingImgs"} src={item.imageUrl} alt={i} />
             </Link>
             <CarouselCaption captionText={item.title} />
           </CarouselItem>
@@ -69,19 +70,23 @@ const ListingGallery = () => {
 
     if (isLoaded) {
         return (
-            <div className="listings">    
-                <Carousel
-                    activeIndex={activeIndex}
-                    next={next}
-                    previous={previous}
-                    interval={false} // Auto-play
-                >
-                    {slides}
-                    <CarouselControl direction="prev" onClickHandler={previous} />
-                    <CarouselControl direction="next" onClickHandler={next} />
-                </Carousel>
-            </div>
-            // <h1> PlaceHolder </h1>
+            <>
+                <div className="listing-info">
+                    <img src={nowShowing} alt=""></img>
+                </div>
+                <div className="listings">    
+                    <Carousel
+                        activeIndex={activeIndex}
+                        next={next}
+                        previous={previous}
+                        interval={false} // Auto-play
+                    >
+                        {slides}
+                        <CarouselControl direction="prev" onClickHandler={previous} />
+                        <CarouselControl direction="next" onClickHandler={next} />
+                    </Carousel>
+                </div>
+            </>
         );
     } else {
         return (

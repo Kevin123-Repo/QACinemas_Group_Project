@@ -8,36 +8,23 @@ const GettingThere = (props) => {
         <>
             <Container className="gettingThere-div">
                 <Row>
-                    <Col lg="4">
-                        <h1>Public Transport</h1>
-                    </Col>
-                    <Col lg="4"/>
-                    <Col lg="1">
-                        <h1>Address</h1>
-                    </Col>
-                </Row>
-                <Row>
                     <Col lg="5">
-                        <p>You'll find us at Cardigan Fields, Kirkstall Rd, Burley, Leeds LS4 2DG. You can get here by bus or by tube!<br/>The closest station is Burley Park.</p>
+                        <br/>
+                        <div id="travel-info-div">
+                            <h1>Public Transport</h1>
+                            <p>You can get here by bus or by train! The closest station is Burley Park.</p>
+                            <h1>Address</h1>
+                            <p>Cardigan Fields,<br/>Kirkstall Rd,<br/>Burley,<br/>Leeds LS4 2DG</p>
+                            <h1>Parking</h1>
+                            <p>Parking is available on site. All available parking spaces and disabled priority spaces will be at the front of the venue!</p>
+                        </div>
                     </Col>
                     <Col lg="1"></Col>
                     <Col className="map-info" lg="6">
                         <p>Please refer to the Map for exact location.</p>
                         <GoogleMap />
                     </Col>
-                </Row>
-                <Row>
-                    <Col lg="1">
-                        <h1>Parking</h1>
-                    </Col>
-                    
-                </Row>
-                <Row>
-                    <Col lg="6">
-                        <p>Our facilities has state of the art accessability. Parking included! All available parking spaces and disabled priority spaces will be at the front of the venue!</p>
-                        <img className="cinema-front" src={Cinema_Image} alt =""/>
-                    </Col>
-                </Row>        
+                </Row>      
             </Container>
         </>
     );

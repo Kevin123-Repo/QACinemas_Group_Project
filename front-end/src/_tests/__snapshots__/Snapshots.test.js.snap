@@ -1,0 +1,1670 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Tests About matches snapshot 1`] = `
+<div
+  className="about-div container"
+>
+  <table
+    className="about-table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="PersonInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Anoush Lowton
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              ALowton@QA.com
+            </p>
+            <p>
+              <a
+                href="https://github.com/ALowtonQA"
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PersonInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              George Ryalls
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              gryalls@qa.com
+            </p>
+            <p>
+              <a
+                href="https://github.com/GeorgeRQA"
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PersonInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Jhon Urrego
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              JUrregoAgudelo@qa.com
+            </p>
+            <p>
+              <a
+                href="https://github.com/JhonQA"
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PersonInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Kevin Tse
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              KTse@qa.com
+            </p>
+            <p>
+              <a
+                href="https://github.com/Kevin123-QA"
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="PersonInfo"
+          >
+            <img
+              alt=""
+              src=""
+            />
+            <h3>
+              Raphael Fywell
+            </h3>
+            <h5>
+              Contact Details
+            </h5>
+            <p>
+              RFywell@qa.com
+            </p>
+            <p>
+              <a
+                href="https://github.com/raphyfqa"
+              >
+                GitHub Link
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div
+    className="card"
+    id="scrum-info-div"
+  >
+    <div
+      className="card-body"
+    />
+    <div
+      className="card-title"
+    >
+      <center>
+        <b>
+          About Scrum
+        </b>
+      </center>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        <p>
+          Scrum is a project management idea withihn the agile process used during the product development. It can be utilised in any projects that have multiple deadlines, complex requirements and a degree of uniqueness. Inside scrums each series of iteraion known as sprints are your typical stages of progress. sprints can last however long you want although the most common length for sprints are between two and four weeks.
+        </p>
+        <p>
+           Scrums functions best when the team is self organising and cross functional. This means that there is no leader that assigns a person to a task or tells someone how to solve a problem. Cross functional means that everyone inside takes a feature from an idea to implementation. Within the agile process you have a product owner who represents the customer/business and guides the team to building the product they want. A scrum master is also present to help manage the whole process of using scrum to ensure its performing at the most efficient levels.
+        </p>
+        <p>
+          The primary purpose of scrum development is to ensure that at the end of each sprint you have a product that is in a publishable state. Through using product backlogs a list of to-do's can be listed and prioritised so everyone on the team knows what the most important features are and they can begin work on that first. From this product backlog a sprint backlog can be formed. A product backlog can be thought of as all the things that needs to be completed for this project to be consider complete whereas a sprint backlog is a list of things to complete for the upcoming sprint.
+        </p>
+      </div>
+      <div
+        className="card-footer"
+      >
+        <center>
+          <a
+            href="https://www.scrum.org/"
+            target="_blank"
+          >
+            Scrum.org
+          </a>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Classifications matches snapshot 1`] = `
+<div
+  className="classification-div"
+>
+  <div
+    className="top-row row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+        id="classU"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+            <img
+              aria-label="u"
+              height="150"
+              id="u"
+              onClick={[Function]}
+              src="U_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Universal(U)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              This rating implies the movie is suitable for anyone aged four and above. Although with children this is a guideline as it can be hard to envisage what topics could cause distress to children. A general rule for any films aiming for a U rating is to have a positive theme throughout. Minalisation of violence, threat or horror is the best practice although inclusion of any should offer reassuring couterbalances to offset it.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Any references to drugs must have clear educational purpose.
+                    </li>
+                    <li>
+                      Infrequent use of only very mild bad language.
+                    </li>
+                    <li>
+                      Occasional nudity, no sexual context.
+                    </li>
+                    <li>
+                      Only mild sexual behaviour like kissing.
+                    </li>
+                    <li>
+                      Mild violence is acceptable if it is justified by context. (i.e. comedic)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/U"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+        id="classPG"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              aria-label="pg"
+              height="150"
+              onClick={[Function]}
+              src="PG_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              Parental Guidance(PG)
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              This rating again is recommended for generally everyone although some scenes within the movie may be unsuitable for children younger than eight. Children of any age without the company of a parent can purchase tickets for these movies. As an advisory note parents should consider whether the content within a movie would cause upset or is too sensitive for their children.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      References to illegal drugs or drug misuse must be innocuous or carry a suitable anti-drug message.
+                    </li>
+                    <li>
+                      Mild bad language only
+                    </li>
+                    <li>
+                      Nudity is allowed with no sexual context.
+                    </li>
+                    <li>
+                      Sexual activity can be implied, but should be discreet.
+                    </li>
+                    <li>
+                      Violence will usually be mild.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/pg"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="middle-row row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+        id="class12A"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              aria-label="twelveA"
+              height="150"
+              onClick={[Function]}
+              src="12A_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              12A
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              Generally not suited to children under the age of 12. Children under the age of 12 can watch any movies with this rating as long as they are accompanied by an adult. As an advisory we recommend that adults should check the ratings information for the film in advance so they can make a more informed decision as to whether any scenes within this film will cause particular distress to their children
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Misuse of drugs must be infrequent and should not be glamorised
+                    </li>
+                    <li>
+                      Moderate bad language and use of strong languagemay be permitted
+                    </li>
+                    <li>
+                      Nudity ina sexual context must be brief and discreet
+                    </li>
+                    <li>
+                      Sexual activity may be briefly and discreetly portrayed
+                    </li>
+                    <li>
+                      There may be moderate violence but it should not dwell on detail
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/12"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+        id="class12"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              aria-label="twelve"
+              height="150"
+              onClick={[Function]}
+              src="12_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              12
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              All the same rules as 12A. Again not suitable for anyone younger than 12. Children under 12 must be accompanied by an adult to view these movies. Also no one younger than 12 can purchase or rent a 12 rated work.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Misuse of drugs must be infrequent and should not be glamorised
+                    </li>
+                    <li>
+                      Moderate bad language and use of strong languagemay be permitted
+                    </li>
+                    <li>
+                      Nudity ina sexual context must be brief and discreet
+                    </li>
+                    <li>
+                      Sexual activity may be briefly and discreetly portrayed
+                    </li>
+                    <li>
+                      There may be moderate violence but it should not dwell on detail
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/12"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="bottom-row row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+        id="class15"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              aria-label="fifteen"
+              height="150"
+              onClick={[Function]}
+              src="15_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              15
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              Anyone younger than 15 cannot watch these movies in a cinema. Anyone younger than 15 cannot buy or rent movies with this rating.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  <ul>
+                    <li>
+                      Drugs may be consumed but promotion or encouragement of drug misuse is prohibited
+                    </li>
+                    <li>
+                      Strong language is permitted verys strong language may appear infrequently
+                    </li>
+                    <li>
+                      No constraints on nudity
+                    </li>
+                    <li>
+                      Sexual activity can be portrayed but not in strong detail
+                    </li>
+                    <li>
+                      Violence may be strong but should not dwell on the infliction of pain or injury
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/15"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-sm-6"
+    >
+      <div
+        className="card card-body"
+        id="class18"
+      >
+        <div
+          className="card-body"
+        >
+          <center>
+             
+            <img
+              aria-label="eighteen"
+              height="150"
+              onClick={[Function]}
+              src="18_Alpha.PNG"
+              width="150"
+            />
+          </center>
+        </div>
+        <div
+          className="collapse"
+          style={Object {}}
+        >
+          <div
+            className="card-title"
+            onClick={[Function]}
+          >
+            <b>
+              18
+            </b>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              No one younger than 18 may watch these movies in a cinema, nor can they purchase or rent 18 rated movies. Adults should be free to decide what entertainment they themselves view.
+            </div>
+            <button
+              aria-label={null}
+              className="btn btn-primary"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginBottom": "1rem",
+                }
+              }
+              type="button"
+            >
+              Conditions
+            </button>
+            <div
+              className="collapse"
+              style={Object {}}
+            >
+              <div
+                className="card"
+              >
+                <div
+                  className="card-body"
+                >
+                  There are almost no guidance on what is permiited within these rated movies but there are exceptions in the following areas
+                  <ul>
+                    <li>
+                      Movies should not be created through the commision of a criminal offence
+                    </li>
+                    <li>
+                      Where material or treatment appears to us to risk harm to individuals or, through their behaviour,to society
+                    </li>
+                    <li>
+                      where there are more explicit images of sexual activity in the context of a sex work
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <center>
+                <a
+                  href="https://www.bbfc.co.uk/rating/18"
+                  target="_blank"
+                >
+                  Additional Info
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Contact Page matches snapshot 1`] = `
+<div
+  className="contact-div container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <h1
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Contact Us
+      </h1>
+    </div>
+  </div>
+  <br />
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-3"
+    >
+      <div
+        id="address-info-div"
+      >
+        <h3>
+          Learning Center
+        </h3>
+        <p>
+          8th Floor
+          <br />
+          St James Buildings
+          <br />
+          79 Oxford Street
+          <br />
+          Manchester
+          <br />
+          M1 6FQ
+        </p>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+    >
+       
+      <div
+        className="container"
+        id="contact-form-div"
+      >
+        <h3
+          style={
+            Object {
+              "fontWeight": "italic",
+            }
+          }
+        >
+          Contact the manager!
+        </h3>
+        <form
+          className=""
+          onSubmit={[Function]}
+        >
+          <div
+            className="form-group"
+          >
+            <label
+              className=""
+              htmlFor="exampleEmail"
+            >
+              Name
+            </label>
+            <input
+              className="form-control"
+              id="nameText"
+              name="name"
+              placeholder="Enter your name here!"
+              type="text"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              className=""
+              disabled={true}
+              htmlFor="exampleEmail"
+            >
+              Email
+            </label>
+            <input
+              className="form-control"
+              id="exampleEmail"
+              name="email"
+              placeholder="Enter your email here!"
+              type="email"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              className=""
+              htmlFor="exampleText"
+            >
+              Enter your message here!
+            </label>
+            <textarea
+              className="form-control"
+              id="exampleText"
+              name="message"
+              rows="8"
+            />
+          </div>
+          <button
+            aria-label={null}
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Discussion Board matches snapshot 1`] = `
+<div
+  className="board-div container"
+>
+  <div
+    id="board-title"
+  >
+    <h1>
+      Discussion Board
+    </h1>
+  </div>
+  <table
+    className="table"
+  >
+    <thead>
+      <tr>
+        <th
+          id="username-col"
+        >
+          Username
+        </th>
+        <th
+          id="comment-col"
+        >
+          Comment
+        </th>
+        <th
+          id="film-col"
+        >
+          Film
+        </th>
+        <th
+          id="rating-col"
+        >
+          Rating
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+  <h1>
+    Loading
+  </h1>
+</div>
+`;
+
+exports[`Snapshot Tests Getting There matches snapshot 1`] = `
+<div
+  className="gettingThere-div container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-5"
+    >
+      <br />
+      <div
+        id="travel-info-div"
+      >
+        <h1>
+          Public Transport
+        </h1>
+        <p>
+          You can get here by bus or by train! The closest station is Burley Park.
+        </p>
+        <h1>
+          Address
+        </h1>
+        <p>
+          Cardigan Fields,
+          <br />
+          Kirkstall Rd,
+          <br />
+          Burley,
+          <br />
+          Leeds LS4 2DG
+        </p>
+        <h1>
+          Parking
+        </h1>
+        <p>
+          Parking is available on site. All available parking spaces and disabled priority spaces will be at the front of the venue!
+        </p>
+      </div>
+    </div>
+    <div
+      className="col-lg-1"
+    />
+    <div
+      className="map-info col-lg-6"
+    >
+      <p>
+        Please refer to the Map for exact location.
+      </p>
+      <div>
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Homepage matches snapshot 1`] = `
+<div
+  id="homepage-div"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="carousel slide"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="carousel-inner"
+      >
+        <div
+          className="carousel-item active"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_3.jpg"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_1.jpg"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_4.jpg"
+          />
+        </div>
+        <div
+          className="carousel-item"
+        >
+          <img
+            alt=""
+            className="homepage-imgs"
+            src="cinema_2.jpg"
+          />
+        </div>
+      </div>
+      <a
+        className="carousel-control-prev"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-prev-icon"
+        />
+        <span
+          className="sr-only"
+        >
+          prev
+        </span>
+      </a>
+      <a
+        className="carousel-control-next"
+        onClick={[Function]}
+        role="button"
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        tabIndex="0"
+      >
+        <span
+          aria-hidden="true"
+          className="carousel-control-next-icon"
+        />
+        <span
+          className="sr-only"
+        >
+          next
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    id="homepage-info"
+  >
+    <div
+      className="row"
+    >
+      <h3>
+         Welcome to QA Cinemas! Here you can browse all of our latest films. 
+      </h3>
+       
+      <br />
+      <p>
+        You can also book tickets for showings in advance, and get a preview of new releases arriving in the near future!
+      </p>
+    </div>
+    <div
+      className="row"
+    />
+    <div
+      className="row"
+    >
+      <p>
+        QA Cinemas is the UK's premiere multiplex cinema chain, and the best destination to kick back, relax, and forget your worries for a few hours.
+        <br />
+        <br />
+        Grab some popcorn and an extra large soft drink of your choice and be transported to a new world by the magic of cinema.
+        <br />
+        <br />
+        Take your family, friends, or even just that special someone... yourself!
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Listing Gallery matches snapshot 1`] = `
+<h1>
+   Loading... 
+</h1>
+`;
+
+exports[`Snapshot Tests New Releases matches snapshot 1`] = `
+<h1>
+   Loading... 
+</h1>
+`;
+
+exports[`Snapshot Tests Opening Times matches snapshot 1`] = `
+<div
+  className="times-div container"
+>
+  <div
+    class="Accordion"
+    className="accordion"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        Opening Times
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse show"
+      >
+        <div
+          className="card-body"
+        >
+          <h5
+            align="center"
+          >
+            Monday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Tuesday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Wednesday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Thursday: 10:00 - 23:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Friday: 10:00 - 00:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Saturday: 10:00 - 00:00
+          </h5>
+          <h5
+            align="center"
+          >
+            Sunday: 10:00 - 22:00
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        Where can we find you?
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/GettingThere"
+            onClick={[Function]}
+          >
+            Getting There
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        Where can we visit nearby?
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/PlacesToGo"
+            onClick={[Function]}
+          >
+            Places To Visit
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        How can we contact a manager?
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/ContactPage"
+            onClick={[Function]}
+          >
+            Contact Us
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+        onClick={[Function]}
+      >
+        About
+      </div>
+      <div
+        aria-expanded={null}
+        className="collapse"
+      >
+        <div
+          className="card-body"
+        >
+          Hello! For further assistance please click the link to be taken to our 
+          <a
+            aria-current={null}
+            href="/About"
+            onClick={[Function]}
+          >
+            About
+          </a>
+           page
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Places To Go matches snapshot 1`] = `
+<div
+  className="places-div container"
+>
+  <h1
+    align="center"
+  >
+    Places to go
+  </h1>
+  <table
+    id="places-table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="toGoInfo"
+          >
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="Frankie and Bennys"
+                className="places-imgs"
+                src="FrankieAndBennys.jpg"
+              />
+            </div>
+            <h2
+              align="center"
+            >
+              Frankie and Bennys
+            </h2>
+            <p>
+              Frankie and Benny's is the perfect way to start and end your day. With a delicious breakfast menu filled with our favourite breakfast and brunch food items to our American and Italian menu. Enjoy our sizzling steaks, speciality pizza, American burgers and hearty pasta dishes - the options are endless! Our lively atmosphere makes it great for families to enjoy a great day out but it's also relaxing enough to enjoy a quite meal with friends.
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0113 203 8888
+            </p>
+            <p>
+              <a
+                href="https://www.frankieandbennys.com/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="toGoInfo"
+          >
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="Nandos"
+                className="places-imgs"
+                src="Nandos.jpg"
+              />
+            </div>
+            <h2
+              align="center"
+            >
+              Nandos
+            </h2>
+            <p>
+              We're the home of the legendary Portuguese, flame grilled PERI-PERI chicken. You're guaranteed great food with excellent value for money, served in a warm, fun and vibrant atmosphere. Your senses will be fired up by the addictive flavour of our delicious chicken, grilled to perfection and served with pride and passion.
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0113 279 6309
+            </p>
+            <p>
+              <a
+                href="https://www.nandos.co.uk/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div
+            className="toGoInfo"
+          >
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="Hollywood Bowl"
+                className="places-imgs"
+                src="HollywoodBowl.jpg"
+              />
+            </div>
+            <h2
+              align="center"
+            >
+              Hollywood Bowl
+            </h2>
+            <p>
+              At Hollywood Bowl we have brilliant entertainment packages for all the family – including kids big and small! We're not just great for families: let out your competitive side against friends or colleagues. You can find everything you need for the perfect game including our fully licenced bar and fantastic deals on food and drink in our American inpired diner. With 32 lanes to bowl along, we bring the fun and entertainment. 
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0844 826 1466
+            </p>
+            <p>
+              <a
+                href="https://www.hollywoodbowl.co.uk/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+        <td>
+          <div
+            className="toGoInfo"
+          >
+            <div
+              className="places-img-container"
+            >
+              <img
+                alt="LaserZone"
+                className="places-imgs"
+                src="LaserZone.jpg"
+              />
+            </div>
+            <h2
+              align="center"
+            >
+              LaserZone
+            </h2>
+            <p>
+              LaserZone is out of this world! Beyond the airlock lies a 4000sqft galactic labyrinth filled with swirling smoke, strange sounds, flashing lights...and enemies! Explore our multi-level, fully supervised arena, armed with state of the art laser packs and phasors. Score points by zapping your opponents and destroying their bases.
+            </p>
+            <h5>
+              Contact Details:
+            </h5>
+            <p>
+              0113 279 0000
+            </p>
+            <p>
+              <a
+                href="https://www.laserzone.co.uk/"
+              >
+                Website
+              </a>
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Snapshot Tests Screens matches snapshot 1`] = `
+<div
+  className="screens-div container"
+>
+  <div
+    className="carousel slide"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <div
+      className="carousel-inner"
+    >
+      <div
+        className="carousel-item active"
+      >
+        <img
+          alt="Regular Screen"
+          className="screens-imgs"
+          src="Screens-OriginalRegularScreenPhoto.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Regular Screen
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <img
+          alt="Regular Seating Plan"
+          className="screens-imgs"
+          src="Screens-OriginalRegularSeatingPlan.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Regular Seating Plan
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <img
+          alt="Deluxe Screen"
+          className="screens-imgs"
+          src="Screens-OriginalDeluxeScreenPhoto.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Deluxe Screen
+          </p>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <img
+          alt="Deluxe Seating Plan"
+          className="screens-imgs"
+          src="Screens-OriginalDeluxeSeatingPlan.jpg"
+        />
+        <div
+          className="carousel-caption d-none d-md-block"
+        >
+          <h3 />
+          <p>
+            Deluxe Seating Plan
+          </p>
+        </div>
+      </div>
+    </div>
+    <a
+      className="carousel-control-prev"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+      tabIndex="0"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-prev-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Previous
+      </span>
+    </a>
+    <a
+      className="carousel-control-next"
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+      tabIndex="0"
+    >
+      <span
+        aria-hidden="true"
+        className="carousel-control-next-icon"
+      />
+      <span
+        className="sr-only"
+      >
+        Next
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests Ticket Booking matches snapshot 1`] = `
+<h1>
+   Loading... 
+</h1>
+`;

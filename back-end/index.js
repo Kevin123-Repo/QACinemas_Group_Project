@@ -19,15 +19,21 @@ APP.use(DISCUSSION_BOARD_ROUTES);  //
 
 // Connect to MongoDB
 MONGOOSE
-    .connect("mongodb://localhost:27017/qacinemas", {
-        useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
+    .connect("mongodb+srv://qacinemas:XTorP2q49ji5@qacinema1.gn9gk.mongodb.net/qacinemas?retryWrites=true&w=majority", {
+        useNewUrlParser: true, useUnifiedTopology: true
     }).then(() => {
         console.log("MongoDB Connection Succesful");
-        // Listen for traffic on PORT
-        APP.listen(PORT, (err) => {
-            if (err) console.log(err);
-            console.log(`App listening at http://localhost:${PORT}`);
-        });
     }).catch((err) => { 
         console.log("MongoDB Connection Failed!!!");
     });
+
+// Listen for traffic on PORT
+let server = APP.listen(PORT, (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(`App listening at http://localhost:${PORT}`);
+    }
+});
+
+module.exports = server;

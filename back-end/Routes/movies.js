@@ -50,7 +50,7 @@ ROUTER.get("/movies/find/:query", async(req, res, next) => {
                 {director: new RegExp(req.params.query, 'i')}
                 ]
         });
-        (FOUND.length)? res.send(FOUND) : next(new Error("ERROR: Could not find a movie with that title"));
+        res.send(FOUND);
     } catch(err) {
         next(new Error(err.message));
     }
