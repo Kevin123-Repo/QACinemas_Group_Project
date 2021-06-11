@@ -9,6 +9,7 @@ const DISCUSSION_BOARD_ROUTES = require("./Routes/discussionboard");
 const BOOKING_ROUTES = require("./Routes/bookings");
 const APP = EXPRESS();
 const PORT = 8080;
+const MONGO_URL = "";
 
 // Middleware & Routes
 APP.use(CORS());                       // Disable Cross Origin Resource Sharing Restrictions
@@ -19,7 +20,7 @@ APP.use(DISCUSSION_BOARD_ROUTES);  //
 
 // Connect to MongoDB
 MONGOOSE
-    .connect("mongodb+srv://qacinemas:XTorP2q49ji5@qacinema1.gn9gk.mongodb.net/qacinemas?retryWrites=true&w=majority", {
+    .connect(MONGO_URL, {
         useNewUrlParser: true, useUnifiedTopology: true
     }).then(() => {
         console.log("MongoDB Connection Succesful");
