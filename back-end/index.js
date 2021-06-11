@@ -8,7 +8,6 @@ const MOVIE_ROUTES = require("./Routes/movies");
 const DISCUSSION_BOARD_ROUTES = require("./Routes/discussionboard");
 const BOOKING_ROUTES = require("./Routes/bookings");
 const APP = EXPRESS();
-const PORT = process.env.PORT || 8080;
 
 // Middleware & Routes
 APP.use(CORS());                       // Disable Cross Origin Resource Sharing Restrictions
@@ -19,16 +18,17 @@ APP.use(DISCUSSION_BOARD_ROUTES);  //
 
 // Connect to MongoDB
 MONGOOSE
-    .connect("mongodb+srv://qacinemas:XTorP2q49ji5@qacinema1.gn9gk.mongodb.net/qacinemas?retryWrites=true&w=majority", {
-        useNewUrlParser: true, useUnifiedTopology: true
-    }).then(() => {
-        console.log("MongoDB Connection Succesful");
-    }).catch((err) => { 
-        console.log("MongoDB Connection Failed!!!");
-    });
-    
+.connect("mongodb+srv://qacinemas:XTorP2q49ji5@qacinema1.gn9gk.mongodb.net/qacinemas?retryWrites=true&w=majority", {
+    useNewUrlParser: true, useUnifiedTopology: true
+}).then(() => {
+    console.log("MongoDB Connection Succesful");
+}).catch((err) => { 
+    console.log("MongoDB Connection Failed!!!");
+});
+
+const PORT = process.env.PORT || 8080;
 // Listen for traffic on PORT
-let server = APP.listen(PORT, (err) => {
+APP.listen(PORT, (err) => {
     if (err) {
         console.log(err);
     } else {
@@ -36,4 +36,4 @@ let server = APP.listen(PORT, (err) => {
     }
 });
 
-module.exports = server;
+// module.exports = server;

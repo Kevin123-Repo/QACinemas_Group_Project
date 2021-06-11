@@ -34,7 +34,7 @@ const ListingGallery = () => {
     }
 
     useEffect(() => {
-        axios.get("https://qacinemaproject.nw.r.appspot.com/movies/getCurrent")
+        axios.get("/movies/getCurrent")
             .then((res) => {
                 const DATA = res.data;
                 setData(DATA);
