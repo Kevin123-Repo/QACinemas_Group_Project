@@ -8,7 +8,7 @@ const MOVIE_ROUTES = require("./Routes/movies");
 const DISCUSSION_BOARD_ROUTES = require("./Routes/discussionboard");
 const BOOKING_ROUTES = require("./Routes/bookings");
 const APP = EXPRESS();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // Middleware & Routes
 APP.use(CORS());                       // Disable Cross Origin Resource Sharing Restrictions
@@ -26,7 +26,7 @@ MONGOOSE
     }).catch((err) => { 
         console.log("MongoDB Connection Failed!!!");
     });
-
+    
 // Listen for traffic on PORT
 let server = APP.listen(PORT, (err) => {
     if (err) {
