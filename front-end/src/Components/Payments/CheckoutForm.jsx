@@ -79,7 +79,7 @@ const CheckoutForm = ({bookingInfo}) => {
                         .then((res) => {
                             setErrorMessage(null);
                             setSuccessMessage("Payment processed and receipt sent via Email.");
-                            setTimeout(() => setRedirect("/OrderSummary"), 2000);
+                            setTimeout(() => setRedirect("/OrderSummary"), 3000);
                         }).catch((err) => {
                             console.error(err.message);
                             setPaymentProcessing(false);
