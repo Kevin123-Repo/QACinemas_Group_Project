@@ -10,6 +10,7 @@ const DiscussionBoard = () => {
 
     const [update, setUpdate] = useState(false);
     const [data, setData] = useState([]);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     const handleUpdate = (e) => {
         setUpdate(c => !c);
@@ -28,23 +29,30 @@ const DiscussionBoard = () => {
                     dataArray.push(filterData(entry));
                 });
                 setData(dataArray);
+                setIsLoaded(true);
             })
             .catch((error) => {
                 console.error(error.message);
             });
     }, [update]);
 
-    return (
-        <>
-        <Container className="board-div">
-            <div id="board-title">
-                <h1>Discussion Board</h1>
-            </div>
-            <CommentsTable data={data}/>
-            <CommentsForm handleUpdate={handleUpdate}/>
-        </Container>
-        </>
-    );
+    if (isLoaded) {
+        return (
+            <>
+            <Container className="board-div">
+                <div id="board-title">
+                    <h1>Discussion Board</h1>
+                </div>
+                <CommentsTable data={data}/>
+                <CommentsForm handleUpdate={handleUpdate}/>
+            </Container>
+            </>
+        );
+    } else {
+        return (
+            <h1> Loading.. </h1>
+        );
+    }
 }
 
 export default DiscussionBoard;
