@@ -1,8 +1,30 @@
 # QACinemas_Group_Project
 
+Make sure to run `npm i` in both the front-end and back-end to install any dependencies needed for the project.
+
+# Back-end (Express)
+
+The back-end was created using Express.
+
+## Available Scripts
+
+In the back-end you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+
+### `npm test`
+
+Runs the tests for the back-end
+
+### `npm coverage`
+
+Runs the test and shows line coverage
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The front-end was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
