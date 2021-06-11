@@ -11,7 +11,7 @@ const BookingForm = (props) => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/movies/getCurrent")
+        axios.get("https://qacinemaproject.nw.r.appspot.com/movies/getCurrent")
             .then((res) => {
                 const DATA = res.data;
                 setData(DATA);

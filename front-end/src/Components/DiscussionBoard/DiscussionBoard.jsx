@@ -21,7 +21,7 @@ const DiscussionBoard = () => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/discussions/getAll")
+            .get("https://qacinemaproject.nw.r.appspot.com/discussions/getAll")
             .then((response) => {
                 let dataArray = [];
                 response.data.map((entry) => {

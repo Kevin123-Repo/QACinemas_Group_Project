@@ -34,7 +34,7 @@ const NewReleases = () => {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:8080/movies/getNewReleases")
+        axios.get("https://qacinemaproject.nw.r.appspot.com/movies/getNewReleases")
             .then((res) => {
                 const DATA = res.data;
                 setData(DATA);

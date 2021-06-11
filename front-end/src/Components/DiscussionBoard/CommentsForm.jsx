@@ -32,7 +32,7 @@ const CommentsForm = ({ handleUpdate }) => {
         };
 
         axios
-            .post("http://localhost:8080/discussions/post", dataTosend)
+            .post("https://qacinemaproject.nw.r.appspot.com/discussions/post", dataTosend)
             .then((response) => {
                 console.log(response);
             })
@@ -50,7 +50,7 @@ const CommentsForm = ({ handleUpdate }) => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8080/movies/getAll")
+            .get("https://qacinemaproject.nw.r.appspot.com/movies/getAll")
             .then((response) => {
                 setMovie(response.data);
                 setIsLoading(false);

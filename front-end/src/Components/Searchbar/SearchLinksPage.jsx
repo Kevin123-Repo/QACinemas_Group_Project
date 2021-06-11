@@ -9,7 +9,7 @@ const SearchLinksPage = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/movies/find/${query}`)
+        axios.get(`https://qacinemaproject.nw.r.appspot.com/movies/find/${query}`)
             .then((res) => {
                 const DATA = res.data;
                 setData(DATA);

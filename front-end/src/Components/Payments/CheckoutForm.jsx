@@ -62,7 +62,7 @@ const CheckoutForm = ({bookingInfo}) => {
             setErrorMessage(result.error.message);
         } else {
             setPaymentProcessing(true);
-            axios.post("http://localhost:8080/bookings/payment", {price: PRICE, token: result.token, booking: bookingInfo})
+            axios.post("https://qacinemaproject.nw.r.appspot.com/bookings/payment", {price: PRICE, token: result.token, booking: bookingInfo})
                 .then((res) => {
                     const emailData = {
                         service_id: 'service_6hyhf2k',
