@@ -1,39 +1,82 @@
 # Simple Web App
 
-Make sure to run `npm i` in both the front-end and back-end to install any dependencies needed for the project.
+This is a full-stack web application consisting of a front-end built with React and a back-end using Express and MongoDB.
 
-# Back-end
+## Prerequisites
 
-The back-end was created using Express. 
-The database used was MongoDB
+Before running the project, ensure you have the following installed:
 
-##Setup
-Make sure to enter the .env file in the backend folder and replace the mongo_url to your own MongoDB URI.
-## Available Scripts
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [MongoDB](https://www.mongodb.com/) (local or cloud instance)
 
-In the back-end you can run:
+## Installation
 
-### `npm start`
-This runs the app
-### `npm test`
-This will run the tests for the back-end
-Before running npm test you will need to replace the `id` with an actual `id` from your database to ensure the tests will pass.
-You will see a comment to instruct you where changes are needed.
+### 1. Install Dependencies
 
-# Getting Started with Create React App
+Run the following command in both the **front-end** and **back-end** directories to install dependencies:
+
+```sh
+npm install
+```
+
+---
+
+## Back-end
+
+The back-end is built using **Express.js** and uses **MongoDB** as the database.
+
+### Setup
+
+1. Navigate to the `backend` folder.
+2. Create a `.env` file and set up your MongoDB URI:
+   ```sh
+   MONGO_URL=your_mongodb_connection_string
+   ```
+3. Start the server:
+   ```sh
+   npm start
+   ```
+
+### Available Scripts
+
+#### `npm start`
+
+Runs the back-end server.
+
+#### `npm test`
+
+Runs the test suite for the back-end.
+
+> **Note:** Before running tests, update the `id` in test files with an actual document `_id` from your database to ensure the tests pass. Look for comments indicating where to make changes.
+
+---
+
+## Front-end
+
 The front-end was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-In the project directory, you can run:
 
-### `npm start`
+### Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Navigate to the `frontend` folder.
+2. Start the development server:
+   ```sh
+   npm start
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Available Scripts
 
-## Learn More
+#### `npm start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs the app in development mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page reloads automatically when you make changes. You can also see lint errors in the console.
+
+---
+
+## Additional Resources
+
+- [MongoDB Documentation](https://www.mongodb.com/docs/)
+- [Express.js Documentation](https://expressjs.com/)
+- [React Documentation](https://reactjs.org/)
+- [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+
