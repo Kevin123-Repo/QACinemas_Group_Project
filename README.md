@@ -17,7 +17,7 @@ In the back-end you can run:
 This runs the app
 ### `npm test`
 This will run the tests for the back-end
-Before running npm test you will need to replace the id with an actual id from your database to ensure the tests will pass.
+Before running npm test you will need to replace the `id` with an actual `id` from your database to ensure the tests will pass.
 You will see a comment to instruct you where changes are needed.
 
 # Getting Started with Create React App
